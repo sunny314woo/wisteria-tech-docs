@@ -402,6 +402,212 @@ git commit -m "Add post about exporting ChatGPT conversations"
 git push origin main
 ```
 
+## 怎么写英文博客
+
+英文博客和中文博客的流程基本一样，但有几个关键区别：文件放 `source/_posts/en/`，frontmatter 用英文，`lang` 写 `en`。
+
+### 文件位置
+
+英文文章必须放在：
+
+```text
+source/_posts/en/
+```
+
+不是 `source/_posts/zh/`，也不是 `source/_posts/` 根目录。放错位置 Hexo 不会生成正确的 URL。
+
+### Frontmatter 格式
+
+英文文章的 frontmatter 和中文文章写法一致，但字段值要用英文：
+
+```markdown
+---
+title: "How to Export ChatGPT Conversations to Markdown"
+date: 2026-05-19 10:00:00
+categories:
+  - Product Docs
+tags:
+  - Markdown
+  - export
+  - ChatGPT
+  - archiving
+lang: en
+---
+```
+
+和中英文前端的区别：
+
+| 字段 | 中文 | 英文 |
+|---|---|---|
+| `title` | 中文标题 | 英文标题 |
+| `categories` | 产品文档 | Product Docs |
+| `tags` | 中文标签 | 英文小写标签，多个词用连字符（如 `long-conversation`） |
+| `lang` | zh-CN | en |
+
+**重要：** `lang: en` 必须写，否则 Hexo 会把文章当成中文处理，URL 和页面渲染都会出问题。
+
+### 标签命名规范
+
+英文标签建议用全小写，多个词用连字符连接：
+
+推荐：
+
+```yaml
+tags:
+  - long-conversation
+  - Markdown
+  - knowledge-management
+  - local-first
+```
+
+不推荐：
+
+```yaml
+tags:
+  - Long Conversation
+  - markdown
+  - Knowledge Management
+  - local_first
+```
+
+保持标签写法前后一致，否则 Hexo 会生成两个不同标签页。
+
+### 文章结构建议
+
+为了 SEO 和 AEO（AI 引擎优化），英文文章建议使用以下结构：
+
+```markdown
+---
+title: "How to Do Something in ChatGPT"
+date: 2026-05-19 10:00:00
+categories:
+  - Product Docs
+tags:
+  - ChatGPT
+  - productivity
+  - guide
+lang: en
+---
+
+**Meta Description:** A one-sentence summary of what this article teaches.
+
+---
+
+## Quick Answer
+
+直接回答问题。一两段就够了。不要绕弯子。
+
+## Why This Matters
+
+解释这是一个什么痛点和为什么值得解决。
+
+## Step-by-Step Guide
+
+### Step 1: xxx
+
+文字说明。
+
+### Step 2: xxx
+
+文字说明。
+
+## Comparison (可选)
+
+| Method | Speed | Ease |
+|---|---|---|
+| Method A | Fast | Easy |
+| Method B | Slow | Hard |
+
+## FAQ
+
+**Question one?**
+Direct answer.
+
+**Question two?**
+Direct answer.
+
+## Final Thoughts
+
+总结 + 自然提到相关产品 + CTA 链接。
+```
+
+这套结构和 `source/_posts/en/` 里已有的 20 篇文章一致，可以参考仿写。
+
+### 已有文章参考
+
+当前 `source/_posts/en/` 目录下有以下文章可以直接作为示例：
+
+- `01-how-to-navigate-long-chatgpt-conversations-without-endless-scrolling.md`
+- `03-how-to-export-chatgpt-conversations-to-markdown.md`
+- `05-how-to-bookmark-important-chatgpt-answers.md`
+- `11-how-to-organize-long-gemini-conversations.md`
+- `14-chatgpt-gemini-outline-export-review.md`
+- `18-how-to-build-a-local-first-ai-knowledge-base.md`
+
+想写新文章时，可以打开其中一篇查看 frontmatter 和正文结构，直接复制格式。
+
+### 完整发布流程（英文文章）
+
+假设新文章放在：
+
+```text
+source/_posts/en/my-new-english-post.md
+```
+
+发布步骤：
+
+```bash
+# 1. 拉取最新代码
+git pull origin main
+
+# 2. 本地预览（确认文章格式和效果）
+npm run server
+
+# 3. 构建检查
+npm run build
+
+# 4. 查看改动
+git status
+
+# 5. 提交
+git add source/_posts/en/my-new-english-post.md
+git commit -m "Add English post: My New English Post"
+
+# 6. 如果有新图片也一起提交
+git add source/images/tutorials/my-new-english-post/
+git commit -m "Add images for English post"
+
+# 7. 推送到 GitHub
+git push origin main
+```
+
+推送后 GitHub Actions 会自动构建并部署到 <https://blog.wisteriasoftware.uk>。
+
+### 英文文章发布检查清单
+
+- [ ] 文件在 `source/_posts/en/` 下
+- [ ] `title` 是英文
+- [ ] `date` 格式正确（`YYYY-MM-DD HH:mm:ss`）
+- [ ] `categories` 写的是 `Product Docs`（或对应英文分类）
+- [ ] `tags` 全是英文小写，多词用连字符
+- [ ] `lang: en` 已写
+- [ ] frontmatter 的 `---` 上下对齐，没有多余空格
+- [ ] 正文有 `Quick Answer` / `Why This Matters` / `Step-by-Step Guide` / `FAQ` / `Final Thoughts`
+- [ ] CTA 链接指向 Chrome Web Store 和 wisteriasoftware.uk
+- [ ] 本地 `npm run build` 通过
+- [ ] 本地预览 `http://localhost:4000/` 能正常显示
+- [ ] `git push origin main` 成功后等 GitHub Actions 变绿
+
+### 中英文文章同发策略
+
+如果同一主题需要中英文两篇：
+
+1. 分别放在 `source/_posts/zh/` 和 `source/_posts/en/`。
+2. 文件名不需要一致，但建议保持相似以便查找。
+3. 两篇文章互相独立，不互相翻译。英文用英文搜索关键词，中文用中文搜索关键词。
+4. 可以同时在两个文件里添加内部链接互相引用（用 `https://blog.wisteriasoftware.uk/...` 完整 URL），方便用户切换语言。
+5. 单独提交，一次只推一篇或一批同类文章，不要中英混合大批量提交。
+
 ### 本地写作时推荐打开两个终端
 
 第一个终端专门跑预览服务：
