@@ -1,4 +1,15 @@
-# Best Way to Export ChatGPT Conversations with Structure
+---
+title: "Best Way to Export ChatGPT Conversations with Structure"
+date: 2026-05-19 04:00:00
+categories:
+  - Product Docs
+tags:
+  - Markdown
+  - export
+  - structure
+  - archiving
+lang: en
+---
 
 **Meta Description:** Discover the best way to export ChatGPT conversations while preserving structure — headings, code blocks, lists, and formatting intact. Compare tools, methods, and workflows.
 

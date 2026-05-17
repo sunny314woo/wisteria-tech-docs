@@ -1,4 +1,15 @@
-# How to Jump to Any Message in a ChatGPT Conversation
+---
+title: "How to Jump to Any Message in a ChatGPT Conversation"
+date: 2026-05-19 10:00:00
+categories:
+  - Product Docs
+tags:
+  - navigation
+  - jump-to-message
+  - outline
+  - productivity
+lang: en
+---
 
 **Meta Description:** Stop scrolling through long ChatGPT threads. Learn how to jump to any message instantly using outline navigation tools.
 

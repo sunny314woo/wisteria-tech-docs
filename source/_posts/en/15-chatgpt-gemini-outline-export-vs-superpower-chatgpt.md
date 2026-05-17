@@ -1,4 +1,15 @@
-# ChatGPT Gemini Outline & Export vs Superpower ChatGPT: Which Is Better?
+---
+title: "ChatGPT Gemini Outline & Export vs Superpower ChatGPT: Which Is Better?"
+date: 2026-05-19 15:00:00
+categories:
+  - Product Docs
+tags:
+  - comparison
+  - Superpower-ChatGPT
+  - extension
+  - review
+lang: en
+---
 
 **Meta Description:** ChatGPT Gemini Outline & Export and Superpower ChatGPT are two leading ChatGPT extensions. Compare their features, strengths, and weaknesses to choose the right one.
 

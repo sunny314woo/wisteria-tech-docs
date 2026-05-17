@@ -1,4 +1,15 @@
-# How to Navigate Long ChatGPT Conversations Without Endless Scrolling
+---
+title: "How to Navigate Long ChatGPT Conversations Without Endless Scrolling"
+date: 2026-05-19 01:00:00
+categories:
+  - Product Docs
+tags:
+  - long-conversation
+  - scrolling
+  - navigation
+  - productivity
+lang: en
+---
 
 **Meta Description:** Learn how to navigate long ChatGPT conversations without endless scrolling using outlines, bookmarks, and smart export tools. A practical guide for power users.
 

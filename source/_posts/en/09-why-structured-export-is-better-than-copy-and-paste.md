@@ -1,4 +1,15 @@
-# Why Structured Export Is Better Than Copy and Paste
+---
+title: "Why Structured Export Is Better Than Copy and Paste"
+date: 2026-05-19 09:00:00
+categories:
+  - Product Docs
+tags:
+  - Markdown
+  - export
+  - copy-paste
+  - structure
+lang: en
+---
 
 **Meta Description:** Copy and paste might seem easy, but structured Markdown export preserves formatting, saves time, and integrates with your workflow. Here is why it is the better choice.
 

@@ -1,4 +1,15 @@
-# Best Way to Export Gemini Conversations to Markdown
+---
+title: "Best Way to Export Gemini Conversations to Markdown"
+date: 2026-05-19 12:00:00
+categories:
+  - Product Docs
+tags:
+  - Gemini
+  - Markdown
+  - export
+  - archiving
+lang: en
+---
 
 **Meta Description:** Learn the best way to export Google Gemini conversations to structured Markdown files for offline access, search, and knowledge management.
 

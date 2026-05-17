@@ -1,4 +1,15 @@
-# How to Reuse Valuable AI Conversations
+---
+title: "How to Reuse Valuable AI Conversations"
+date: 2026-05-19 19:00:00
+categories:
+  - Product Docs
+tags:
+  - reuse
+  - knowledge-management
+  - Markdown
+  - productivity
+lang: en
+---
 
 **Meta Description:** Your AI conversations contain valuable insights, code, and ideas. Learn how to capture, organize, and reuse them effectively.
 

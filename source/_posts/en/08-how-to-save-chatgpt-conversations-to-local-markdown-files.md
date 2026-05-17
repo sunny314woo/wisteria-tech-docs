@@ -1,4 +1,15 @@
-# How to Save ChatGPT Conversations to Local Markdown Files
+---
+title: "How to Save ChatGPT Conversations to Local Markdown Files"
+date: 2026-05-19 08:00:00
+categories:
+  - Product Docs
+tags:
+  - Markdown
+  - local-files
+  - export
+  - archiving
+lang: en
+---
 
 **Meta Description:** Learn how to save ChatGPT conversations to local Markdown files for permanent, searchable, offline-accessible archives. Step-by-step guide with best practices.
 

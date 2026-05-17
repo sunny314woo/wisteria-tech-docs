@@ -1,4 +1,15 @@
-# How to Search Old ChatGPT Answers Quickly
+---
+title: "How to Search Old ChatGPT Answers Quickly"
+date: 2026-05-19 16:00:00
+categories:
+  - Product Docs
+tags:
+  - search
+  - Markdown
+  - export
+  - knowledge-management
+lang: en
+---
 
 **Meta Description:** Learn how to search old ChatGPT answers quickly using outline navigation, bookmarks, and Markdown export. Stop scrolling — start searching.
 

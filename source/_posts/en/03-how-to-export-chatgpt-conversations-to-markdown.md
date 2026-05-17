@@ -1,4 +1,15 @@
-# How to Export ChatGPT Conversations to Markdown
+---
+title: "How to Export ChatGPT Conversations to Markdown"
+date: 2026-05-19 03:00:00
+categories:
+  - Product Docs
+tags:
+  - Markdown
+  - export
+  - conversation
+  - archiving
+lang: en
+---
 
 **Meta Description:** Learn how to export ChatGPT conversations to Markdown with full structure — headings, code blocks, and formatting preserved. A complete step-by-step guide.
 

@@ -1,4 +1,15 @@
-# Best ChatGPT Outline Extension in 2026
+---
+title: "Best ChatGPT Outline Extension in 2026"
+date: 2026-05-19 06:00:00
+categories:
+  - Product Docs
+tags:
+  - outline
+  - extension
+  - comparison
+  - review
+lang: en
+---
 
 **Meta Description:** Looking for the best ChatGPT outline extension in 2026? We review the top tools for navigating, bookmarking, and exporting ChatGPT conversations.
 
