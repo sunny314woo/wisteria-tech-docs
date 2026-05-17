@@ -1,6 +1,6 @@
 ---
 title: "如何避免在 ChatGPT 中反复滚动查找历史回答"
-date: 2026-05-19 10:00:00
+date: 2026-05-19 23:00:00
 categories:
   - AI 工具
 tags:

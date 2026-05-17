@@ -1,6 +1,6 @@
 ---
 title: "如何在 ChatGPT 中一键跳转到任意问题"
-date: 2026-05-19 11:00:00
+date: 2026-05-19 23:59:00
 categories:
   - AI 工具
 tags:
