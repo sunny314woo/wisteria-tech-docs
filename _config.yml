@@ -11,7 +11,7 @@ language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
-url: https://docs.wisteriasoftware.uk
+url: https://blog.wisteriasoftware.uk
 root: /
 permalink: :category/:title/
 permalink_defaults:
