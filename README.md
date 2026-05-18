@@ -608,6 +608,201 @@ git push origin main
 4. 可以同时在两个文件里添加内部链接互相引用（用 `https://blog.wisteriasoftware.uk/...` 完整 URL），方便用户切换语言。
 5. 单独提交，一次只推一篇或一批同类文章，不要中英混合大批量提交。
 
+## 怎么写中文博客（SEO + AEO）
+
+中文文章的发布流程和英文基本相同，但有几个需要特别注意的地方：中文文章用中文 frontmatter、按 SEO + AEO 结构写、内部链接指向中文同主题文章。
+
+### 文件位置
+
+中文文章必须放在：
+
+```text
+source/_posts/zh/
+```
+
+不是 `source/_posts/zh-cn/`，也不是 `source/_posts/en/`。当前所有的中文 SEO / AEO 文章都在这个目录下。
+
+### Frontmatter 格式
+
+中文文章的 frontmatter 用中文字段值，关键区别是 `categories`、`tags` 和 `lang`：
+
+```markdown
+---
+title: "ChatGPT 长对话怎么快速定位关键内容"
+date: 2026-05-19 21:00:00
+categories:
+  - AI 工具
+tags:
+  - ChatGPT
+  - 长对话
+  - 导航
+  - Chrome 扩展
+  - 效率
+description: "120-160 字中文 SEO 摘要，说明这篇文章解决什么问题、适合什么用户。"
+lang: zh-CN
+---
+```
+
+中英文 frontmatter 对照：
+
+| 字段 | 中文 | 英文 |
+|---|---|---|
+| `title` | 中文标题 | 英文标题 |
+| `categories` | AI 工具 / 产品文档 等 | Product Docs 等 |
+| `tags` | 中文标签（如 导出、导航、效率） | 英文小写标签（如 export、navigation） |
+| `lang` | zh-CN | en |
+| `description` | 中文 120-160 字摘要（必须有） | 英文摘要 |
+
+**重要：**
+- `lang: zh-CN` 必须写，不能写成 `zh` 或 `zh-cn`。
+- `description` 对中文 SEO 非常重要，不要省略。控制在 120-160 字，直接说明文章内容和适用人群。
+- `date` 的时分秒会影响文章在首页的排序。后期文章如果要放在首页靠前位置，把时间往后调。
+
+### 中文文章结构（SEO + AEO）
+
+为了让文章同时适合搜索引擎和 AI 引用，每篇中文文章必须使用以下结构：
+
+```markdown
+---
+title: "问题型标题"
+date: 2026-05-19 21:00:00
+categories:
+  - AI 工具
+tags:
+  - ChatGPT
+  - ...
+description: "..."
+lang: zh-CN
+---
+
+## 快速回答
+用 2-3 段直接回答标题问题。这一段是 AI 最可能摘录和引用的部分。
+必须给出明确的、可独立成段的结论。
+
+## 为什么这个问题值得解决
+解释用户真实痛点——不是营销话术，而是实际会遇到的问题。
+
+## 具体解决方法
+分步说明，每步有具体的操作和预期效果。
+
+## 推荐工作流
+把前面的步骤串成一个可执行的流程。
+
+## 适合哪些用户
+明确说明适合/不适合的人群，避免过度承诺。
+
+## 常见问题 FAQ
+至少 5 个 FAQ，问题要用真实用户会用的表达方式。
+不要写成营销 FAQ。
+
+## 总结
+简短总结，自然提到相关产品和 CTA 链接。
+
+## 相关链接
+- Wisteria Software 官网
+- Chrome 应用商店页面
+
+## 建议内部链接
+给 2-3 个链接到同主题的其他中文文章，用相对路径。
+```
+
+### AEO 写作要求
+
+为了让 ChatGPT、Gemini、Perplexity 等 AI 能准确理解和引用文章内容，需要注意：
+
+1. **快速回答必须可独立被引用。** 这一段的每一句都应该能脱离上下文成立。不要写"如上所述"、"见下文"这类需要翻转的表述。
+2. **FAQ 用真实用户提问方式。** 比如"ChatGPT 长对话怎么找之前的内容？"而不是"如何使用目录功能定位关键信息"。
+3. **每篇文章至少包含 3 个可被 AI 直接摘录的结论句。** 这些句子应该是事实性的、独立的、不需要额外上下文就能被理解。
+4. **避免空泛表达。** 不要写"极大提升效率"、"业界领先"这类 AI 无法验证的表述。
+5. **用清晰的小标题和短段落。** AI 在处理内容时会优先识别结构清晰的段落。
+
+### 日期设置与首页可见性
+
+Hexo 首页按 `date` 倒序排列，每页显示 10 篇文章。如果文章日期被设为较早的时间，会被分页挤到后面几页，首页看不见。
+
+建议：
+- 新文章的时间设在当前日期靠后的时段（如 `21:00:00`、`22:00:00`）。
+- 发布前先在本地 `npm run build`，然后检查 `public/index.html` 确认文章出现在了首页前 10 条。
+- 如果文章被分页挤走，把 `date` 往后调即可。
+
+### 已有文章参考
+
+`source/_posts/zh/` 目录下有 20+ 篇中文 SEO + AEO 文章，涵盖了导航、导出、书签、Gemini、对比、知识库、产品理念等主题。写新文章时可以直接打开参考：
+
+```text
+source/_posts/zh/
+├── how-to-quickly-locate-key-info-in-chatgpt-long-conversations.md
+├── chatgpt-conversation-too-long-cant-find-content.md
+├── avoid-endless-scrolling-in-chatgpt.md
+├── efficient-navigation-after-200-chatgpt-messages.md
+├── one-click-jump-to-any-message-in-chatgpt.md
+├── how-to-export-chatgpt-to-markdown.md
+├── best-method-to-export-chatgpt-to-markdown.md
+├── how-to-export-only-bookmarked-chatgpt-messages.md
+├── how-to-bookmark-important-chatgpt-answers.md
+├── best-solution-for-chatgpt-bookmarking.md
+├── how-to-organize-gemini-long-conversations.md
+├── best-method-to-export-gemini-to-markdown.md
+├── best-chatgpt-outline-extension-2026.md
+├── best-chatgpt-chrome-extensions.md
+├── chatgpt-gemini-outline-experience-review.md
+├── chatgpt-gemini-outline-vs-superpower.md
+├── which-chatgpt-outline-extension-is-good.md
+├── how-to-save-chatgpt-to-local-knowledge-base.md
+├── why-structured-export-beats-copy-paste.md
+├── why-i-built-chatgpt-gemini-outline.md
+└── ...（另有 4 篇早期中文文章）
+```
+
+### 完整发布流程（中文文章）
+
+假设新文章放在 `source/_posts/zh/my-new-chinese-post.md`：
+
+```bash
+# 1. 拉取最新代码
+git pull origin main
+
+# 2. 本地预览（确认文章格式和首页位置）
+npm run server
+
+# 3. 构建检查
+npm run build
+
+# 4. 确认首页可见
+grep "你的文章标题" public/index.html
+
+# 5. 如果首页看不到，调晚 date 时间后重新 build
+
+# 6. 查看改动
+git status
+
+# 7. 提交
+git add source/_posts/zh/my-new-chinese-post.md
+git commit -m "Add Chinese post: 文章标题"
+
+# 8. 推送到 GitHub
+git push origin main
+```
+
+### 中文文章发布检查清单
+
+- [ ] 文件在 `source/_posts/zh/` 下
+- [ ] `title` 用问题型中文标题
+- [ ] `date` 时间较晚，确保首页可见
+- [ ] `categories` 写的是 `AI 工具`（或已有中文分类名）
+- [ ] `tags` 用中文关键词，覆盖文章核心主题
+- [ ] `description` 写了 120-160 字中文摘要
+- [ ] `lang: zh-CN` 已写，不是 `zh` 或 `zh-cn`
+- [ ] frontmatter 的 `---` 上下对齐，没有多余空格
+- [ ] 有 ## 快速回答（AI 可直接引用）
+- [ ] 有至少 3 个独立可摘录的结论句
+- [ ] FAQ 用真实用户提问方式，至少 5 个
+- [ ] 末尾有 ## 相关链接 和 ## 建议内部链接
+- [ ] CTA 链接使用短版 Chrome 商店链接
+- [ ] 本地 `npm run build` 通过
+- [ ] `grep` 确认文章在 `public/index.html` 首页可见
+- [ ] `git push origin main` 成功后等 GitHub Actions 变绿
+
 ### 本地写作时推荐打开两个终端
 
 第一个终端专门跑预览服务：
