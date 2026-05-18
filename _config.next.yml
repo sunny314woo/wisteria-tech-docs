@@ -1,0 +1,126 @@
+# NexT Theme Configuration
+# https://theme-next.js.org/docs/
+
+# Scheme
+# One of: Muse | Mist | Pisces | Gemini
+# Gemini 为经典两栏布局，适合技术文档
+scheme: Gemini
+
+# Dark Mode
+darkmode: false
+
+# Menu
+menu:
+  home: / || fa fa-home
+  categories: /categories/ || fa fa-th
+  tags: /tags/ || fa fa-tags
+  archives: /archives/ || fa fa-archive
+  about: /about/ || fa fa-user
+
+menu_settings:
+  icons: true
+  badges: false
+
+# Sidebar
+sidebar:
+  # left | right
+  position: left
+  # post | always | hide | remove
+  display: post
+  # sidebar 在文章页展开 TOC
+  padding: 18
+  offset: 12
+  b2t: true
+  scrollpercent: true
+  onmobile: false
+
+# TOC
+toc:
+  enable: true
+  number: true
+  max_depth: 3
+  wrap: false
+
+# Code block
+codeblock:
+  border_radius: 4
+  copy_button:
+    enable: true
+    style: flat
+  highlight_theme: atom-one-light
+
+# Back to top
+back2top:
+  enable: true
+  sidebar: true
+  scrollpercent: true
+
+# Reading progress
+reading_progress:
+  enable: false
+
+# Bookmark
+bookmark:
+  enable: false
+
+# Creative Commons
+creative_commons:
+  license: by-nc-sa
+  sidebar: true
+  post: false
+  language:
+
+# Footer
+footer:
+  since: 2025
+  icon:
+    name: fa fa-heart
+    animated: false
+    color: '#ff0000'
+  powered: true
+  theme:
+    enable: true
+
+# Social links (保持整洁，不放无关社交链接)
+social:
+
+social_icons:
+  enable: false
+
+# Categories & Tags
+category_tag:
+
+# Avatar
+avatar:
+  enable: false
+
+# Tags page style
+tagcloud:
+  min: 12
+  max: 30
+
+# Animation
+motion:
+  enable: false
+  async: false
+  transition:
+    accelerate_in: false
+    accelerate_out: false
+    fade: false
+    move: false
+    scale: false
+    roll: false
+
+# Vendors (CDN)
+vendors:
+  # Use internal css/js
+  internal: local
+
+# Misc
+style: null
+
+# Disable fancybox (lightbox)
+fancybox: false
+
+# Disable pjax
+pjax: false
