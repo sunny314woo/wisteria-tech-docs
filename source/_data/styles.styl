@@ -1,0 +1,521 @@
+/* ================================================================
+   Wisteria Tech Docs — Custom Brand Styles
+   NexT Pisces theme override
+   ================================================================ */
+
+// ----------------------------------------------------------
+// Color variables
+// ----------------------------------------------------------
+$brand-primary    = #7c3aed
+$brand-primary-soft = #ede9fe
+$brand-primary-light = #f5f3ff
+$brand-text       = #1f2937
+$brand-muted      = #6b7280
+$brand-border     = #e5e7eb
+$brand-bg         = #ffffff
+$brand-page-bg    = #f8fafc
+$brand-sidebar-bg = #ffffff
+$brand-code-bg    = #f5f3ff
+$brand-radius     = 12px
+$brand-radius-sm  = 8px
+$brand-shadow     = 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03)
+
+// ----------------------------------------------------------
+// Page background
+// ----------------------------------------------------------
+body {
+  background: $brand-page-bg;
+  color: $brand-text;
+}
+
+// ----------------------------------------------------------
+// Site branding area — soft purple gradient
+// ----------------------------------------------------------
+.site-brand-container {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%);
+}
+
+.site-title a,
+.site-title a:hover {
+  color: #ffffff;
+}
+
+.site-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 4px;
+}
+
+.site-nav {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.site-nav .menu-item a {
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 180ms ease;
+}
+
+.site-nav .menu-item a:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: $brand-radius-sm;
+}
+
+.site-nav .menu-item-active a {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  border-left: 3px solid #ffffff;
+  border-radius: $brand-radius-sm;
+}
+
+// ----------------------------------------------------------
+// Sidebar
+// ----------------------------------------------------------
+.sidebar-inner {
+  background: $brand-sidebar-bg;
+  border-radius: $brand-radius;
+  box-shadow: $brand-shadow;
+  border: 1px solid $brand-border;
+  padding: 20px 0;
+}
+
+.sidebar-nav .sidebar-nav-active .sidebar-nav-title,
+.sidebar-nav .sidebar-nav-active .sidebar-nav-toc {
+  color: $brand-primary;
+}
+
+// Sidebar links
+.links-of-blogroll-item a,
+.sidebar-nav li a {
+  color: $brand-muted;
+  transition: all 180ms ease;
+  border-radius: $brand-radius-sm;
+  padding: 4px 12px;
+}
+
+.links-of-blogroll-item a:hover,
+.sidebar-nav li a:hover {
+  color: $brand-primary;
+  background: $brand-primary-light;
+}
+
+// Sidebar headings
+.sidebar-nav .sidebar-nav-title {
+  color: $brand-text;
+}
+
+// Recent posts in sidebar
+.sidebar-panel {
+  margin-bottom: 8px;
+}
+
+// ----------------------------------------------------------
+// Post cards on index page
+// ----------------------------------------------------------
+.post-block {
+  background: $brand-bg;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03);
+  border: 1px solid $brand-border;
+  margin-bottom: 24px;
+  padding: 32px 36px;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.post-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+// Remove default Pisces post block bottom border
+.post-block + .post-block {
+  margin-top: 24px;
+}
+
+// Post titles
+.post-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.post-title a {
+  color: $brand-text;
+  transition: color 180ms ease;
+}
+
+.post-title a:hover {
+  color: $brand-primary;
+}
+
+// Post meta
+.post-meta {
+  color: $brand-muted;
+  font-size: 0.85rem;
+}
+
+.post-meta-item {
+  color: $brand-muted;
+}
+
+.post-meta-item a {
+  color: $brand-muted;
+  transition: color 150ms ease;
+}
+
+.post-meta-item a:hover {
+  color: $brand-primary;
+}
+
+// Post excerpt
+.post-body p {
+  color: $brand-muted;
+  line-height: 1.7;
+}
+
+// Read more button
+.post-button a {
+  color: $brand-primary;
+  border: 1px solid $brand-primary-soft;
+  background: $brand-primary-light;
+  border-radius: $brand-radius-sm;
+  padding: 4px 16px;
+  transition: all 180ms ease;
+  font-size: 0.85rem;
+}
+
+.post-button a:hover {
+  color: #ffffff;
+  background: $brand-primary;
+  border-color: $brand-primary;
+}
+
+// ----------------------------------------------------------
+// Pagination
+// ----------------------------------------------------------
+.pagination .page-number {
+  border-radius: $brand-radius-sm;
+  color: $brand-muted;
+}
+
+.pagination .page-number.current {
+  background: $brand-primary;
+  color: #ffffff;
+  border-color: $brand-primary;
+}
+
+.pagination .page-number:hover {
+  background: $brand-primary-light;
+  color: $brand-primary;
+  border-color: $brand-primary-soft;
+}
+
+// ----------------------------------------------------------
+// Post detail page
+// ----------------------------------------------------------
+.post-body {
+  line-height: 1.8;
+  color: $brand-text;
+  font-size: 1.02rem;
+}
+
+// H2 styling
+.post-body h2 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: $brand-text;
+  border-bottom: 1px solid $brand-border;
+  padding-bottom: 8px;
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+
+// H3 styling
+.post-body h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $brand-text;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+// Links
+.post-body a,
+a {
+  color: $brand-primary;
+  transition: color 150ms ease, border-color 150ms ease;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.post-body a:hover,
+a:hover {
+  color: darken($brand-primary, 10%);
+  border-bottom-color: darken($brand-primary, 10%);
+}
+
+// Inline code
+.post-body code,
+code {
+  background: $brand-code-bg;
+  color: darken($brand-primary, 15%);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.9em;
+  border: none;
+}
+
+// Code blocks
+.post-body pre,
+figure.highlight,
+.highlight {
+  background: #1e293b;
+  border-radius: $brand-radius-sm;
+  border: 1px solid darken($brand-border, 3%);
+}
+
+figure.highlight figcaption,
+.highlight .gutter {
+  background: rgba(0, 0, 0, 0.06);
+  color: $brand-muted;
+}
+
+.highlight .gutter pre {
+  color: $brand-muted;
+}
+
+// Blockquote
+.post-body blockquote,
+blockquote {
+  border-left: 4px solid $brand-primary;
+  background: $brand-primary-light;
+  color: $brand-text;
+  padding: 12px 20px;
+  margin: 20px 0;
+  border-radius: 0 $brand-radius-sm $brand-radius-sm 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+// Tables
+.post-body table,
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+.post-body th,
+th {
+  background: $brand-primary-light;
+  color: $brand-text;
+  font-weight: 600;
+  padding: 10px 14px;
+  border: 1px solid $brand-border;
+  text-align: left;
+}
+
+.post-body td,
+td {
+  padding: 10px 14px;
+  border: 1px solid $brand-border;
+}
+
+.post-body tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+// Images
+.post-body img {
+  border-radius: $brand-radius-sm;
+  box-shadow: $brand-shadow;
+  border: 1px solid $brand-border;
+  max-width: 100%;
+}
+
+// ----------------------------------------------------------
+// TOC styling
+// ----------------------------------------------------------
+.post-toc .nav .nav-item .nav-link {
+  color: $brand-muted;
+  transition: all 180ms ease;
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+
+.post-toc .nav .nav-item .nav-link:hover {
+  color: $brand-primary;
+  background: $brand-primary-light;
+}
+
+.post-toc .nav .active .nav-link {
+  color: $brand-primary;
+  background: $brand-primary-light;
+  font-weight: 500;
+  border-left: 2px solid $brand-primary;
+}
+
+// TOC number
+.post-toc .nav .nav-number {
+  color: $brand-muted;
+}
+
+// ----------------------------------------------------------
+// Footer
+// ----------------------------------------------------------
+.footer {
+  color: $brand-muted;
+  font-size: 0.85rem;
+}
+
+.footer a {
+  color: $brand-muted;
+  transition: color 150ms ease;
+  border-bottom: none;
+}
+
+.footer a:hover {
+  color: $brand-primary;
+}
+
+// ----------------------------------------------------------
+// Tags page
+// ----------------------------------------------------------
+.tag-cloud a {
+  color: $brand-muted;
+  border-radius: $brand-radius-sm;
+  transition: all 180ms ease;
+}
+
+.tag-cloud a:hover {
+  color: $brand-primary;
+  background: $brand-primary-light;
+  border-color: $brand-primary-soft;
+}
+
+// ----------------------------------------------------------
+// Category page
+// ----------------------------------------------------------
+.category-list a {
+  color: $brand-text;
+  transition: color 150ms ease;
+  border-bottom: none;
+}
+
+.category-list a:hover {
+  color: $brand-primary;
+}
+
+// ----------------------------------------------------------
+// Archive page
+// ----------------------------------------------------------
+.posts-collapse .post-header a {
+  color: $brand-text;
+  transition: color 150ms ease;
+  border-bottom: none;
+}
+
+.posts-collapse .post-header a:hover {
+  color: $brand-primary;
+}
+
+// ----------------------------------------------------------
+// Search
+// ----------------------------------------------------------
+.local-search-popup .search-result-list li {
+  border-radius: $brand-radius-sm;
+  transition: background 150ms ease;
+}
+
+.local-search-popup .search-result-list li:hover {
+  background: $brand-primary-light;
+}
+
+.local-search-popup .search-keyword {
+  color: $brand-primary;
+  background: $brand-primary-soft;
+  border-radius: 3px;
+}
+
+// ----------------------------------------------------------
+// Back to top button
+// ----------------------------------------------------------
+.back-to-top {
+  background: $brand-primary;
+  color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba($brand-primary, 0.3);
+  transition: all 200ms ease;
+}
+
+.back-to-top:hover {
+  background: darken($brand-primary, 8%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba($brand-primary, 0.4);
+}
+
+// ----------------------------------------------------------
+// Content area width
+// ----------------------------------------------------------
+.content-wrap {
+  width: 72%;
+}
+
+.main-inner {
+  max-width: 920px;
+}
+
+// ----------------------------------------------------------
+// Responsive
+// ----------------------------------------------------------
+@media (max-width: 768px) {
+  .content-wrap {
+    width: 100%;
+  }
+
+  .post-block {
+    padding: 20px 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+
+  .site-brand-container {
+    border-radius: 0;
+  }
+}
+
+// ----------------------------------------------------------
+// Header (post detail)
+// ----------------------------------------------------------
+.post-header h1 {
+  font-size: 1.6rem;
+}
+
+// ----------------------------------------------------------
+// Muted helper text
+// ----------------------------------------------------------
+.post-meta-divider {
+  color: $brand-border;
+}
+
+// ----------------------------------------------------------
+// Smooth scrollbar (WebKit)
+// ----------------------------------------------------------
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $brand-border;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darken($brand-border, 15%);
+}

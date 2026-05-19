@@ -4,7 +4,7 @@
 # Site
 title: Wisteria Tech Docs
 subtitle: ''
-description: 'Wisteria Software 产品技术文档与开发笔记 — Chrome 插件 · 本地优先工具 · FastAPI 后端 · MySQL / 原生 SQL'
+description: 'Technical docs, product notes, and local-first AI workflow experiments.'
 keywords: [Wisteria, tech-docs, outline, inbox, chrome-extension, fastapi, mysql, local-first]
 author: Wisteria Software
 language: zh-CN
@@ -39,7 +39,7 @@ external_link:
   exclude:
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js

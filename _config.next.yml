@@ -41,7 +41,7 @@ sidebar:
 recent_posts:
   enable: true
   title: 近期文章
-  count: 5
+  count: 20
 
 # ---------------------------------------------------------------
 # TOC — 文章内目录
@@ -135,8 +135,9 @@ motion:
 vendors:
   internal: local
 
-# Misc
-style: null
+# Custom file paths — inject custom Stylus
+custom_file_path:
+  style: source/_data/styles.styl
 
 # Disable extras
 fancybox: false
