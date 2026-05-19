@@ -2,10 +2,10 @@
 ## Docs: https://hexo.io/docs/configuration.html
 
 # Site
-title: Wisteria Tech Docs
-subtitle: '技术文档 · 产品笔记 · 本地优先 AI 工作流'
-description: 'Technical docs, product notes, and local-first AI workflow experiments.'
-keywords: [Wisteria, tech-docs, outline, inbox, chrome-extension, fastapi, mysql, local-first]
+title: Wisteria Blog
+subtitle: 'AI 对话整理、导出与本地知识管理'
+description: 'Wisteria Software 的 AI 对话工作流博客，分享 ChatGPT、Gemini、Outline、Inbox、本地优先归档与隐私友好的知识管理实践。'
+keywords: [Wisteria, Wisteria Blog, ChatGPT, Gemini, Outline, Inbox, AI 对话, Markdown 导出, 本地优先, 知识管理]
 author: Wisteria Software
 language: zh-CN
 timezone: Asia/Shanghai
