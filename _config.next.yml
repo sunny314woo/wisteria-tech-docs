@@ -135,9 +135,10 @@ motion:
 vendors:
   internal: local
 
-# Custom file paths — inject custom Stylus
+# Custom file paths — inject custom Stylus + sidebar widgets
 custom_file_path:
   style: source/_data/styles.styl
+  sidebar: _templates/sidebar-recent-posts.njk
 
 # Disable extras
 fancybox: false

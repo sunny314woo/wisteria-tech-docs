@@ -6,76 +6,174 @@
 // ----------------------------------------------------------
 // Color variables
 // ----------------------------------------------------------
-$brand-primary    = #7c3aed
-$brand-primary-soft = #ede9fe
+$brand-primary       = #7c3aed
+$brand-primary-soft  = #ede9fe
 $brand-primary-light = #f5f3ff
-$brand-text       = #1f2937
-$brand-muted      = #6b7280
-$brand-border     = #e5e7eb
-$brand-bg         = #ffffff
-$brand-page-bg    = #f8fafc
-$brand-sidebar-bg = #ffffff
-$brand-code-bg    = #f5f3ff
-$brand-radius     = 12px
-$brand-radius-sm  = 8px
-$brand-shadow     = 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03)
+$brand-text          = #1f2937
+$brand-muted         = #6b7280
+$brand-border        = #e5e7eb
+$brand-bg            = #ffffff
+$brand-page-bg       = #f8fafc
+$brand-code-bg       = #f5f3ff
+$brand-radius        = 12px
+$brand-radius-sm     = 8px
+$brand-shadow        = 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.03)
 
 // ----------------------------------------------------------
-// Page background
+// 1. Global — page background + font
 // ----------------------------------------------------------
 body {
   background: $brand-page-bg;
   color: $brand-text;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // ----------------------------------------------------------
-// Site branding area — soft purple gradient
+// 2. Site branding — white bg + purple title (NO gradient)
 // ----------------------------------------------------------
 .site-brand-container {
-  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%);
+  background: $brand-bg;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
 }
 
 .site-title a,
 .site-title a:hover {
-  color: #ffffff;
+  color: $brand-primary;
 }
 
 .site-subtitle {
-  color: rgba(255, 255, 255, 0.85);
-  margin-top: 4px;
-}
-
-.site-nav {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.site-nav .menu-item a {
-  color: rgba(255, 255, 255, 0.75);
-  transition: all 180ms ease;
-}
-
-.site-nav .menu-item a:hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: $brand-radius-sm;
-}
-
-.site-nav .menu-item-active a {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.18);
-  border-left: 3px solid #ffffff;
-  border-radius: $brand-radius-sm;
+  color: $brand-muted;
+  margin-top: 2px;
+  font-size: 0.78rem;
+  font-weight: 400;
 }
 
 // ----------------------------------------------------------
-// Sidebar
+// 3. Menu items — dark text, visible on white bg
+// ----------------------------------------------------------
+.site-nav {
+  border-top: 1px solid $brand-border;
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+.site-nav .menu-item {
+  margin: 2px 0;
+}
+
+.site-nav .menu-item a {
+  color: $brand-text;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: $brand-radius-sm;
+  transition: all 180ms ease;
+  display: block;
+}
+
+.site-nav .menu-item a:hover {
+  color: $brand-primary;
+  background: $brand-primary-light;
+}
+
+// Active menu item — purple left accent + light bg
+.site-nav .menu-item-active a {
+  color: $brand-primary;
+  background: $brand-primary-light;
+  border-left: 3px solid $brand-primary;
+  font-weight: 600;
+}
+
+// Override NexT default colored menu badges
+.menu-item .badge {
+  background: $brand-primary-soft;
+  color: $brand-primary;
+  font-weight: 500;
+}
+
+// ----------------------------------------------------------
+// 4. Sidebar container
 // ----------------------------------------------------------
 .sidebar-inner {
   background: $brand-sidebar-bg;
   border-radius: $brand-radius;
   box-shadow: $brand-shadow;
   border: 1px solid $brand-border;
-  padding: 20px 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sidebar {
+  background: transparent;
+}
+
+// ----------------------------------------------------------
+// 5. Sidebar panels — recent posts, links, etc.
+// ----------------------------------------------------------
+.sidebar-panel {
+  padding: 0 18px 18px 18px;
+}
+
+// Each sidebar widget heading
+.sidebar-panel .sidebar-panel-title,
+.links-of-blogroll-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $brand-muted;
+  margin: 16px 0 10px 0;
+  padding: 0;
+}
+
+// Recent posts list — expanded, full titles
+.links-of-blogroll-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links-of-blogroll-item {
+  margin: 0;
+  padding: 0;
+}
+
+.links-of-blogroll-item a {
+  display: block;
+  color: $brand-text;
+  font-size: 0.88rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 150ms ease;
+  line-height: 1.4;
+  white-space: normal;
+  overflow: visible;
+}
+
+.links-of-blogroll-item a:hover {
+  color: $brand-primary;
+  background: $brand-primary-light;
+}
+
+// Sidebar nav links (TOC sidebar)
+.sidebar-nav li a {
+  color: $brand-muted;
+  transition: all 180ms ease;
+  border-radius: 6px;
+  padding: 4px 10px;
+  display: block;
+}
+
+.sidebar-nav li a:hover {
+  color: $brand-primary;
+  background: $brand-primary-light;
 }
 
 .sidebar-nav .sidebar-nav-active .sidebar-nav-title,
@@ -83,38 +181,18 @@ body {
   color: $brand-primary;
 }
 
-// Sidebar links
-.links-of-blogroll-item a,
-.sidebar-nav li a {
-  color: $brand-muted;
-  transition: all 180ms ease;
-  border-radius: $brand-radius-sm;
-  padding: 4px 12px;
-}
-
-.links-of-blogroll-item a:hover,
-.sidebar-nav li a:hover {
-  color: $brand-primary;
-  background: $brand-primary-light;
-}
-
-// Sidebar headings
 .sidebar-nav .sidebar-nav-title {
   color: $brand-text;
-}
-
-// Recent posts in sidebar
-.sidebar-panel {
-  margin-bottom: 8px;
+  font-weight: 600;
 }
 
 // ----------------------------------------------------------
-// Post cards on index page
+// 6. Post cards on index page
 // ----------------------------------------------------------
 .post-block {
   background: $brand-bg;
   border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.03);
   border: 1px solid $brand-border;
   margin-bottom: 24px;
   padding: 32px 36px;
@@ -123,19 +201,19 @@ body {
 
 .post-block:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
 }
 
-// Remove default Pisces post block bottom border
 .post-block + .post-block {
   margin-top: 24px;
 }
 
 // Post titles
 .post-title {
-  font-size: 1.35rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
   line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 
 .post-title a {
@@ -150,13 +228,10 @@ body {
 // Post meta
 .post-meta {
   color: $brand-muted;
-  font-size: 0.85rem;
+  font-size: 0.83rem;
 }
 
-.post-meta-item {
-  color: $brand-muted;
-}
-
+.post-meta-item,
 .post-meta-item a {
   color: $brand-muted;
   transition: color 150ms ease;
@@ -168,19 +243,24 @@ body {
 
 // Post excerpt
 .post-body p {
-  color: $brand-muted;
+  color: darken($brand-muted, 5%);
   line-height: 1.7;
 }
 
 // Read more button
+.post-button {
+  margin-top: 16px;
+}
+
 .post-button a {
   color: $brand-primary;
   border: 1px solid $brand-primary-soft;
   background: $brand-primary-light;
   border-radius: $brand-radius-sm;
-  padding: 4px 16px;
+  padding: 5px 18px;
   transition: all 180ms ease;
   font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .post-button a:hover {
@@ -190,11 +270,15 @@ body {
 }
 
 // ----------------------------------------------------------
-// Pagination
+// 7. Pagination
 // ----------------------------------------------------------
 .pagination .page-number {
   border-radius: $brand-radius-sm;
   color: $brand-muted;
+  transition: all 150ms ease;
+  min-width: 36px;
+  height: 36px;
+  line-height: 36px;
 }
 
 .pagination .page-number.current {
@@ -203,25 +287,25 @@ body {
   border-color: $brand-primary;
 }
 
-.pagination .page-number:hover {
+.pagination .page-number:hover:not(.current) {
   background: $brand-primary-light;
   color: $brand-primary;
   border-color: $brand-primary-soft;
 }
 
 // ----------------------------------------------------------
-// Post detail page
+// 8. Post detail page
 // ----------------------------------------------------------
 .post-body {
-  line-height: 1.8;
+  line-height: 1.85;
   color: $brand-text;
-  font-size: 1.02rem;
+  font-size: 1rem;
 }
 
-// H2 styling
+// H2
 .post-body h2 {
-  font-size: 1.45rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: $brand-text;
   border-bottom: 1px solid $brand-border;
   padding-bottom: 8px;
@@ -229,9 +313,9 @@ body {
   margin-bottom: 16px;
 }
 
-// H3 styling
+// H3
 .post-body h3 {
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   font-weight: 600;
   color: $brand-text;
   margin-top: 28px;
@@ -239,29 +323,27 @@ body {
 }
 
 // Links
-.post-body a,
-a {
+.post-body a {
   color: $brand-primary;
   transition: color 150ms ease, border-color 150ms ease;
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
 
-.post-body a:hover,
-a:hover {
-  color: darken($brand-primary, 10%);
-  border-bottom-color: darken($brand-primary, 10%);
+.post-body a:hover {
+  color: darken($brand-primary, 12%);
+  border-bottom-color: darken($brand-primary, 12%);
 }
 
 // Inline code
-.post-body code,
-code {
+.post-body code {
   background: $brand-code-bg;
-  color: darken($brand-primary, 15%);
+  color: darken($brand-primary, 18%);
   border-radius: 4px;
   padding: 2px 6px;
   font-size: 0.9em;
   border: none;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", Menlo, Monaco, monospace;
 }
 
 // Code blocks
@@ -270,45 +352,37 @@ figure.highlight,
 .highlight {
   background: #1e293b;
   border-radius: $brand-radius-sm;
-  border: 1px solid darken($brand-border, 3%);
+  border: none;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", Menlo, Monaco, monospace;
+  font-size: 0.88rem;
 }
 
 figure.highlight figcaption,
 .highlight .gutter {
-  background: rgba(0, 0, 0, 0.06);
-  color: $brand-muted;
-}
-
-.highlight .gutter pre {
-  color: $brand-muted;
+  color: rgba(255,255,255,0.4);
 }
 
 // Blockquote
-.post-body blockquote,
-blockquote {
+.post-body blockquote {
   border-left: 4px solid $brand-primary;
   background: $brand-primary-light;
   color: $brand-text;
-  padding: 12px 20px;
-  margin: 20px 0;
+  padding: 14px 22px;
+  margin: 22px 0;
   border-radius: 0 $brand-radius-sm $brand-radius-sm 0;
-
-  p {
-    margin: 0;
-  }
 }
 
 // Tables
-.post-body table,
-table {
+.post-body table {
   border-collapse: collapse;
   width: 100%;
   margin: 20px 0;
   font-size: 0.9rem;
+  border-radius: $brand-radius-sm;
+  overflow: hidden;
 }
 
-.post-body th,
-th {
+.post-body th {
   background: $brand-primary-light;
   color: $brand-text;
   font-weight: 600;
@@ -317,8 +391,7 @@ th {
   text-align: left;
 }
 
-.post-body td,
-td {
+.post-body td {
   padding: 10px 14px;
   border: 1px solid $brand-border;
 }
@@ -336,13 +409,14 @@ td {
 }
 
 // ----------------------------------------------------------
-// TOC styling
+// 9. TOC
 // ----------------------------------------------------------
 .post-toc .nav .nav-item .nav-link {
   color: $brand-muted;
   transition: all 180ms ease;
   border-radius: 4px;
   padding: 3px 8px;
+  font-size: 0.88rem;
 }
 
 .post-toc .nav .nav-item .nav-link:hover {
@@ -357,17 +431,16 @@ td {
   border-left: 2px solid $brand-primary;
 }
 
-// TOC number
 .post-toc .nav .nav-number {
   color: $brand-muted;
 }
 
 // ----------------------------------------------------------
-// Footer
+// 10. Footer
 // ----------------------------------------------------------
 .footer {
   color: $brand-muted;
-  font-size: 0.85rem;
+  font-size: 0.83rem;
 }
 
 .footer a {
@@ -381,12 +454,13 @@ td {
 }
 
 // ----------------------------------------------------------
-// Tags page
+// 11. Tags & Categories
 // ----------------------------------------------------------
 .tag-cloud a {
   color: $brand-muted;
   border-radius: $brand-radius-sm;
   transition: all 180ms ease;
+  padding: 4px 10px;
 }
 
 .tag-cloud a:hover {
@@ -395,21 +469,23 @@ td {
   border-color: $brand-primary-soft;
 }
 
-// ----------------------------------------------------------
-// Category page
-// ----------------------------------------------------------
 .category-list a {
   color: $brand-text;
   transition: color 150ms ease;
   border-bottom: none;
+  font-size: 1rem;
 }
 
 .category-list a:hover {
   color: $brand-primary;
 }
 
+.category-list-count {
+  color: $brand-muted;
+}
+
 // ----------------------------------------------------------
-// Archive page
+// 12. Archive
 // ----------------------------------------------------------
 .posts-collapse .post-header a {
   color: $brand-text;
@@ -422,7 +498,7 @@ td {
 }
 
 // ----------------------------------------------------------
-// Search
+// 13. Search popup
 // ----------------------------------------------------------
 .local-search-popup .search-result-list li {
   border-radius: $brand-radius-sm;
@@ -440,7 +516,7 @@ td {
 }
 
 // ----------------------------------------------------------
-// Back to top button
+// 14. Back to top
 // ----------------------------------------------------------
 .back-to-top {
   background: $brand-primary;
@@ -457,7 +533,7 @@ td {
 }
 
 // ----------------------------------------------------------
-// Content area width
+// 15. Content width
 // ----------------------------------------------------------
 .content-wrap {
   width: 72%;
@@ -468,7 +544,7 @@ td {
 }
 
 // ----------------------------------------------------------
-// Responsive
+// 16. Responsive
 // ----------------------------------------------------------
 @media (max-width: 768px) {
   .content-wrap {
@@ -480,28 +556,26 @@ td {
     border-radius: 12px;
     margin-bottom: 16px;
   }
-
-  .site-brand-container {
-    border-radius: 0;
-  }
 }
 
 // ----------------------------------------------------------
-// Header (post detail)
+// 17. Header
 // ----------------------------------------------------------
 .post-header h1 {
-  font-size: 1.6rem;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 // ----------------------------------------------------------
-// Muted helper text
+// 18. Misc
 // ----------------------------------------------------------
 .post-meta-divider {
   color: $brand-border;
 }
 
 // ----------------------------------------------------------
-// Smooth scrollbar (WebKit)
+// 19. Scrollbar
 // ----------------------------------------------------------
 ::-webkit-scrollbar {
   width: 6px;
