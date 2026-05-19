@@ -1,13 +1,16 @@
 # NexT Theme Configuration
 # https://theme-next.js.org/docs/
 
-# Scheme
-# One of: Muse | Mist | Pisces | Gemini
-# Gemini 为经典两栏布局，适合技术文档
-scheme: Gemini
+# Scheme: Pisces — 宽侧边栏，适合技术文档导航
+scheme: Pisces
 
 # Dark Mode
 darkmode: false
+
+# Favicon
+favicon:
+  small: /images/favicon-16x16-next.png
+  medium: /images/favicon-32x32-next.png
 
 # Menu
 menu:
@@ -21,20 +24,28 @@ menu_settings:
   icons: true
   badges: false
 
-# Sidebar
+# ---------------------------------------------------------------
+# Sidebar — 固定显示，左侧显示近期文章、分类、标签
+# ---------------------------------------------------------------
 sidebar:
-  # left | right
   position: left
-  # post | always | hide | remove
-  display: post
-  # sidebar 在文章页展开 TOC
+  # always: 所有页面固定显示侧边栏
+  display: always
   padding: 18
   offset: 12
   b2t: true
   scrollpercent: true
   onmobile: false
 
-# TOC
+# Recent Posts
+recent_posts:
+  enable: true
+  title: 近期文章
+  count: 5
+
+# ---------------------------------------------------------------
+# TOC — 文章内目录
+# ---------------------------------------------------------------
 toc:
   enable: true
   number: true
@@ -63,6 +74,16 @@ reading_progress:
 bookmark:
   enable: false
 
+# ---------------------------------------------------------------
+# 本地搜索
+# ---------------------------------------------------------------
+local_search:
+  enable: true
+  trigger: auto
+  top_n_per_article: 1
+  unescape: false
+  preload: false
+
 # Creative Commons
 creative_commons:
   license: by-nc-sa
@@ -76,21 +97,18 @@ footer:
   icon:
     name: fa fa-heart
     animated: false
-    color: '#ff0000'
+    color: '#808080'
   powered: true
   theme:
     enable: true
 
-# Social links (保持整洁，不放无关社交链接)
+# Social (不启用)
 social:
 
 social_icons:
   enable: false
 
-# Categories & Tags
-category_tag:
-
-# Avatar
+# Avatar (不启用)
 avatar:
   enable: false
 
@@ -99,7 +117,9 @@ tagcloud:
   min: 12
   max: 30
 
-# Animation
+# ---------------------------------------------------------------
+# 动画 — 全部关闭，技术文档风格
+# ---------------------------------------------------------------
 motion:
   enable: false
   async: false
@@ -111,16 +131,13 @@ motion:
     scale: false
     roll: false
 
-# Vendors (CDN)
+# Vendors
 vendors:
-  # Use internal css/js
   internal: local
 
 # Misc
 style: null
 
-# Disable fancybox (lightbox)
+# Disable extras
 fancybox: false
-
-# Disable pjax
 pjax: false

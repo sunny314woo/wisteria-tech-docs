@@ -3,9 +3,9 @@
 
 # Site
 title: Wisteria Tech Docs
-subtitle: 技术文档与开发笔记
-description: Wisteria Software 产品线的技术文档、开发笔记与产品更新日志。Local-first, privacy-friendly, technical documentation.
-keywords: [Wisteria, tech-docs, outline, inbox, chrome-extension, fastapi]
+subtitle: ''
+description: 'Wisteria Software 产品技术文档与开发笔记 — Chrome 插件 · 本地优先工具 · FastAPI 后端 · MySQL / 原生 SQL'
+keywords: [Wisteria, tech-docs, outline, inbox, chrome-extension, fastapi, mysql, local-first]
 author: Wisteria Software
 language: zh-CN
 timezone: Asia/Shanghai
