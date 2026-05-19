@@ -20,7 +20,8 @@
         posts: '日志',
         categories: '分类',
         tags: '标签',
-        recent: '近期文章'
+        recent: '近期文章',
+        related: '相关文章'
       },
       post: {
         posted: '发表于',
@@ -62,7 +63,8 @@
         posts: 'Posts',
         categories: 'Categories',
         tags: 'Tags',
-        recent: 'Recent Posts'
+        recent: 'Recent Posts',
+        related: 'Related Posts'
       },
       post: {
         posted: 'Posted on',
@@ -157,6 +159,9 @@
     document.querySelectorAll('[data-i18n="recent_posts"], .links-of-blogroll-title').forEach(element => {
       element.textContent = t.sidebar.recent;
     });
+    document.querySelectorAll('[data-i18n="related_posts"]').forEach(element => {
+      element.textContent = t.sidebar.related;
+    });
     document.querySelectorAll('[data-i18n="official_site"]').forEach(element => {
       element.textContent = t.officialSite;
     });
@@ -233,7 +238,7 @@
       button.setAttribute('aria-pressed', String(active));
     });
     document.querySelectorAll('[data-ui-lang-label]').forEach(element => {
-      element.textContent = lang === 'zh-CN' ? '中' : 'EN';
+      element.textContent = lang === 'zh-CN' ? 'EN' : '中';
     });
     document.querySelectorAll('[data-ui-lang-toggle]').forEach(button => {
       button.dataset.currentLang = lang;
@@ -288,14 +293,32 @@
     });
   };
 
+  const placeRelatedPosts = () => {
+    const related = document.querySelector('[data-sidebar-related]');
+    if (!related || related.dataset.placed === 'true') return;
+
+    const backToTop = document.querySelector('.sidebar-inner .back-to-top');
+    const activeSidebar = document.querySelector('.sidebar-inner.sidebar-nav-active') || document.querySelector('.sidebar-inner');
+    if (!activeSidebar) return;
+
+    if (backToTop) {
+      backToTop.insertAdjacentElement('afterend', related);
+    } else {
+      activeSidebar.appendChild(related);
+    }
+    related.dataset.placed = 'true';
+  };
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       updateSearchShortcut();
+      placeRelatedPosts();
       applyTheme(getInitialTheme());
       applyLanguage(getInitialLanguage());
     });
   } else {
     updateSearchShortcut();
+    placeRelatedPosts();
     applyTheme(getInitialTheme());
     applyLanguage(getInitialLanguage());
   }

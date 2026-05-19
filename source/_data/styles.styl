@@ -491,6 +491,22 @@ html[data-theme] .site-tools-theme-icon::before {
   border-left-color: $brand-primary;
 }
 
+.sidebar-inner > .wt-related-posts {
+  border-top: 1px solid $brand-border;
+  margin: 16px 20px 0;
+  padding-top: 14px;
+}
+
+.wt-related-posts .links-of-blogroll-title {
+  margin-bottom: 8px;
+}
+
+.wt-related-posts .links-of-blogroll-item a {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  padding: 5px 8px;
+}
+
 // Sidebar state (posts/categories/tags count)
 .site-state {
   padding: 4px 0;
@@ -609,6 +625,10 @@ html[data-theme] .site-tools-theme-icon::before {
   color: $brand-primary-hover;
   background: none;
   border-color: transparent;
+}
+
+.post-footer .post-eof {
+  display: none;
 }
 
 // ----------------------------------------------------------
@@ -1145,7 +1165,7 @@ figure.highlight figcaption,
 }
 
 .wt-language-toggle {
-  min-width: 50px;
+  min-width: 34px;
 }
 
 .wt-theme-toggle {
@@ -1242,6 +1262,38 @@ html[data-theme="dark"] .sidebar-inner {
   border-right-color: transparent;
 }
 
+.sidebar-toggle {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  color: $brand-text;
+}
+
+.sidebar-toggle .toggle-line {
+  background: $brand-text;
+}
+
+.sidebar-toggle:hover,
+.sidebar-active .sidebar-toggle {
+  background: $brand-primary-light;
+}
+
+.sidebar-toggle:hover .toggle-line,
+.sidebar-active .sidebar-toggle .toggle-line {
+  background: $brand-primary;
+}
+
+html[data-theme="dark"] .sidebar-toggle {
+  background: rgba(15, 23, 42, 0.92);
+  border-color: rgba(148, 163, 184, 0.18);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="dark"] .sidebar-toggle .toggle-line {
+  background: $brand-body-text;
+}
+
 .search-pop-overlay {
   z-index: 120;
 }
@@ -1250,7 +1302,10 @@ html[data-theme="dark"] .sidebar-inner {
   border: 1px solid $brand-border;
   border-radius: 8px;
   box-shadow: 0 30px 80px rgba(15, 23, 42, 0.22);
+  height: min(44vh, 420px);
+  max-height: 440px;
   overflow: hidden;
+  width: unquote('min(700px, calc(100vw - 32px))');
 }
 
 .search-popup .search-header {
@@ -1260,6 +1315,17 @@ html[data-theme="dark"] .sidebar-inner {
 
 .search-popup .search-input {
   color: $brand-text;
+}
+
+.search-popup .search-result-container {
+  height: calc(100% - 46px);
+  min-height: 220px;
+  overflow: auto;
+}
+
+.search-popup .search-result-icon:has(.fa-spinner),
+.search-popup .search-result-icon:has(.fa-search) {
+  display: none;
 }
 
 html[data-theme="dark"] .search-popup {
