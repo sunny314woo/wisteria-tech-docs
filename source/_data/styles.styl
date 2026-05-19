@@ -1,113 +1,113 @@
 /* ================================================================
-   Wisteria Tech Docs — Custom Brand Styles
+   Wisteria Tech Docs — Docs-style Brand (Tailwind / Vercel inspired)
    NexT Pisces theme override
    ================================================================ */
 
 // ----------------------------------------------------------
-// Color variables
+// Colors — classic blue
 // ----------------------------------------------------------
-$brand-primary       = #7c3aed
-$brand-primary-soft  = #ede9fe
-$brand-primary-light = #f5f3ff
-$brand-text          = #1f2937
+$brand-primary       = #2563eb
+$brand-primary-soft  = #dbeafe
+$brand-primary-light = #eff6ff
+$brand-text          = #111827
 $brand-muted         = #6b7280
 $brand-border        = #e5e7eb
 $brand-bg            = #ffffff
-$brand-page-bg       = #f8fafc
-$brand-code-bg       = #f5f3ff
-$brand-radius        = 12px
-$brand-radius-sm     = 8px
-$brand-shadow        = 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.03)
+$brand-page-bg       = #ffffff
+$brand-code-bg       = #eff6ff
+$brand-radius        = 6px
+$brand-radius-sm     = 4px
 
 // ----------------------------------------------------------
-// 1. Global — page background + font
+// 1. Global
 // ----------------------------------------------------------
 body {
   background: $brand-page-bg;
   color: $brand-text;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 // ----------------------------------------------------------
-// 2. Site branding — white bg + purple title (NO gradient)
+// 2. Site branding — dark header like Tailwind docs
 // ----------------------------------------------------------
 .site-brand-container {
-  background: $brand-bg;
+  background: #0f172a;
+  padding: 24px 20px 20px 20px;
 }
 
 .site-title {
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   letter-spacing: -0.01em;
 }
 
 .site-title a,
 .site-title a:hover {
-  color: $brand-primary;
+  color: #ffffff;
 }
 
 .site-subtitle {
-  color: $brand-muted;
-  margin-top: 2px;
-  font-size: 0.78rem;
+  color: #94a3b8;
+  margin-top: 4px;
+  font-size: 0.75rem;
   font-weight: 400;
+  line-height: 1.5;
 }
 
 // ----------------------------------------------------------
-// 3. Menu items — dark text, visible on white bg
+// 3. Menu — clean nav links, dark bg
 // ----------------------------------------------------------
 .site-nav {
-  border-top: 1px solid $brand-border;
-  padding-top: 10px;
-  margin-top: 6px;
+  border-top: 1px solid #1e293b;
+  padding-top: 12px;
+  margin-top: 16px;
 }
 
 .site-nav .menu-item {
-  margin: 2px 0;
+  margin: 1px 0;
 }
 
 .site-nav .menu-item a {
-  color: $brand-text;
+  color: #94a3b8;
   font-weight: 500;
-  font-size: 0.9rem;
-  padding: 6px 14px;
+  font-size: 0.875rem;
+  padding: 6px 12px;
   border-radius: $brand-radius-sm;
-  transition: all 180ms ease;
+  transition: all 150ms ease;
   display: block;
 }
 
 .site-nav .menu-item a:hover {
-  color: $brand-primary;
-  background: $brand-primary-light;
+  color: #ffffff;
+  background: #1e293b;
 }
 
-// Active menu item — purple left accent + light bg
 .site-nav .menu-item-active a {
-  color: $brand-primary;
-  background: $brand-primary-light;
-  border-left: 3px solid $brand-primary;
+  color: #ffffff;
+  background: $brand-primary;
+  border-left: none;
   font-weight: 600;
 }
 
-// Override NexT default colored menu badges
 .menu-item .badge {
-  background: $brand-primary-soft;
-  color: $brand-primary;
+  background: rgba(255,255,255,0.15);
+  color: #cbd5e1;
   font-weight: 500;
 }
 
 // ----------------------------------------------------------
-// 4. Sidebar container
+// 4. Sidebar — flat, clean, no shadows
 // ----------------------------------------------------------
 .sidebar-inner {
-  background: $brand-sidebar-bg;
-  border-radius: $brand-radius;
-  box-shadow: $brand-shadow;
-  border: 1px solid $brand-border;
+  background: $brand-bg;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-right: 1px solid $brand-border;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .sidebar {
@@ -115,25 +115,28 @@ body {
 }
 
 // ----------------------------------------------------------
-// 5. Sidebar panels — recent posts, links, etc.
+// 5. Sidebar panels — docs-nav style
 // ----------------------------------------------------------
 .sidebar-panel {
-  padding: 0 18px 18px 18px;
+  padding: 0 20px 20px 20px;
 }
 
-// Each sidebar widget heading
-.sidebar-panel .sidebar-panel-title,
+.links-of-blogroll {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid $brand-border;
+}
+
 .links-of-blogroll-title {
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: $brand-muted;
-  margin: 16px 0 10px 0;
+  margin: 0 0 8px 0;
   padding: 0;
 }
 
-// Recent posts list — expanded, full titles
 .links-of-blogroll-list {
   list-style: none;
   margin: 0;
@@ -147,78 +150,90 @@ body {
 
 .links-of-blogroll-item a {
   display: block;
-  color: $brand-text;
-  font-size: 0.88rem;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: all 150ms ease;
+  color: #475569;
+  font-size: 0.825rem;
+  padding: 4px 8px;
+  border-radius: $brand-radius-sm;
+  transition: all 120ms ease;
   line-height: 1.4;
   white-space: normal;
   overflow: visible;
+  border-left: 2px solid transparent;
 }
 
 .links-of-blogroll-item a:hover {
   color: $brand-primary;
   background: $brand-primary-light;
+  border-left-color: $brand-primary;
 }
 
-// Sidebar nav links (TOC sidebar)
-.sidebar-nav li a {
-  color: $brand-muted;
-  transition: all 180ms ease;
-  border-radius: 6px;
-  padding: 4px 10px;
-  display: block;
+// Sidebar state (posts/categories/tags count)
+.site-state {
+  padding: 4px 0;
 }
 
-.sidebar-nav li a:hover {
+.site-state-item {
+  padding: 0 8px;
+}
+
+.site-state-item a {
+  color: #475569;
+  font-size: 0.8rem;
+  border-bottom: none;
+}
+
+.site-state-item a:hover {
   color: $brand-primary;
-  background: $brand-primary-light;
 }
 
-.sidebar-nav .sidebar-nav-active .sidebar-nav-title,
-.sidebar-nav .sidebar-nav-active .sidebar-nav-toc {
-  color: $brand-primary;
-}
-
-.sidebar-nav .sidebar-nav-title {
+.site-state-item-count {
+  font-weight: 700;
+  font-size: 1rem;
   color: $brand-text;
-  font-weight: 600;
 }
 
 // ----------------------------------------------------------
-// 6. Post cards on index page
+// 6. Post list — clean, no card, subtle separators
 // ----------------------------------------------------------
 .post-block {
-  background: $brand-bg;
-  border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.03);
-  border: 1px solid $brand-border;
-  margin-bottom: 24px;
-  padding: 32px 36px;
-  transition: transform 200ms ease, box-shadow 200ms ease;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid $brand-border;
+  margin-bottom: 0;
+  padding: 28px 0;
+  transition: none;
+  text-align: left;
 }
 
 .post-block:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
+  transform: none;
+  box-shadow: none;
+}
+
+.post-block:first-child {
+  padding-top: 8px;
 }
 
 .post-block + .post-block {
-  margin-top: 24px;
+  margin-top: 0;
 }
 
 // Post titles
 .post-title {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.01em;
+  text-align: left;
+  margin-bottom: 6px;
 }
 
 .post-title a {
   color: $brand-text;
-  transition: color 180ms ease;
+  transition: color 120ms ease;
+  border-bottom: none;
 }
 
 .post-title a:hover {
@@ -228,13 +243,14 @@ body {
 // Post meta
 .post-meta {
   color: $brand-muted;
-  font-size: 0.83rem;
+  font-size: 0.8rem;
 }
 
 .post-meta-item,
 .post-meta-item a {
   color: $brand-muted;
-  transition: color 150ms ease;
+  transition: color 120ms ease;
+  border-bottom: none;
 }
 
 .post-meta-item a:hover {
@@ -243,42 +259,52 @@ body {
 
 // Post excerpt
 .post-body p {
-  color: darken($brand-muted, 5%);
-  line-height: 1.7;
+  color: #475569;
+  line-height: 1.65;
+  font-size: 0.95rem;
 }
 
-// Read more button
+// Read more
 .post-button {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .post-button a {
   color: $brand-primary;
-  border: 1px solid $brand-primary-soft;
-  background: $brand-primary-light;
-  border-radius: $brand-radius-sm;
-  padding: 5px 18px;
-  transition: all 180ms ease;
+  border: none;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  transition: color 120ms ease;
   font-size: 0.85rem;
   font-weight: 500;
+  border-bottom: none;
 }
 
 .post-button a:hover {
-  color: #ffffff;
-  background: $brand-primary;
-  border-color: $brand-primary;
+  color: darken($brand-primary, 12%);
+  background: none;
+  border-color: transparent;
 }
 
 // ----------------------------------------------------------
 // 7. Pagination
 // ----------------------------------------------------------
+.pagination {
+  margin-top: 32px;
+  border-top: 1px solid $brand-border;
+  padding-top: 24px;
+}
+
 .pagination .page-number {
   border-radius: $brand-radius-sm;
   color: $brand-muted;
-  transition: all 150ms ease;
-  min-width: 36px;
-  height: 36px;
-  line-height: 36px;
+  transition: all 120ms ease;
+  min-width: 34px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 0.85rem;
+  border: 1px solid transparent;
 }
 
 .pagination .page-number.current {
@@ -294,81 +320,80 @@ body {
 }
 
 // ----------------------------------------------------------
-// 8. Post detail page
+// 8. Post detail
 // ----------------------------------------------------------
 .post-body {
-  line-height: 1.85;
+  line-height: 1.8;
   color: $brand-text;
-  font-size: 1rem;
+  font-size: 0.975rem;
 }
 
-// H2
 .post-body h2 {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: $brand-text;
   border-bottom: 1px solid $brand-border;
-  padding-bottom: 8px;
-  margin-top: 36px;
-  margin-bottom: 16px;
+  padding-bottom: 6px;
+  margin-top: 40px;
+  margin-bottom: 14px;
 }
 
-// H3
 .post-body h3 {
-  font-size: 1.18rem;
+  font-size: 1.12rem;
   font-weight: 600;
   color: $brand-text;
   margin-top: 28px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 // Links
 .post-body a {
   color: $brand-primary;
-  transition: color 150ms ease, border-color 150ms ease;
+  transition: color 120ms ease;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid $brand-primary-soft;
 }
 
 .post-body a:hover {
   color: darken($brand-primary, 12%);
-  border-bottom-color: darken($brand-primary, 12%);
+  border-bottom-color: $brand-primary;
 }
 
 // Inline code
 .post-body code {
   background: $brand-code-bg;
-  color: darken($brand-primary, 18%);
-  border-radius: 4px;
-  padding: 2px 6px;
-  font-size: 0.9em;
+  color: #1e40af;
+  border-radius: 3px;
+  padding: 1.5px 5px;
+  font-size: 0.88em;
   border: none;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", Menlo, Monaco, monospace;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", Menlo, Consolas, monospace;
 }
 
 // Code blocks
 .post-body pre,
 figure.highlight,
 .highlight {
-  background: #1e293b;
-  border-radius: $brand-radius-sm;
+  background: #0f172a;
+  border-radius: $brand-radius;
   border: none;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", Menlo, Monaco, monospace;
-  font-size: 0.88rem;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.65;
 }
 
 figure.highlight figcaption,
 .highlight .gutter {
-  color: rgba(255,255,255,0.4);
+  color: #64748b;
 }
 
 // Blockquote
 .post-body blockquote {
-  border-left: 4px solid $brand-primary;
+  border-left: 3px solid $brand-primary;
   background: $brand-primary-light;
-  color: $brand-text;
-  padding: 14px 22px;
-  margin: 22px 0;
+  color: #334155;
+  padding: 12px 20px;
+  margin: 20px 0;
   border-radius: 0 $brand-radius-sm $brand-radius-sm 0;
 }
 
@@ -377,58 +402,59 @@ figure.highlight figcaption,
   border-collapse: collapse;
   width: 100%;
   margin: 20px 0;
-  font-size: 0.9rem;
-  border-radius: $brand-radius-sm;
-  overflow: hidden;
+  font-size: 0.875rem;
 }
 
 .post-body th {
   background: $brand-primary-light;
   color: $brand-text;
   font-weight: 600;
-  padding: 10px 14px;
+  padding: 8px 12px;
   border: 1px solid $brand-border;
   text-align: left;
+  font-size: 0.85rem;
 }
 
 .post-body td {
-  padding: 10px 14px;
+  padding: 8px 12px;
   border: 1px solid $brand-border;
+  font-size: 0.85rem;
 }
 
 .post-body tr:nth-child(even) td {
-  background: #fafafa;
+  background: #f8fafc;
 }
 
 // Images
 .post-body img {
   border-radius: $brand-radius-sm;
-  box-shadow: $brand-shadow;
   border: 1px solid $brand-border;
   max-width: 100%;
+  box-shadow: none;
 }
 
 // ----------------------------------------------------------
-// 9. TOC
+// 9. TOC — clean docs-style
 // ----------------------------------------------------------
 .post-toc .nav .nav-item .nav-link {
-  color: $brand-muted;
-  transition: all 180ms ease;
-  border-radius: 4px;
+  color: #64748b;
+  transition: all 120ms ease;
+  border-radius: $brand-radius-sm;
   padding: 3px 8px;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
+  border-left: 2px solid transparent;
 }
 
 .post-toc .nav .nav-item .nav-link:hover {
   color: $brand-primary;
-  background: $brand-primary-light;
+  background: transparent;
 }
 
 .post-toc .nav .active .nav-link {
   color: $brand-primary;
   background: $brand-primary-light;
   font-weight: 500;
-  border-left: 2px solid $brand-primary;
+  border-left-color: $brand-primary;
 }
 
 .post-toc .nav .nav-number {
@@ -440,12 +466,15 @@ figure.highlight figcaption,
 // ----------------------------------------------------------
 .footer {
   color: $brand-muted;
-  font-size: 0.83rem;
+  font-size: 0.8rem;
+  border-top: 1px solid $brand-border;
+  padding-top: 24px;
+  margin-top: 48px;
 }
 
 .footer a {
   color: $brand-muted;
-  transition: color 150ms ease;
+  transition: color 120ms ease;
   border-bottom: none;
 }
 
@@ -457,10 +486,11 @@ figure.highlight figcaption,
 // 11. Tags & Categories
 // ----------------------------------------------------------
 .tag-cloud a {
-  color: $brand-muted;
+  color: #475569;
   border-radius: $brand-radius-sm;
-  transition: all 180ms ease;
-  padding: 4px 10px;
+  transition: all 120ms ease;
+  padding: 3px 8px;
+  font-size: 0.85rem;
 }
 
 .tag-cloud a:hover {
@@ -471,9 +501,9 @@ figure.highlight figcaption,
 
 .category-list a {
   color: $brand-text;
-  transition: color 150ms ease;
+  transition: color 120ms ease;
   border-bottom: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .category-list a:hover {
@@ -489,7 +519,7 @@ figure.highlight figcaption,
 // ----------------------------------------------------------
 .posts-collapse .post-header a {
   color: $brand-text;
-  transition: color 150ms ease;
+  transition: color 120ms ease;
   border-bottom: none;
 }
 
@@ -498,11 +528,11 @@ figure.highlight figcaption,
 }
 
 // ----------------------------------------------------------
-// 13. Search popup
+// 13. Search
 // ----------------------------------------------------------
 .local-search-popup .search-result-list li {
   border-radius: $brand-radius-sm;
-  transition: background 150ms ease;
+  transition: background 120ms ease;
 }
 
 .local-search-popup .search-result-list li:hover {
@@ -522,74 +552,60 @@ figure.highlight figcaption,
   background: $brand-primary;
   color: #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba($brand-primary, 0.3);
-  transition: all 200ms ease;
+  box-shadow: 0 2px 6px rgba($brand-primary, 0.25);
+  transition: all 150ms ease;
 }
 
 .back-to-top:hover {
   background: darken($brand-primary, 8%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba($brand-primary, 0.4);
 }
 
 // ----------------------------------------------------------
 // 15. Content width
 // ----------------------------------------------------------
 .content-wrap {
-  width: 72%;
+  width: 73%;
 }
 
 .main-inner {
-  max-width: 920px;
+  max-width: 860px;
 }
 
 // ----------------------------------------------------------
-// 16. Responsive
-// ----------------------------------------------------------
-@media (max-width: 768px) {
-  .content-wrap {
-    width: 100%;
-  }
-
-  .post-block {
-    padding: 20px 16px;
-    border-radius: 12px;
-    margin-bottom: 16px;
-  }
-}
-
-// ----------------------------------------------------------
-// 17. Header
+// 16. Post header
 // ----------------------------------------------------------
 .post-header h1 {
-  font-size: 1.55rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
 }
 
 // ----------------------------------------------------------
-// 18. Misc
+// 17. Misc
 // ----------------------------------------------------------
 .post-meta-divider {
   color: $brand-border;
 }
 
 // ----------------------------------------------------------
-// 19. Scrollbar
+// 18. Scrollbar
 // ----------------------------------------------------------
 ::-webkit-scrollbar {
   width: 6px;
 }
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
+::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: $brand-border;
+  background: #cbd5e1;
   border-radius: 3px;
 }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
-::-webkit-scrollbar-thumb:hover {
-  background: darken($brand-border, 15%);
+// ----------------------------------------------------------
+// 19. Responsive
+// ----------------------------------------------------------
+@media (max-width: 768px) {
+  .content-wrap { width: 100%; }
+  .post-block { padding: 20px 0; }
 }
