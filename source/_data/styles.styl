@@ -198,6 +198,44 @@ body {
   line-height: 1.55;
 }
 
+// UI language switcher
+.ui-language-switch {
+  background: $brand-sidebar-panel;
+  border-top: 1px solid $brand-border;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  padding: 12px 18px 0;
+}
+
+.ui-language-switch-button {
+  appearance: none;
+  background: transparent;
+  border: 1px solid $brand-border;
+  border-radius: 999px;
+  color: $brand-muted;
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 700;
+  height: 28px;
+  letter-spacing: 0;
+  line-height: 1;
+  min-width: 44px;
+  padding: 0 12px;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.ui-language-switch-button:hover,
+.ui-language-switch-button.is-active {
+  background: $brand-primary-light;
+  border-color: $brand-primary-soft;
+  color: $brand-primary;
+}
+
+.ui-language-switch-button.is-active {
+  box-shadow: inset 0 0 0 1px $brand-primary-soft;
+}
+
 // ----------------------------------------------------------
 // 3. Menu — compact knowledge-base navigation
 // ----------------------------------------------------------

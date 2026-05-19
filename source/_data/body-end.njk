@@ -1,0 +1,196 @@
+<script>
+(() => {
+  const storageKey = 'wisteria-ui-language';
+  const dictionary = {
+    'zh-CN': {
+      subtitle: 'AI 对话整理、导出与本地知识管理',
+      siteDescription: 'Wisteria Software 的 AI 对话工作流博客，分享 ChatGPT、Gemini、Outline、Inbox、本地优先归档与隐私友好的知识管理实践。',
+      nav: {
+        home: '首页',
+        categories: '分类',
+        tags: '标签',
+        archives: '归档',
+        about: '关于',
+        search: '搜索'
+      },
+      sidebar: {
+        toc: '文章目录',
+        overview: '站点概览',
+        posts: '日志',
+        categories: '分类',
+        tags: '标签',
+        recent: '近期文章'
+      },
+      post: {
+        posted: '发表于',
+        edited: '更新于',
+        in: '分类于'
+      },
+      search: {
+        placeholder: '搜索...',
+        empty: '没有找到任何搜索结果：${query}',
+        hits_time: '找到 ${hits} 个搜索结果（用时 ${time} 毫秒）',
+        hits: '找到 ${hits} 个搜索结果'
+      },
+      accessibility: {
+        navToggle: '切换导航栏',
+        search: '搜索',
+        backToTop: '返回顶部',
+        language: '语言'
+      }
+    },
+    en: {
+      subtitle: 'AI conversation workflows, export, and local knowledge management',
+      siteDescription: 'Wisteria Software blog for AI conversation workflows, ChatGPT, Gemini, Outline, Inbox, local-first archiving, and privacy-friendly knowledge management.',
+      nav: {
+        home: 'Home',
+        categories: 'Categories',
+        tags: 'Tags',
+        archives: 'Archives',
+        about: 'About',
+        search: 'Search'
+      },
+      sidebar: {
+        toc: 'Table of Contents',
+        overview: 'Overview',
+        posts: 'Posts',
+        categories: 'Categories',
+        tags: 'Tags',
+        recent: 'Recent Posts'
+      },
+      post: {
+        posted: 'Posted on',
+        edited: 'Updated on',
+        in: 'In'
+      },
+      search: {
+        placeholder: 'Search...',
+        empty: 'No results found for: ${query}',
+        hits_time: '${hits} results found in ${time} ms',
+        hits: '${hits} results found'
+      },
+      accessibility: {
+        navToggle: 'Toggle navigation',
+        search: 'Search',
+        backToTop: 'Back to top',
+        language: 'Language'
+      }
+    }
+  };
+
+  const normalize = language => String(language || '').toLowerCase().startsWith('zh') ? 'zh-CN' : 'en';
+  const getInitialLanguage = () => {
+    const saved = localStorage.getItem(storageKey);
+    if (saved && dictionary[saved]) return saved;
+    return normalize(navigator.language || (navigator.languages && navigator.languages[0]) || 'zh-CN');
+  };
+
+  const textOnly = (element, value) => {
+    if (!element) return;
+    const icon = element.querySelector('i');
+    element.textContent = '';
+    if (icon) element.appendChild(icon);
+    element.append(value);
+  };
+
+  const replaceTextNodes = (root, replacements) => {
+    if (!root) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(node => {
+      const value = node.nodeValue.trim();
+      if (replacements[value]) node.nodeValue = node.nodeValue.replace(value, replacements[value]);
+    });
+  };
+
+  const applyLanguage = language => {
+    const lang = dictionary[language] ? language : 'zh-CN';
+    const t = dictionary[lang];
+    document.documentElement.dataset.uiLang = lang;
+    localStorage.setItem(storageKey, lang);
+
+    const subtitle = document.querySelector('.site-subtitle');
+    if (subtitle) subtitle.textContent = t.subtitle;
+
+    const siteDescription = document.querySelector('.site-description');
+    if (siteDescription) siteDescription.textContent = t.siteDescription;
+
+    const menuMap = {
+      '.menu-item-home > a': t.nav.home,
+      '.menu-item-categories > a': t.nav.categories,
+      '.menu-item-tags > a': t.nav.tags,
+      '.menu-item-archives > a': t.nav.archives,
+      '.menu-item-about > a': t.nav.about,
+      '.menu-item-search > a': t.nav.search
+    };
+    Object.entries(menuMap).forEach(([selector, label]) => textOnly(document.querySelector(selector), label));
+
+    const toc = document.querySelector('.sidebar-nav-toc');
+    if (toc) toc.textContent = t.sidebar.toc;
+    const overview = document.querySelector('.sidebar-nav-overview');
+    if (overview) overview.textContent = t.sidebar.overview;
+
+    const stateLabels = document.querySelectorAll('.site-state-item-name');
+    if (stateLabels[0]) stateLabels[0].textContent = t.sidebar.posts;
+    if (stateLabels[1]) stateLabels[1].textContent = t.sidebar.categories;
+    if (stateLabels[2]) stateLabels[2].textContent = t.sidebar.tags;
+
+    document.querySelectorAll('[data-i18n="recent_posts"], .links-of-blogroll-title').forEach(element => {
+      element.textContent = t.sidebar.recent;
+    });
+
+    document.querySelectorAll('.post-meta').forEach(meta => replaceTextNodes(meta, {
+      '发表于': t.post.posted,
+      'Posted on': t.post.posted,
+      '更新于': t.post.edited,
+      'Updated on': t.post.edited,
+      '分类于': t.post.in,
+      'In': t.post.in
+    }));
+
+    document.querySelectorAll('.search-input').forEach(input => {
+      input.setAttribute('placeholder', t.search.placeholder);
+    });
+
+    if (window.CONFIG) {
+      window.CONFIG.i18n = {
+        placeholder: t.search.placeholder,
+        empty: t.search.empty,
+        hits_time: t.search.hits_time,
+        hits: t.search.hits
+      };
+    }
+
+    document.querySelectorAll('.site-nav-toggle .toggle').forEach(element => {
+      element.setAttribute('aria-label', t.accessibility.navToggle);
+    });
+    document.querySelectorAll('.popup-trigger').forEach(element => {
+      element.setAttribute('aria-label', t.accessibility.search);
+    });
+    document.querySelectorAll('.back-to-top').forEach(element => {
+      element.setAttribute('aria-label', t.accessibility.backToTop);
+    });
+    document.querySelectorAll('.ui-language-switch').forEach(element => {
+      element.setAttribute('aria-label', t.accessibility.language);
+    });
+    document.querySelectorAll('[data-ui-lang-option]').forEach(button => {
+      const active = button.dataset.uiLangOption === lang;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+  };
+
+  document.addEventListener('click', event => {
+    const button = event.target.closest('[data-ui-lang-option]');
+    if (!button) return;
+    applyLanguage(button.dataset.uiLangOption);
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => applyLanguage(getInitialLanguage()));
+  } else {
+    applyLanguage(getInitialLanguage());
+  }
+})();
+</script>

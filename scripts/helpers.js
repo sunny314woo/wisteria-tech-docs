@@ -6,7 +6,7 @@ hexo.extend.helper.register('recent_posts_sidebar', function(limit) {
   if (!posts.length) return '';
 
   let html = '<div class="links-of-blogroll animated">';
-  html += '<div class="links-of-blogroll-title">近期文章</div>';
+  html += '<div class="links-of-blogroll-title" data-i18n="recent_posts">近期文章</div>';
   html += '<ul class="links-of-blogroll-list">';
   posts.forEach(function(post) {
     html += '<li class="links-of-blogroll-item">';

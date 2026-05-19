@@ -142,6 +142,8 @@ vendors:
 
 # Custom file paths — inject custom Stylus + sidebar widgets
 custom_file_path:
+  header: source/_data/header.njk
+  bodyEnd: source/_data/body-end.njk
   style: source/_data/styles.styl
   sidebar: _templates/sidebar-recent-posts.njk
 
