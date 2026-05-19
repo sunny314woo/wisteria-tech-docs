@@ -1,6 +1,7 @@
 <script>
 (() => {
-  const storageKey = 'wisteria-ui-language';
+  const languageStorageKey = 'wisteria-ui-language';
+  const themeStorageKey = 'wisteria-ui-theme';
   const dictionary = {
     'zh-CN': {
       subtitle: 'AI 对话整理、导出与本地知识管理',
@@ -36,8 +37,11 @@
         navToggle: '切换导航栏',
         search: '搜索',
         backToTop: '返回顶部',
-        language: '语言'
-      }
+        language: '语言',
+        theme: '切换明暗模式'
+      },
+      officialSite: '官网',
+      theme: '主题'
     },
     en: {
       subtitle: 'AI conversation workflows, export, and local knowledge management',
@@ -73,16 +77,25 @@
         navToggle: 'Toggle navigation',
         search: 'Search',
         backToTop: 'Back to top',
-        language: 'Language'
-      }
+        language: 'Language',
+        theme: 'Toggle color theme'
+      },
+      officialSite: 'Official',
+      theme: 'Theme'
     }
   };
 
   const normalize = language => String(language || '').toLowerCase().startsWith('zh') ? 'zh-CN' : 'en';
   const getInitialLanguage = () => {
-    const saved = localStorage.getItem(storageKey);
+    const saved = localStorage.getItem(languageStorageKey);
     if (saved && dictionary[saved]) return saved;
     return normalize(navigator.language || (navigator.languages && navigator.languages[0]) || 'zh-CN');
+  };
+
+  const getInitialTheme = () => {
+    const saved = localStorage.getItem(themeStorageKey);
+    if (saved === 'light' || saved === 'dark') return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   };
 
   const textOnly = (element, value) => {
@@ -108,7 +121,7 @@
     const lang = dictionary[language] ? language : 'zh-CN';
     const t = dictionary[lang];
     document.documentElement.dataset.uiLang = lang;
-    localStorage.setItem(storageKey, lang);
+    localStorage.setItem(languageStorageKey, lang);
 
     const subtitle = document.querySelector('.site-subtitle');
     if (subtitle) subtitle.textContent = t.subtitle;
@@ -138,6 +151,12 @@
 
     document.querySelectorAll('[data-i18n="recent_posts"], .links-of-blogroll-title').forEach(element => {
       element.textContent = t.sidebar.recent;
+    });
+    document.querySelectorAll('[data-i18n="official_site"]').forEach(element => {
+      element.textContent = t.officialSite;
+    });
+    document.querySelectorAll('[data-i18n="theme"]').forEach(element => {
+      element.textContent = t.theme;
     });
 
     document.querySelectorAll('.post-meta').forEach(meta => replaceTextNodes(meta, {
@@ -174,6 +193,10 @@
     document.querySelectorAll('.ui-language-switch').forEach(element => {
       element.setAttribute('aria-label', t.accessibility.language);
     });
+    document.querySelectorAll('[data-ui-theme-toggle]').forEach(element => {
+      element.setAttribute('aria-label', t.accessibility.theme);
+      element.setAttribute('title', t.accessibility.theme);
+    });
     document.querySelectorAll('[data-ui-lang-option]').forEach(button => {
       const active = button.dataset.uiLangOption === lang;
       button.classList.toggle('is-active', active);
@@ -181,15 +204,39 @@
     });
   };
 
+  const applyTheme = theme => {
+    const nextTheme = theme === 'dark' ? 'dark' : 'light';
+    document.documentElement.dataset.theme = nextTheme;
+    localStorage.setItem(themeStorageKey, nextTheme);
+    document.querySelectorAll('[data-ui-theme-toggle]').forEach(button => {
+      button.dataset.theme = nextTheme;
+      button.setAttribute('aria-pressed', String(nextTheme === 'dark'));
+    });
+  };
+
+  const toggleTheme = () => {
+    const current = document.documentElement.dataset.theme || getInitialTheme();
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  };
+
   document.addEventListener('click', event => {
-    const button = event.target.closest('[data-ui-lang-option]');
-    if (!button) return;
-    applyLanguage(button.dataset.uiLangOption);
+    const languageButton = event.target.closest('[data-ui-lang-option]');
+    if (languageButton) {
+      applyLanguage(languageButton.dataset.uiLangOption);
+      return;
+    }
+    if (event.target.closest('[data-ui-theme-toggle]')) {
+      toggleTheme();
+    }
   });
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => applyLanguage(getInitialLanguage()));
+    document.addEventListener('DOMContentLoaded', () => {
+      applyTheme(getInitialTheme());
+      applyLanguage(getInitialLanguage());
+    });
   } else {
+    applyTheme(getInitialTheme());
     applyLanguage(getInitialLanguage());
   }
 })();
