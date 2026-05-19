@@ -2,7 +2,7 @@
 ## Docs: https://hexo.io/docs/configuration.html
 
 # Site
-title: Wisteria Tech Docs
+title: Wisteria Blog
 subtitle: ''
 description: 'Technical docs, product notes, and local-first AI workflow experiments.'
 keywords: [Wisteria, tech-docs, outline, inbox, chrome-extension, fastapi, mysql, local-first]

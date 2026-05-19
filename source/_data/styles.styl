@@ -33,23 +33,24 @@ body {
 // 2. Site branding — dark header like Tailwind docs
 // ----------------------------------------------------------
 .site-brand-container {
-  background: #0f172a;
+  background: $brand-bg;
+  border-bottom: 1px solid $brand-border;
   padding: 24px 20px 20px 20px;
 }
 
 .site-title {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   letter-spacing: -0.01em;
 }
 
 .site-title a,
 .site-title a:hover {
-  color: #ffffff;
+  color: $brand-primary;
 }
 
 .site-subtitle {
-  color: #94a3b8;
+  color: $brand-muted;
   margin-top: 4px;
   font-size: 0.75rem;
   font-weight: 400;
@@ -60,9 +61,9 @@ body {
 // 3. Menu — clean nav links, dark bg
 // ----------------------------------------------------------
 .site-nav {
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid $brand-border;
   padding-top: 12px;
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .site-nav .menu-item {
@@ -70,7 +71,7 @@ body {
 }
 
 .site-nav .menu-item a {
-  color: #94a3b8;
+  color: #475569;
   font-weight: 500;
   font-size: 0.875rem;
   padding: 6px 12px;
@@ -80,20 +81,20 @@ body {
 }
 
 .site-nav .menu-item a:hover {
-  color: #ffffff;
-  background: #1e293b;
+  color: $brand-primary;
+  background: $brand-primary-light;
 }
 
 .site-nav .menu-item-active a {
-  color: #ffffff;
-  background: $brand-primary;
+  color: $brand-primary;
+  background: $brand-primary-light;
   border-left: none;
   font-weight: 600;
 }
 
 .menu-item .badge {
-  background: rgba(255,255,255,0.15);
-  color: #cbd5e1;
+  background: $brand-primary-soft;
+  color: $brand-primary;
   font-weight: 500;
 }
 
@@ -135,6 +136,7 @@ body {
   color: $brand-muted;
   margin: 0 0 8px 0;
   padding: 0;
+  text-align: left;
 }
 
 .links-of-blogroll-list {
@@ -159,6 +161,7 @@ body {
   white-space: normal;
   overflow: visible;
   border-left: 2px solid transparent;
+  text-align: left;
 }
 
 .links-of-blogroll-item a:hover {
