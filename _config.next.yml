@@ -5,7 +5,12 @@
 scheme: Pisces
 
 # Dark Mode
-darkmode: false
+darkmode: true
+
+# Browser header panel color
+theme_color:
+  light: "#2563eb"
+  dark: "#0b1120"
 
 # Favicon
 favicon:

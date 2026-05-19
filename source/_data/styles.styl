@@ -4,19 +4,97 @@
    ================================================================ */
 
 // ----------------------------------------------------------
-// Colors — classic blue
+// Colors — calm docs palette with light/dark variants
 // ----------------------------------------------------------
-$brand-primary       = #2563eb
-$brand-primary-soft  = #dbeafe
-$brand-primary-light = #eff6ff
-$brand-text          = #111827
-$brand-muted         = #6b7280
-$brand-border        = #e5e7eb
-$brand-bg            = #ffffff
-$brand-page-bg       = #ffffff
-$brand-code-bg       = #eff6ff
-$brand-radius        = 6px
-$brand-radius-sm     = 4px
+:root {
+  --wt-primary: #2563eb;
+  --wt-primary-hover: #1d4ed8;
+  --wt-primary-soft: #dbeafe;
+  --wt-primary-light: #eff6ff;
+  --wt-primary-shadow: rgba(37, 99, 235, 0.25);
+  --wt-text: #111827;
+  --wt-body-text: #334155;
+  --wt-muted: #64748b;
+  --wt-menu-text: #475569;
+  --wt-border: #e2e8f0;
+  --wt-bg: #ffffff;
+  --wt-page-bg: #f8fafc;
+  --wt-code-bg: #eff6ff;
+  --wt-code-text: #1e40af;
+  --wt-code-block-bg: #0f172a;
+  --wt-code-caption: #64748b;
+  --wt-table-alt-bg: #f8fafc;
+  --wt-scrollbar: #cbd5e1;
+  --wt-scrollbar-hover: #94a3b8;
+  --wt-brand-bg: #ffffff;
+  --wt-brand-border: #e2e8f0;
+  --wt-brand-primary: #2563eb;
+  --wt-brand-primary-hover: #1d4ed8;
+  --wt-brand-muted: #64748b;
+  --wt-brand-shadow: rgba(37, 99, 235, 0.25);
+  --theme-color: var(--wt-primary);
+  --brand-color: var(--wt-primary);
+  --brand-hover-color: var(--wt-primary-hover);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --wt-primary: #60a5fa;
+    --wt-primary-hover: #93c5fd;
+    --wt-primary-soft: rgba(96, 165, 250, 0.22);
+    --wt-primary-light: rgba(96, 165, 250, 0.12);
+    --wt-primary-shadow: rgba(96, 165, 250, 0.24);
+    --wt-text: #e5e7eb;
+    --wt-body-text: #cbd5e1;
+    --wt-muted: #94a3b8;
+    --wt-menu-text: #cbd5e1;
+    --wt-border: #263244;
+    --wt-bg: #111827;
+    --wt-page-bg: #0b1120;
+    --wt-code-bg: rgba(96, 165, 250, 0.16);
+    --wt-code-text: #bfdbfe;
+    --wt-code-block-bg: #020617;
+    --wt-code-caption: #94a3b8;
+    --wt-table-alt-bg: rgba(148, 163, 184, 0.08);
+    --wt-scrollbar: #334155;
+    --wt-scrollbar-hover: #475569;
+    --wt-brand-bg: #ffffff;
+    --wt-brand-border: #e2e8f0;
+    --wt-brand-primary: #2563eb;
+    --wt-brand-primary-hover: #1d4ed8;
+    --wt-brand-muted: #64748b;
+    --wt-brand-shadow: rgba(37, 99, 235, 0.25);
+    color-scheme: dark;
+  }
+}
+
+$brand-primary        = var(--wt-primary)
+$brand-primary-hover  = var(--wt-primary-hover)
+$brand-primary-soft   = var(--wt-primary-soft)
+$brand-primary-light  = var(--wt-primary-light)
+$brand-primary-shadow = var(--wt-primary-shadow)
+$brand-text           = var(--wt-text)
+$brand-body-text      = var(--wt-body-text)
+$brand-muted          = var(--wt-muted)
+$brand-menu-text      = var(--wt-menu-text)
+$brand-border         = var(--wt-border)
+$brand-bg             = var(--wt-bg)
+$brand-page-bg        = var(--wt-page-bg)
+$brand-code-bg        = var(--wt-code-bg)
+$brand-code-text      = var(--wt-code-text)
+$brand-code-block-bg  = var(--wt-code-block-bg)
+$brand-code-caption   = var(--wt-code-caption)
+$brand-table-alt-bg   = var(--wt-table-alt-bg)
+$brand-scrollbar      = var(--wt-scrollbar)
+$brand-scrollbar-hover = var(--wt-scrollbar-hover)
+$brand-logo-bg        = var(--wt-brand-bg)
+$brand-logo-border    = var(--wt-brand-border)
+$brand-logo-primary   = var(--wt-brand-primary)
+$brand-logo-primary-hover = var(--wt-brand-primary-hover)
+$brand-logo-muted     = var(--wt-brand-muted)
+$brand-logo-shadow    = var(--wt-brand-shadow)
+$brand-radius         = 6px
+$brand-radius-sm      = 4px
 
 // ----------------------------------------------------------
 // 1. Global
@@ -30,29 +108,70 @@ body {
 }
 
 // ----------------------------------------------------------
-// 2. Site branding — dark header like Tailwind docs
+// 2. Site branding — white card with blue brand mark
 // ----------------------------------------------------------
-.sidebar-inner .site-brand-container {
-  background: $brand-bg;
-  border-bottom: 1px solid $brand-border;
-  padding: 24px 20px 20px 20px;
+.site-brand-container,
+.column .site-brand-container {
+  background: $brand-logo-bg !important;
+  border-bottom: 1px solid $brand-logo-border;
+  padding: 18px 18px 16px;
+}
+
+.site-meta {
+  padding: 0;
+}
+
+.brand {
+  align-items: center;
+  color: $brand-logo-primary !important;
+  display: inline-flex;
+  gap: 10px;
+  line-height: 1.2;
+}
+
+.brand:hover {
+  color: $brand-logo-primary-hover !important;
+}
+
+.brand .logo-line {
+  display: none;
+}
+
+.brand::before {
+  align-items: center;
+  background: $brand-logo-primary;
+  border-radius: 9px;
+  box-shadow: 0 8px 18px $brand-logo-shadow;
+  color: #ffffff;
+  content: "W";
+  display: inline-flex;
+  flex: 0 0 34px;
+  font-size: 0.98rem;
+  font-weight: 800;
+  height: 34px;
+  justify-content: center;
+  letter-spacing: 0;
+  width: 34px;
 }
 
 .site-title {
+  color: $brand-logo-primary;
   font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.25;
 }
 
-.site-title a,
-.site-title a:hover {
-  color: $brand-primary;
+.brand .site-title,
+.brand:hover .site-title {
+  color: $brand-logo-primary;
 }
 
 .site-subtitle {
-  color: $brand-muted;
-  margin-top: 4px;
-  font-size: 0.75rem;
+  color: $brand-logo-muted;
+  margin: 8px auto 0;
+  max-width: 190px;
+  font-size: 0.72rem;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -71,7 +190,7 @@ body {
 }
 
 .site-nav .menu-item a {
-  color: #475569;
+  color: $brand-menu-text;
   font-weight: 500;
   font-size: 0.875rem;
   padding: 6px 12px;
@@ -152,7 +271,7 @@ body {
 
 .links-of-blogroll-item a {
   display: block;
-  color: #475569;
+  color: $brand-menu-text;
   font-size: 0.825rem;
   padding: 4px 8px;
   border-radius: $brand-radius-sm;
@@ -180,7 +299,7 @@ body {
 }
 
 .site-state-item a {
-  color: #475569;
+  color: $brand-menu-text;
   font-size: 0.8rem;
   border-bottom: none;
 }
@@ -262,7 +381,7 @@ body {
 
 // Post excerpt
 .post-body p {
-  color: #475569;
+  color: $brand-body-text;
   line-height: 1.65;
   font-size: 0.95rem;
 }
@@ -285,7 +404,7 @@ body {
 }
 
 .post-button a:hover {
-  color: darken($brand-primary, 12%);
+  color: $brand-primary-hover;
   background: none;
   border-color: transparent;
 }
@@ -358,14 +477,14 @@ body {
 }
 
 .post-body a:hover {
-  color: darken($brand-primary, 12%);
+  color: $brand-primary-hover;
   border-bottom-color: $brand-primary;
 }
 
 // Inline code
 .post-body code {
   background: $brand-code-bg;
-  color: #1e40af;
+  color: $brand-code-text;
   border-radius: 3px;
   padding: 1.5px 5px;
   font-size: 0.88em;
@@ -377,7 +496,7 @@ body {
 .post-body pre,
 figure.highlight,
 .highlight {
-  background: #0f172a;
+  background: $brand-code-block-bg;
   border-radius: $brand-radius;
   border: none;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", Menlo, Consolas, monospace;
@@ -387,14 +506,14 @@ figure.highlight,
 
 figure.highlight figcaption,
 .highlight .gutter {
-  color: #64748b;
+  color: $brand-code-caption;
 }
 
 // Blockquote
 .post-body blockquote {
   border-left: 3px solid $brand-primary;
   background: $brand-primary-light;
-  color: #334155;
+  color: $brand-body-text;
   padding: 12px 20px;
   margin: 20px 0;
   border-radius: 0 $brand-radius-sm $brand-radius-sm 0;
@@ -425,7 +544,7 @@ figure.highlight figcaption,
 }
 
 .post-body tr:nth-child(even) td {
-  background: #f8fafc;
+  background: $brand-table-alt-bg;
 }
 
 // Images
@@ -440,7 +559,7 @@ figure.highlight figcaption,
 // 9. TOC — clean docs-style
 // ----------------------------------------------------------
 .post-toc .nav .nav-item .nav-link {
-  color: #64748b;
+  color: $brand-muted;
   transition: all 120ms ease;
   border-radius: $brand-radius-sm;
   padding: 3px 8px;
@@ -489,7 +608,7 @@ figure.highlight figcaption,
 // 11. Tags & Categories
 // ----------------------------------------------------------
 .tag-cloud a {
-  color: #475569;
+  color: $brand-menu-text;
   border-radius: $brand-radius-sm;
   transition: all 120ms ease;
   padding: 3px 8px;
@@ -555,12 +674,12 @@ figure.highlight figcaption,
   background: $brand-primary;
   color: #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba($brand-primary, 0.25);
+  box-shadow: 0 2px 6px $brand-primary-shadow;
   transition: all 150ms ease;
 }
 
 .back-to-top:hover {
-  background: darken($brand-primary, 8%);
+  background: $brand-primary-hover;
   transform: translateY(-2px);
 }
 
@@ -608,10 +727,10 @@ figure.highlight figcaption,
 }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: $brand-scrollbar;
   border-radius: 3px;
 }
-::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+::-webkit-scrollbar-thumb:hover { background: $brand-scrollbar-hover; }
 
 // ----------------------------------------------------------
 // 19. Responsive
