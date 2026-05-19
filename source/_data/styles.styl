@@ -32,7 +32,7 @@ body {
 // ----------------------------------------------------------
 // 2. Site branding — dark header like Tailwind docs
 // ----------------------------------------------------------
-.site-brand-container {
+.sidebar-inner .site-brand-container {
   background: $brand-bg;
   border-bottom: 1px solid $brand-border;
   padding: 24px 20px 20px 20px;
@@ -576,8 +576,16 @@ figure.highlight figcaption,
 }
 
 // ----------------------------------------------------------
-// 16. Post header
+// 16. Post header — override theme centering
 // ----------------------------------------------------------
+.main-inner .posts-expand .post-header {
+  text-align: left;
+}
+
+.main-inner .post-meta {
+  justify-content: flex-start;
+}
+
 .post-header h1 {
   font-size: 1.6rem;
   font-weight: 700;
