@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Wisteria Blog">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="w" x1="10" y1="13" x2="54" y2="51" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ddd6fe"/>
+      <stop offset=".5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#6d28d9"/>
+    </linearGradient>
+    <clipPath id="wClip">
+      <path d="M8 20 18 13l13 32 6-26 10 28 10-37 7-3-14 42-10 5-7-21-5 19-9 1Z"/>
+    </clipPath>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <g clip-path="url(#wClip)">
+    <path d="M8 20 18 13l13 32 6-26 10 28 10-37 7-3-14 42-10 5-7-21-5 19-9 1Z" fill="url(#w)"/>
+    <polygon points="8,20 18,13 16,30" fill="#ddd6fe"/>
+    <polygon points="16,30 25,28 31,45 19,53" fill="#8b5cf6"/>
+    <polygon points="25,28 37,19 31,45" fill="#a78bfa"/>
+    <polygon points="37,19 47,47 34,34" fill="#c4b5fd"/>
+    <polygon points="40,54 47,47 57,10 50,49" fill="#7c3aed"/>
+    <polygon points="57,10 64,7 58,24" fill="#ddd6fe"/>
+  </g>
+</svg>

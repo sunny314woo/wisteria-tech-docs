@@ -7,6 +7,7 @@
 // Colors — calm docs palette with light/dark variants
 // ----------------------------------------------------------
 :root {
+  --wt-topbar-height: 64px;
   --wt-primary: #2563eb;
   --wt-primary-hover: #1d4ed8;
   --wt-accent: #7c3aed;
@@ -79,6 +80,7 @@
 }
 
 html[data-theme="light"] {
+  --wt-topbar-height: 64px;
   --wt-primary: #2563eb;
   --wt-primary-hover: #1d4ed8;
   --wt-accent: #7c3aed;
@@ -113,6 +115,7 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
+  --wt-topbar-height: 64px;
   --wt-primary: #93c5fd;
   --wt-primary-hover: #bfdbfe;
   --wt-accent: #c4b5fd;
@@ -478,6 +481,7 @@ html[data-theme] .site-tools-theme-icon::before {
   white-space: normal;
   overflow: visible;
   border-left: 2px solid transparent;
+  border-bottom: 0 !important;
   text-align: left;
 }
 
@@ -953,5 +957,397 @@ figure.highlight figcaption,
   .ui-language-switch-button {
     min-width: 32px;
     padding: 0 8px;
+  }
+}
+
+// ----------------------------------------------------------
+// 20. Tailwind-docs inspired fixed top bar
+// ----------------------------------------------------------
+.headband {
+  display: none;
+}
+
+.header {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.header > .site-brand-container,
+.header > .site-nav {
+  display: none !important;
+}
+
+.main {
+  padding-top: calc(var(--wt-topbar-height) + 18px);
+}
+
+.wt-topbar {
+  background: rgba(255, 255, 255, 0.86);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.26);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.70), 0 18px 40px rgba(15, 23, 42, 0.06);
+  backdrop-filter: saturate(180%) blur(18px);
+  left: 0;
+  min-height: var(--wt-topbar-height);
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 90;
+}
+
+.wt-topbar-inner {
+  align-items: center;
+  display: flex;
+  gap: 22px;
+  margin: 0 auto;
+  max-width: 1240px;
+  min-height: var(--wt-topbar-height);
+  padding: 0 24px;
+}
+
+.wt-brand {
+  align-items: center;
+  border-bottom: 0;
+  color: $brand-text;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  min-width: 190px;
+  text-decoration: none;
+}
+
+.wt-brand:hover {
+  color: $brand-primary;
+}
+
+.wt-brand-mark {
+  background: transparent url("/images/wisteria-mark.svg") center / contain no-repeat;
+  display: inline-flex;
+  flex: 0 0 46px;
+  height: 32px;
+  width: 46px;
+}
+
+.wt-brand-copy {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+}
+
+.wt-brand-name {
+  color: $brand-text;
+  font-size: 0.94rem;
+  font-weight: 750;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.wt-brand-subtitle {
+  color: $brand-muted;
+  font-size: 0.71rem;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.wt-nav {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  gap: 2px;
+  min-width: 0;
+}
+
+.wt-nav-link {
+  border-bottom: 0;
+  border-radius: 7px;
+  color: $brand-menu-text;
+  display: inline-flex;
+  font-size: 0.84rem;
+  font-weight: 650;
+  line-height: 1;
+  padding: 10px 11px;
+  text-decoration: none;
+  transition: background 140ms ease, color 140ms ease;
+  white-space: nowrap;
+}
+
+.wt-nav-link:hover {
+  background: $brand-primary-light;
+  color: $brand-primary;
+}
+
+.wt-actions {
+  align-items: center;
+  background: rgba(248, 250, 252, 0.66);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 8px;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0;
+  margin-left: auto;
+  padding: 2px;
+}
+
+.wt-search-trigger,
+.wt-tool,
+.wt-icon-link {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: $brand-muted;
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  gap: 6px;
+  height: 32px;
+  justify-content: center;
+  line-height: 1;
+  padding: 0 10px;
+  text-decoration: none;
+  transition: background 140ms ease, color 140ms ease;
+  white-space: nowrap;
+}
+
+.wt-search-trigger,
+.wt-tool {
+  cursor: pointer;
+}
+
+.wt-search-trigger:hover,
+.wt-tool:hover,
+.wt-icon-link:hover {
+  background: $brand-primary-light;
+  color: $brand-primary;
+}
+
+.wt-search-trigger kbd {
+  background: #fff;
+  border: 1px solid rgba(148, 163, 184, 0.36);
+  border-radius: 5px;
+  color: $brand-muted;
+  font-family: inherit;
+  font-size: 0.66rem;
+  font-weight: 750;
+  line-height: 1;
+  padding: 3px 5px;
+}
+
+.wt-github-link i {
+  color: $brand-text;
+  font-size: 1.06rem;
+}
+
+.wt-github-link:hover i {
+  color: $brand-primary;
+}
+
+.wt-language-toggle {
+  min-width: 50px;
+}
+
+.wt-theme-toggle {
+  appearance: none;
+  min-width: 34px;
+  padding: 0;
+}
+
+.wt-theme-icon {
+  align-items: center;
+  display: inline-flex;
+  height: 22px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.wt-theme-icon-sun,
+.wt-theme-icon-moon {
+  display: none;
+}
+
+html[data-theme="light"] .wt-theme-icon-sun,
+html[data-theme="dark"] .wt-theme-icon-moon {
+  display: inline-flex;
+}
+
+.wt-theme-icon svg {
+  fill: none;
+  height: 15px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  width: 15px;
+}
+
+.wt-theme-icon-moon svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+html[data-theme="light"] .wt-theme-icon-sun,
+html[data-theme="dark"] .wt-theme-icon-moon {
+  color: $brand-primary;
+}
+
+html[data-theme="dark"] .wt-topbar {
+  background: rgba(7, 10, 22, 0.86);
+  border-bottom-color: rgba(148, 163, 184, 0.14);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03), 0 18px 42px rgba(0, 0, 0, 0.30);
+}
+
+html[data-theme="dark"] .wt-actions {
+  background: rgba(15, 23, 42, 0.58);
+  border-color: rgba(148, 163, 184, 0.14);
+}
+
+html[data-theme="dark"] .wt-search-trigger,
+html[data-theme="dark"] .wt-tool,
+html[data-theme="dark"] .wt-icon-link {
+  background: transparent;
+}
+
+html[data-theme="dark"] .wt-search-trigger:hover,
+html[data-theme="dark"] .wt-tool:hover,
+html[data-theme="dark"] .wt-icon-link:hover {
+  background: rgba(196, 181, 253, 0.10);
+}
+
+html[data-theme="dark"] .wt-search-trigger kbd {
+  background: #111827;
+  border-color: rgba(148, 163, 184, 0.18);
+}
+
+html[data-theme="dark"] .column,
+html[data-theme="dark"] .sidebar,
+html[data-theme="dark"] .sidebar-inner,
+html[data-theme="dark"] .site-overview-wrap {
+  background: $brand-sidebar-bg !important;
+}
+
+html[data-theme="dark"] .sidebar-inner {
+  border-right-color: transparent;
+  box-shadow: none !important;
+}
+
+.sidebar {
+  top: calc(var(--wt-topbar-height) + 14px) !important;
+}
+
+.sidebar-inner {
+  max-height: calc(100vh - var(--wt-topbar-height) - 28px) !important;
+  border-right-color: transparent;
+}
+
+.search-pop-overlay {
+  z-index: 120;
+}
+
+.search-popup {
+  border: 1px solid $brand-border;
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.22);
+  overflow: hidden;
+}
+
+.search-popup .search-header {
+  background: $brand-surface;
+  border-bottom: 1px solid $brand-border;
+}
+
+.search-popup .search-input {
+  color: $brand-text;
+}
+
+html[data-theme="dark"] .search-popup {
+  background: $brand-surface;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.46);
+}
+
+@media (max-width: 1060px) {
+  .wt-topbar-inner {
+    gap: 12px;
+    padding: 0 14px;
+  }
+
+  .wt-nav {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .wt-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .wt-search-trigger kbd,
+  .wt-icon-link span {
+    display: none;
+  }
+
+  .wt-icon-link {
+    padding: 0;
+    width: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root,
+  html[data-theme="light"],
+  html[data-theme="dark"] {
+    --wt-topbar-height: 150px;
+  }
+
+  .main {
+    padding-top: calc(var(--wt-topbar-height) + 14px);
+  }
+
+  .wt-topbar-inner {
+    align-content: center;
+    display: grid;
+    gap: 8px 10px;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 8px 12px;
+  }
+
+  .wt-brand {
+    min-width: 0;
+  }
+
+  .wt-brand-subtitle {
+    display: none;
+  }
+
+  .wt-nav {
+    grid-column: 1 / -1;
+    order: 3;
+    padding-bottom: 2px;
+  }
+
+  .wt-nav-link {
+    padding: 9px 10px;
+  }
+
+  .wt-actions {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-left: 0;
+    min-width: 0;
+    order: 2;
+  }
+
+  .wt-search-trigger {
+    padding: 0 9px;
+  }
+
+  .wt-search-trigger span {
+    display: none;
+  }
+
+  .wt-tool,
+  .wt-icon-link {
+    padding: 0 9px;
   }
 }

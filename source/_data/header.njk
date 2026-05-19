@@ -1,11 +1,55 @@
-<div class="site-tools" aria-label="Site tools">
-  <a class="site-tools-link" href="https://wisteriasoftware.uk/" target="_blank" rel="noopener" data-i18n="official_site">官网</a>
-  <button class="site-tools-button" type="button" data-ui-theme-toggle aria-label="切换明暗模式" title="切换明暗模式">
-    <span class="site-tools-theme-icon" aria-hidden="true">◐</span>
-    <span class="site-tools-theme-label" data-i18n="theme">主题</span>
-  </button>
-  <div class="ui-language-switch" role="group" aria-label="Language">
-    <button class="ui-language-switch-button" type="button" data-ui-lang-option="zh-CN" aria-pressed="true">中</button>
-    <button class="ui-language-switch-button" type="button" data-ui-lang-option="en" aria-pressed="false">EN</button>
+<div class="wt-topbar" aria-label="Primary navigation">
+  <div class="wt-topbar-inner">
+    <a class="wt-brand" href="/" rel="start" aria-label="Wisteria Blog">
+      <span class="wt-brand-mark" aria-hidden="true"></span>
+      <span class="wt-brand-copy">
+        <span class="wt-brand-name">Wisteria Blog</span>
+        <span class="wt-brand-subtitle" data-i18n="topbar_subtitle">AI 对话工作流</span>
+      </span>
+    </a>
+
+    <nav class="wt-nav" aria-label="Site">
+      <a class="wt-nav-link" href="/" data-i18n="nav_home">首页</a>
+      <a class="wt-nav-link" href="/categories/" data-i18n="nav_categories">分类</a>
+      <a class="wt-nav-link" href="/tags/" data-i18n="nav_tags">标签</a>
+      <a class="wt-nav-link" href="/archives/" data-i18n="nav_archives">归档</a>
+      <a class="wt-nav-link" href="/about/" data-i18n="nav_about">关于</a>
+    </nav>
+
+    <div class="wt-actions" aria-label="Site tools">
+      <button class="wt-search-trigger popup-trigger" type="button" aria-label="搜索">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <span data-i18n="search_button">搜索</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+
+      <button class="wt-tool wt-language-toggle" type="button" data-ui-lang-toggle aria-label="Language" title="Language">
+        <i class="fa fa-language" aria-hidden="true"></i>
+        <span data-ui-lang-label>中</span>
+      </button>
+
+      <button class="wt-tool wt-theme-toggle" type="button" data-ui-theme-toggle aria-label="切换明暗模式" title="切换明暗模式">
+        <span class="wt-theme-icon wt-theme-icon-sun" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"></path>
+          </svg>
+        </span>
+        <span class="wt-theme-icon wt-theme-icon-moon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M20.2 14.4A7.9 7.9 0 0 1 9.6 3.8 8.7 8.7 0 1 0 20.2 14.4Z"></path>
+          </svg>
+        </span>
+      </button>
+
+      <a class="wt-icon-link" href="https://wisteriasoftware.uk/" target="_blank" rel="noopener" aria-label="官网" data-i18n-title="official_site">
+        <i class="fa fa-globe" aria-hidden="true"></i>
+        <span data-i18n="official_site">官网</span>
+      </a>
+      <a class="wt-icon-link wt-github-link" href="https://github.com/sunny314woo" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+        <span>GitHub</span>
+      </a>
+    </div>
   </div>
 </div>

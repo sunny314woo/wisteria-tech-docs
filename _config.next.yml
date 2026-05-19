@@ -14,8 +14,8 @@ theme_color:
 
 # Favicon
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
+  small: /images/favicon-16x16.png
+  medium: /images/favicon-32x32.png
 
 # Menu
 menu:

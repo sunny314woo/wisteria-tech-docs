@@ -41,6 +41,8 @@
         theme: '切换明暗模式'
       },
       officialSite: '官网',
+      topbarSubtitle: 'AI 对话工作流',
+      searchButton: '搜索',
       theme: '主题'
     },
     en: {
@@ -81,6 +83,8 @@
         theme: 'Toggle color theme'
       },
       officialSite: 'Official',
+      topbarSubtitle: 'AI conversation workflows',
+      searchButton: 'Search',
       theme: 'Theme'
     }
   };
@@ -120,6 +124,7 @@
   const applyLanguage = language => {
     const lang = dictionary[language] ? language : 'zh-CN';
     const t = dictionary[lang];
+    document.documentElement.lang = lang;
     document.documentElement.dataset.uiLang = lang;
     localStorage.setItem(languageStorageKey, lang);
 
@@ -154,6 +159,31 @@
     });
     document.querySelectorAll('[data-i18n="official_site"]').forEach(element => {
       element.textContent = t.officialSite;
+    });
+    document.querySelectorAll('[data-i18n-title="official_site"]').forEach(element => {
+      element.setAttribute('aria-label', t.officialSite);
+      element.setAttribute('title', t.officialSite);
+    });
+    document.querySelectorAll('[data-i18n="topbar_subtitle"]').forEach(element => {
+      element.textContent = t.topbarSubtitle;
+    });
+    document.querySelectorAll('[data-i18n="search_button"]').forEach(element => {
+      element.textContent = t.searchButton;
+    });
+    document.querySelectorAll('[data-i18n="nav_home"]').forEach(element => {
+      element.textContent = t.nav.home;
+    });
+    document.querySelectorAll('[data-i18n="nav_categories"]').forEach(element => {
+      element.textContent = t.nav.categories;
+    });
+    document.querySelectorAll('[data-i18n="nav_tags"]').forEach(element => {
+      element.textContent = t.nav.tags;
+    });
+    document.querySelectorAll('[data-i18n="nav_archives"]').forEach(element => {
+      element.textContent = t.nav.archives;
+    });
+    document.querySelectorAll('[data-i18n="nav_about"]').forEach(element => {
+      element.textContent = t.nav.about;
     });
     document.querySelectorAll('[data-i18n="theme"]').forEach(element => {
       element.textContent = t.theme;
@@ -202,6 +232,14 @@
       button.classList.toggle('is-active', active);
       button.setAttribute('aria-pressed', String(active));
     });
+    document.querySelectorAll('[data-ui-lang-label]').forEach(element => {
+      element.textContent = lang === 'zh-CN' ? '中' : 'EN';
+    });
+    document.querySelectorAll('[data-ui-lang-toggle]').forEach(button => {
+      button.dataset.currentLang = lang;
+      button.setAttribute('aria-label', t.accessibility.language);
+      button.setAttribute('title', t.accessibility.language);
+    });
   };
 
   const applyTheme = theme => {
@@ -225,17 +263,39 @@
       applyLanguage(languageButton.dataset.uiLangOption);
       return;
     }
+    const languageToggle = event.target.closest('[data-ui-lang-toggle]');
+    if (languageToggle) {
+      const current = document.documentElement.dataset.uiLang || getInitialLanguage();
+      applyLanguage(current === 'zh-CN' ? 'en' : 'zh-CN');
+      return;
+    }
     if (event.target.closest('[data-ui-theme-toggle]')) {
       toggleTheme();
     }
   });
 
+  document.addEventListener('keydown', event => {
+    const isSearchShortcut = (event.key || '').toLowerCase() === 'k' && (event.metaKey || event.ctrlKey);
+    if (!isSearchShortcut) return;
+    event.preventDefault();
+    document.querySelector('.wt-search-trigger.popup-trigger')?.click();
+  });
+
+  const updateSearchShortcut = () => {
+    const shortcut = /mac|iphone|ipad|ipod/i.test(navigator.platform || '') ? '⌘ K' : 'Ctrl K';
+    document.querySelectorAll('.wt-search-trigger kbd').forEach(element => {
+      element.textContent = shortcut;
+    });
+  };
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
+      updateSearchShortcut();
       applyTheme(getInitialTheme());
       applyLanguage(getInitialLanguage());
     });
   } else {
+    updateSearchShortcut();
     applyTheme(getInitialTheme());
     applyLanguage(getInitialLanguage());
   }
