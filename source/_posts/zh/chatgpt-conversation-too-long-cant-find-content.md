@@ -1,14 +1,13 @@
 ---
 title: "ChatGPT 对话太长找不到内容怎么办？"
 date: 2026-05-19 22:00:00
+permalink: AI-工具/zh/chatgpt-conversation-too-long-cant-find-content/
 categories:
-  - AI 工具
+  - AI 对话导航
 tags:
   - ChatGPT
-  - 长对话
-  - 搜索
-  - 导航
-  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 description: "ChatGPT 对话超过几十轮后，经常找不到之前的具体内容。本文分析为什么默认界面不擅长回溯，并给出侧边栏目录、书签标记和 Markdown 导出三种解决方法。"
 lang: zh-CN
 ---

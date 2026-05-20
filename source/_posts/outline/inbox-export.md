@@ -1,11 +1,13 @@
 ---
 title: Inbox 导出
 date: 2026-05-18 10:04:00
+permalink: Outline/outline/inbox-export/
 categories:
-  - Outline
+  - 产品指南
 tags:
-  - inbox
-  - export
+  - ChatGPT Gemini Outline & Export
+  - 结构化导出
+  - Inbox
 ---
 
 ## 导出到 Inbox

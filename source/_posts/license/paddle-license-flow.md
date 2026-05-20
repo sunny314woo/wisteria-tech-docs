@@ -1,12 +1,12 @@
 ---
 title: Paddle License 授权流程
 date: 2026-05-18 10:08:00
+permalink: License/license/paddle-license-flow/
 categories:
-  - License
+  - 授权与支持
 tags:
-  - paddle
-  - license
-  - activation
+  - 授权
+  - Paddle
 ---
 
 ## 概述

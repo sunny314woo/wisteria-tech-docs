@@ -1,11 +1,13 @@
 ---
 title: 本地优先 Inbox
 date: 2026-05-18 10:05:00
+permalink: Inbox/inbox/local-first-inbox/
 categories:
-  - Inbox
+  - 产品指南
 tags:
-  - local-first
-  - architecture
+  - ChatGPT Gemini Outline & Export
+  - 本地优先
+  - Inbox
 ---
 
 ## 设计理念

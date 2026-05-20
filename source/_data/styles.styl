@@ -580,6 +580,18 @@ html[data-theme] .site-tools-theme-icon::before {
   color: $brand-primary;
 }
 
+html[data-theme="dark"] .posts-expand .post-title-link,
+html[data-theme="dark"] .posts-collapse .post-header a,
+html[data-theme="dark"] .post-title a {
+  color: $brand-text !important;
+}
+
+html[data-theme="dark"] .posts-expand .post-title-link:hover,
+html[data-theme="dark"] .posts-collapse .post-header a:hover,
+html[data-theme="dark"] .post-title a:hover {
+  color: $brand-primary-hover !important;
+}
+
 // Post meta
 .post-meta {
   color: $brand-muted;
@@ -595,6 +607,17 @@ html[data-theme] .site-tools-theme-icon::before {
 
 .post-meta-item a:hover {
   color: $brand-primary;
+}
+
+html[data-theme="dark"] .post-meta,
+html[data-theme="dark"] .post-meta-item,
+html[data-theme="dark"] .post-meta-item a,
+html[data-theme="dark"] .post-meta time {
+  color: $brand-muted !important;
+}
+
+html[data-theme="dark"] .post-meta-item a:hover {
+  color: $brand-primary-hover !important;
 }
 
 // Post excerpt
@@ -625,6 +648,14 @@ html[data-theme] .site-tools-theme-icon::before {
   color: $brand-primary-hover;
   background: none;
   border-color: transparent;
+}
+
+html[data-theme="dark"] .post-button a {
+  color: $brand-primary !important;
+}
+
+html[data-theme="dark"] .post-button a:hover {
+  color: $brand-primary-hover !important;
 }
 
 .post-footer .post-eof {

@@ -1,11 +1,11 @@
 ---
 title: macOS 安装
 date: 2026-05-18 10:06:00
+permalink: Inbox/inbox/macos-installation/
 categories:
-  - Inbox
+  - 产品指南
 tags:
-  - installation
-  - macOS
+  - ChatGPT Gemini Outline & Export
 ---
 
 ## 系统要求

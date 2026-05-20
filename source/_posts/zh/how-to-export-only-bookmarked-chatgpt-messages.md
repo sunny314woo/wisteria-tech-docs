@@ -1,14 +1,14 @@
 ---
 title: "如何只导出 ChatGPT 中标记的重点内容"
 date: 2026-05-19 21:15:00
+permalink: AI-工具/zh/how-to-export-only-bookmarked-chatgpt-messages/
 categories:
-  - AI 工具
+  - 结构化导出
 tags:
   - ChatGPT
-  - 书签
-  - 导出
-  - Markdown
-  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
+  - 书签与重点标记
+  - 结构化导出
 description: "长对话中只有一小部分是真正值得保存的。本文介绍如何在 ChatGPT 中标记重点内容，然后只导出这些标记部分，生成干净精炼的 Markdown 文件。"
 lang: zh-CN
 ---

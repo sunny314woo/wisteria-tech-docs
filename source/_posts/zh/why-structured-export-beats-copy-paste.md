@@ -1,14 +1,12 @@
 ---
 title: "为什么结构化保存 AI 对话比复制粘贴更有效"
 date: 2026-05-19 22:10:00
+permalink: AI-工具/zh/why-structured-export-beats-copy-paste/
 categories:
-  - AI 工具
+  - 结构化导出
 tags:
-  - ChatGPT
-  - Markdown
-  - 结构化保存
-  - 对比
-  - 效率
+  - ChatGPT Gemini Outline & Export
+  - 结构化导出
 description: "对比结构化 Markdown 导出和手工复制粘贴两种保存方式，从时间成本、格式完整性、可搜索性和长期可用性四个维度说明结构化保存的优势。"
 lang: zh-CN
 ---

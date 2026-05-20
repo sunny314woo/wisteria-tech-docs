@@ -1,14 +1,13 @@
 ---
 title: "ChatGPT 重点标记功能最佳解决方案"
 date: 2026-05-19 21:25:00
+permalink: AI-工具/zh/best-solution-for-chatgpt-bookmarking/
 categories:
-  - AI 工具
+  - 产品指南
 tags:
   - ChatGPT
-  - 书签
-  - 重点标记
-  - 效率
-  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
+  - 书签与重点标记
 description: "ChatGPT 缺少原生重点标记功能。本文对比多种标记方案，包括浏览器扩展、手动摘录和第三方笔记工具，给出不同场景下的推荐选择。"
 lang: zh-CN
 ---

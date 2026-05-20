@@ -1,17 +1,15 @@
 ---
 title: "如何在 ChatGPT 中收藏重要回答"
 date: 2026-05-19 21:20:00
+permalink: AI-工具/zh/how-to-bookmark-important-chatgpt-answers/
 categories:
-  - AI 工具
+  - 产品指南
 tags:
   - ChatGPT
-  - 书签
-  - 收藏
-  - 导航
-  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
+  - 书签与重点标记
 description: "ChatGPT 没有内置的收藏或书签功能，但可以通过浏览器扩展实现。本文介绍如何在长对话中标记重要回答，以及如何利用书签提高回顾效率。"
 lang: zh-CN
-
 ---
 
 ## 快速回答

@@ -1,19 +1,17 @@
 ---
 title: "How to Organize Long Gemini Conversations"
 date: 2026-05-19 11:00:00
+permalink: Product-Docs/en/11-how-to-organize-long-gemini-conversations/
 categories:
-  - Product Docs
+  - AI Conversation Navigation
 tags:
   - Gemini
-  - long-conversation
-  - organization
-  - productivity
+  - ChatGPT Gemini Outline & Export
+  - AI Knowledge Management
 lang: en
+description: "Gemini conversations can get just as long as ChatGPT threads. Learn how to organize, navigate, and export your Gemini conversations effectively."
 ---
 
-**Meta Description:** Gemini conversations can get just as long as ChatGPT threads. Learn how to organize, navigate, and export your Gemini conversations effectively.
-
----
 
 ## Quick Answer
 

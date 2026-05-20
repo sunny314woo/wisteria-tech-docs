@@ -1,19 +1,17 @@
 ---
 title: "How to Build a Local-First AI Knowledge Base"
 date: 2026-05-19 18:00:00
+permalink: Product-Docs/en/18-how-to-build-a-local-first-ai-knowledge-base/
 categories:
-  - Product Docs
+  - Local-first Knowledge Management
 tags:
-  - knowledge-base
-  - local-first
-  - Markdown
-  - archiving
+  - ChatGPT Gemini Outline & Export
+  - Local-first
+  - AI Knowledge Management
 lang: en
+description: "Learn how to build a local-first AI knowledge base by exporting ChatGPT and Gemini conversations as Markdown files and organizing them into a searchable archive."
 ---
 
-**Meta Description:** Learn how to build a local-first AI knowledge base by exporting ChatGPT and Gemini conversations as Markdown files and organizing them into a searchable archive.
-
----
 
 ## Quick Answer
 

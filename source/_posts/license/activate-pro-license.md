@@ -1,11 +1,11 @@
 ---
 title: 激活 Pro License
 date: 2026-05-18 10:09:00
+permalink: License/license/activate-pro-license/
 categories:
-  - License
+  - 授权与支持
 tags:
-  - activation
-  - pro
+  - 授权
 ---
 
 ## 激活方式

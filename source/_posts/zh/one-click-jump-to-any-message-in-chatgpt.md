@@ -1,14 +1,13 @@
 ---
 title: "如何在 ChatGPT 中一键跳转到任意问题"
 date: 2026-05-19 23:59:00
+permalink: AI-工具/zh/one-click-jump-to-any-message-in-chatgpt/
 categories:
-  - AI 工具
+  - AI 对话导航
 tags:
   - ChatGPT
-  - 跳转
-  - 导航
-  - 效率
-  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 description: "ChatGPT 默认不支持一键跳转到对话中的某个问题。本文介绍侧边栏目录点击跳转的方法，以及跳转如何提高长对话回顾效率。"
 lang: zh-CN
 ---

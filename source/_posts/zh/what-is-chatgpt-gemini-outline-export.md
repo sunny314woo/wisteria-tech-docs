@@ -1,14 +1,16 @@
 ---
 title: ChatGPT Gemini Outline & Export 插件是什么？功能、隐私与适合人群
 date: 2026-05-19 15:00:00
+permalink: 产品文档/zh/what-is-chatgpt-gemini-outline-export/
 categories:
-  - 产品文档
+  - 结构化导出
 tags:
   - ChatGPT
   - Gemini
-  - Chrome Extension
-  - 大纲
-  - Markdown
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
+  - 结构化导出
+  - 隐私
 lang: zh-CN
 ---
 

@@ -1,14 +1,16 @@
 ---
 title: "ChatGPT Gemini Outline & Export 与 Superpower ChatGPT 对比"
 date: 2026-05-19 21:55:00
+permalink: AI-工具/zh/chatgpt-gemini-outline-vs-superpower/
 categories:
-  - AI 工具
+  - 插件评测与对比
 tags:
   - ChatGPT
-  - Chrome 扩展
-  - 对比
-  - Superpower
-  - 评测
+  - Gemini
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
+  - 结构化导出
+  - 产品评测
 description: "详细对比 ChatGPT Gemini Outline & Export 和 Superpower ChatGPT 两款 ChatGPT Chrome 扩展的功能、定位、适用场景和隐私处理。"
 lang: zh-CN
 ---

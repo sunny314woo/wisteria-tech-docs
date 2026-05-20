@@ -1,12 +1,13 @@
 ---
 title: MySQL / 原生 SQL 笔记
 date: 2026-05-18 10:13:00
+permalink: Dev-Notes/dev-notes/mysql-raw-sql-notes/
 categories:
-  - Dev Notes
+  - 开发笔记
 tags:
-  - mysql
-  - sql
-  - database
+  - 开发笔记
+  - MySQL
+  - 后端
 ---
 
 ## 常用模式

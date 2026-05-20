@@ -1,18 +1,20 @@
 ---
 title: "ChatGPT Gemini Outline & Export Review: A Hands-On Look"
 date: 2026-05-19 14:00:00
+permalink: Product-Docs/en/14-chatgpt-gemini-outline-export-review/
 categories:
-  - Product Docs
+  - Extension Reviews & Comparisons
 tags:
-  - review
-  - extension
-  - productivity
+  - ChatGPT
+  - Gemini
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
+  - Structured Export
+  - Product Review
 lang: en
+description: "A detailed hands-on review of ChatGPT Gemini Outline & Export by Wisteria Software — outline navigation, bookmarking, and Markdown export for ChatGPT and Gemini."
 ---
 
-**Meta Description:** A detailed hands-on review of ChatGPT Gemini Outline & Export by Wisteria Software — outline navigation, bookmarking, and Markdown export for ChatGPT and Gemini.
-
----
 
 ## Quick Answer
 

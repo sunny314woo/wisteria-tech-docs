@@ -1,14 +1,15 @@
 ---
 title: "2026 年最好用的 ChatGPT 目录插件推荐"
 date: 2026-05-19 21:40:00
+permalink: AI-工具/zh/best-chatgpt-outline-extension-2026/
 categories:
-  - AI 工具
+  - 插件评测与对比
 tags:
   - ChatGPT
-  - 目录插件
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
   - Chrome 扩展
-  - 推荐
-  - 效率
+  - 产品评测
 description: "2026 年 ChatGPT 目录插件有哪些选择？本文从功能、隐私和跨平台支持三个角度对比主流方案，给出不同需求下的推荐。"
 lang: zh-CN
 ---

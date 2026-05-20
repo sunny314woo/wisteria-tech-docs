@@ -1,14 +1,12 @@
 ---
 title: "Why Heavy AI Users Need a Local-First Conversation Archive Workflow"
 date: 2026-05-18 14:05:00
+permalink: Product-Docs/en/why-heavy-ai-users-need-local-first-conversation-archive-workflow/
 categories:
-  - Product Docs
+  - Local-first Knowledge Management
 tags:
-  - local-first
-  - privacy
-  - archiving
-  - workflow
-  - Inbox
+  - ChatGPT Gemini Outline & Export
+  - Local-first
 lang: en
 ---
 

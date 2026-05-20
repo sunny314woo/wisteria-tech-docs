@@ -1,14 +1,14 @@
 ---
 title: "如何将 ChatGPT 对话保存到本地知识库"
 date: 2026-05-19 22:05:00
+permalink: AI-工具/zh/how-to-save-chatgpt-to-local-knowledge-base/
 categories:
-  - AI 工具
+  - 本地优先知识管理
 tags:
   - ChatGPT
-  - 知识库
-  - Markdown
+  - ChatGPT Gemini Outline & Export
   - 本地优先
-  - Obsidian
+  - AI 知识管理
 description: "AI 对话如果只存在线历史里，很难被反复使用。本文介绍如何将 ChatGPT 对话导出为 Markdown 并整合到本地知识库中，实现离线搜索和长期归档。"
 lang: zh-CN
 ---

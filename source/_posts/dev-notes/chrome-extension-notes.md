@@ -1,11 +1,13 @@
 ---
 title: Chrome 插件开发笔记
 date: 2026-05-18 10:11:00
+permalink: Dev-Notes/dev-notes/chrome-extension-notes/
 categories:
-  - Dev Notes
+  - 开发笔记
 tags:
-  - chrome-extension
-  - manifest-v3
+  - Chrome 扩展
+  - 开发笔记
+  - Chrome MV3
 ---
 
 ## Manifest V3

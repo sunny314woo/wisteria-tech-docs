@@ -1,14 +1,15 @@
 ---
 title: "How to Export Long ChatGPT and Gemini Conversations to Structured Markdown"
 date: 2026-05-18 14:03:00
+permalink: Product-Docs/en/how-to-export-chatgpt-gemini-conversations-structured-markdown/
 categories:
-  - Product Docs
+  - Structured Export & Markdown
 tags:
-  - Markdown
-  - export
   - ChatGPT
   - Gemini
-  - archiving
+  - ChatGPT Gemini Outline & Export
+  - Markdown Export
+  - Structured Export
 lang: en
 ---
 

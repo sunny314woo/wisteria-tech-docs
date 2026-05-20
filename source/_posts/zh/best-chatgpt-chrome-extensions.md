@@ -1,14 +1,14 @@
 ---
 title: "最值得安装的 ChatGPT Chrome 扩展推荐"
 date: 2026-05-19 21:45:00
+permalink: AI-工具/zh/best-chatgpt-chrome-extensions/
 categories:
-  - AI 工具
+  - 插件评测与对比
 tags:
   - ChatGPT
+  - ChatGPT Gemini Outline & Export
   - Chrome 扩展
-  - 推荐
-  - 效率
-  - 工具
+  - 产品评测
 description: "从导航、导出、提示词管理和隐私四个维度，推荐最值得安装的 ChatGPT Chrome 扩展组合。推荐最小化的工具组合，避免安装过多扩展。"
 lang: zh-CN
 ---

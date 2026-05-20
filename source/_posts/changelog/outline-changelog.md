@@ -1,11 +1,13 @@
 ---
 title: Outline 更新日志
 date: 2026-05-18 10:14:00
+permalink: Changelog/changelog/outline-changelog/
 categories:
-  - Changelog
+  - 产品动态
 tags:
-  - outline
-  - release
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
+  - 产品动态
 ---
 
 ## 1.0.0 (2026-05-18)

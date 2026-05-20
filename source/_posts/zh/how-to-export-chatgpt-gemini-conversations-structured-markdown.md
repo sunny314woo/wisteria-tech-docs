@@ -1,14 +1,16 @@
 ---
 title: 如何把 ChatGPT 和 Gemini 对话导出为 Markdown，并保留目录结构
 date: 2026-05-18 14:02:00
+permalink: 产品文档/zh/how-to-export-chatgpt-gemini-conversations-structured-markdown/
 categories:
-  - 产品文档
+  - 结构化导出
 tags:
-  - Markdown
-  - 导出
   - ChatGPT
   - Gemini
-  - 归档
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
+  - Markdown 导出
+  - 结构化导出
 lang: zh-CN
 ---
 

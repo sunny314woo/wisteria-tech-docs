@@ -1,11 +1,11 @@
 ---
 title: 常见问题
 date: 2026-05-18 10:10:00
+permalink: License/license/faq/
 categories:
-  - License
+  - 授权与支持
 tags:
-  - faq
-  - support
+  - 授权
 ---
 
 ## License 常见问题

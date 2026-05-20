@@ -1,11 +1,12 @@
 ---
 title: 书签与高亮
 date: 2026-05-18 10:02:00
+permalink: Outline/outline/bookmarks-and-highlights/
 categories:
-  - Outline
+  - 产品指南
 tags:
-  - bookmarks
-  - highlights
+  - ChatGPT Gemini Outline & Export
+  - 书签与重点标记
 ---
 
 ## 书签

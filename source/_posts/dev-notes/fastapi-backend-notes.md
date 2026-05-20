@@ -1,12 +1,13 @@
 ---
 title: FastAPI 后端开发笔记
 date: 2026-05-18 10:12:00
+permalink: Dev-Notes/dev-notes/fastapi-backend-notes/
 categories:
-  - Dev Notes
+  - 开发笔记
 tags:
-  - fastapi
-  - python
-  - backend
+  - 开发笔记
+  - FastAPI
+  - 后端
 ---
 
 ## 项目结构

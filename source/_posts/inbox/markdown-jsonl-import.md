@@ -1,12 +1,13 @@
 ---
 title: Markdown / JSONL 导入
 date: 2026-05-18 10:07:00
+permalink: Inbox/inbox/markdown-jsonl-import/
 categories:
-  - Inbox
+  - 产品指南
 tags:
-  - import
-  - markdown
-  - jsonl
+  - ChatGPT Gemini Outline & Export
+  - Markdown 导出
+  - 结构化导出
 ---
 
 ## 导入方式

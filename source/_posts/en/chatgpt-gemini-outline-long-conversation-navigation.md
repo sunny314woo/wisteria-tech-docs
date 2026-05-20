@@ -1,14 +1,15 @@
 ---
 title: "ChatGPT Gemini Outline & Export: How to Navigate Long AI Conversations"
 date: 2026-05-18 14:01:00
+permalink: Product-Docs/en/chatgpt-gemini-outline-long-conversation-navigation/
 categories:
-  - Product Docs
+  - Structured Export & Markdown
 tags:
-  - outline
-  - long-conversation
   - ChatGPT
   - Gemini
-  - productivity
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
+  - Structured Export
 lang: en
 ---
 

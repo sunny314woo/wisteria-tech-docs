@@ -1,11 +1,11 @@
 ---
 title: 快速开始
 date: 2026-05-18 10:00:00
+permalink: Outline/outline/getting-started/
 categories:
-  - Outline
+  - 产品指南
 tags:
-  - getting-started
-  - plugin
+  - ChatGPT Gemini Outline & Export
 ---
 
 ## 简介

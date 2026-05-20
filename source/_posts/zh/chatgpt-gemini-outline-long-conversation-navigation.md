@@ -1,14 +1,14 @@
 ---
 title: ChatGPT 长对话怎么快速定位关键回答？用目录大纲解决滚动查找
 date: 2026-05-18 14:00:00
+permalink: 产品文档/zh/chatgpt-gemini-outline-long-conversation-navigation/
 categories:
-  - 产品文档
+  - AI 对话导航
 tags:
-  - 大纲
-  - 长对话
   - ChatGPT
   - Gemini
-  - 效率
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 lang: zh-CN
 ---
 

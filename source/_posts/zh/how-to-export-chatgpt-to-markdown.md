@@ -1,14 +1,14 @@
 ---
 title: "如何将 ChatGPT 对话导出为 Markdown 文件"
 date: 2026-05-19 21:05:00
+permalink: AI-工具/zh/how-to-export-chatgpt-to-markdown/
 categories:
-  - AI 工具
+  - 结构化导出
 tags:
   - ChatGPT
-  - Markdown
-  - 导出
-  - 知识管理
-  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
+  - Markdown 导出
+  - 结构化导出
 description: "将 ChatGPT 对话导出为 Markdown 文件可以保留标题、代码块和格式，适合长期保存和本地搜索。本文介绍导出方法、格式选择和常见问题。"
 lang: zh-CN
 ---

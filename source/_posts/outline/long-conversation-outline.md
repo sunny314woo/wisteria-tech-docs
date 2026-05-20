@@ -1,11 +1,12 @@
 ---
 title: 长对话大纲
 date: 2026-05-18 10:01:00
+permalink: Outline/outline/long-conversation-outline/
 categories:
-  - Outline
+  - 产品指南
 tags:
-  - outline
-  - long-conversation
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 ---
 
 ## 功能说明

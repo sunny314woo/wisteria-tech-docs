@@ -1,14 +1,13 @@
 ---
 title: "ChatGPT 超过 200 轮对话后如何高效导航"
 date: 2026-05-19 23:30:00
+permalink: AI-工具/zh/efficient-navigation-after-200-chatgpt-messages/
 categories:
-  - AI 工具
+  - AI 对话导航
 tags:
   - ChatGPT
-  - 长对话
-  - 导航
-  - 效率
-  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 description: "ChatGPT 对话超过 200 轮后，默认界面几乎无法有效导航。本文介绍目录、书签和分段导出三种应对长对话导航的方法。"
 lang: zh-CN
 ---

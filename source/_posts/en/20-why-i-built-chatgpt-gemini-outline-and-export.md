@@ -1,18 +1,20 @@
 ---
 title: "Why I Built ChatGPT Gemini Outline & Export"
 date: 2026-05-19 20:00:00
+permalink: Product-Docs/en/20-why-i-built-chatgpt-gemini-outline-and-export/
 categories:
-  - Product Docs
+  - Product Philosophy
 tags:
-  - product-philosophy
-  - origin-story
-  - privacy
+  - ChatGPT
+  - Gemini
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
+  - Structured Export
+  - Product Philosophy
 lang: en
+description: "The story behind ChatGPT Gemini Outline & Export by Wisteria Software — why it was built, the problems it solves, and the philosophy behind it."
 ---
 
-**Meta Description:** The story behind ChatGPT Gemini Outline & Export by Wisteria Software — why it was built, the problems it solves, and the philosophy behind it.
-
----
 
 ## Quick Answer
 

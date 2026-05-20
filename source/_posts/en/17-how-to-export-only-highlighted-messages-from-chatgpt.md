@@ -1,19 +1,18 @@
 ---
 title: "How to Export Only Highlighted Messages from ChatGPT"
 date: 2026-05-19 17:00:00
+permalink: Product-Docs/en/17-how-to-export-only-highlighted-messages-from-chatgpt/
 categories:
-  - Product Docs
+  - Structured Export & Markdown
 tags:
-  - highlights
-  - bookmarks
-  - export
-  - selective-export
+  - ChatGPT
+  - ChatGPT Gemini Outline & Export
+  - Bookmarks
+  - Structured Export
 lang: en
+description: "Learn how to export only highlighted or bookmarked messages from ChatGPT conversations, creating focused summaries instead of full transcripts."
 ---
 
-**Meta Description:** Learn how to export only highlighted or bookmarked messages from ChatGPT conversations, creating focused summaries instead of full transcripts.
-
----
 
 ## Quick Answer
 

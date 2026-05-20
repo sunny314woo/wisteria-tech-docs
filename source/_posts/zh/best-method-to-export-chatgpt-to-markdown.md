@@ -1,14 +1,14 @@
 ---
 title: "ChatGPT 导出 Markdown 的最佳方法"
 date: 2026-05-19 21:10:00
+permalink: AI-工具/zh/best-method-to-export-chatgpt-to-markdown/
 categories:
-  - AI 工具
+  - 结构化导出
 tags:
   - ChatGPT
-  - Markdown
-  - 导出
-  - 对比
-  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
+  - Markdown 导出
+  - 结构化导出
 description: "对比 ChatGPT 导出 Markdown 的三种主要方法：浏览器扩展、手工复制粘贴和 OpenAI 数据导出，分析各自优缺点和适用场景。"
 lang: zh-CN
 ---

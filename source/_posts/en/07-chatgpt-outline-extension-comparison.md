@@ -1,19 +1,19 @@
 ---
 title: "ChatGPT Outline Extension Comparison"
 date: 2026-05-19 07:00:00
+permalink: Product-Docs/en/07-chatgpt-outline-extension-comparison/
 categories:
-  - Product Docs
+  - Extension Reviews & Comparisons
 tags:
-  - outline
-  - extension
-  - comparison
-  - review
+  - ChatGPT
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
+  - Chrome Extension
+  - Product Review
 lang: en
+description: "Compare the top ChatGPT outline extensions side by side — features, pricing, pros, cons, and best use cases. Find the right tool for your workflow."
 ---
 
-**Meta Description:** Compare the top ChatGPT outline extensions side by side — features, pricing, pros, cons, and best use cases. Find the right tool for your workflow.
-
----
 
 ## Quick Answer
 

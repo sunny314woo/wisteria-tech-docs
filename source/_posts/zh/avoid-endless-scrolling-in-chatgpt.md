@@ -1,14 +1,13 @@
 ---
 title: "如何避免在 ChatGPT 中反复滚动查找历史回答"
 date: 2026-05-19 23:00:00
+permalink: AI-工具/zh/avoid-endless-scrolling-in-chatgpt/
 categories:
-  - AI 工具
+  - AI 对话导航
 tags:
   - ChatGPT
-  - 滚动
-  - 导航
-  - 效率
-  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 description: "ChatGPT 长对话中反复滚动查找历史回答是高频用户的共同痛点。本文提供目录跳转、书签标记和结构化导出三种解决方案。"
 lang: zh-CN
 ---

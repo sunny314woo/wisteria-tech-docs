@@ -1,14 +1,14 @@
 ---
 title: "如何快速整理 Gemini 长对话内容"
 date: 2026-05-19 21:30:00
+permalink: AI-工具/zh/how-to-organize-gemini-long-conversations/
 categories:
-  - AI 工具
+  - AI 对话导航
 tags:
   - Gemini
-  - 长对话
-  - 整理
-  - 导出
-  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
+  - AI 知识管理
 description: "Gemini 长对话同样存在内容难以整理和回溯的问题。本文介绍用目录、书签和 Markdown 导出三种方法快速整理 Gemini 对话。"
 lang: zh-CN
 ---

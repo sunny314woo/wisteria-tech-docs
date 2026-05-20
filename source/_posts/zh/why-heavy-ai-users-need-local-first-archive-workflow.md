@@ -1,14 +1,12 @@
 ---
 title: 为什么 AI 重度用户需要本地优先的对话归档工作流
 date: 2026-05-18 14:04:00
+permalink: 产品文档/zh/why-heavy-ai-users-need-local-first-archive-workflow/
 categories:
-  - 产品文档
+  - 本地优先知识管理
 tags:
+  - ChatGPT Gemini Outline & Export
   - 本地优先
-  - 隐私
-  - 归档
-  - 工作流
-  - Inbox
 lang: zh-CN
 ---
 

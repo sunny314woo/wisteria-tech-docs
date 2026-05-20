@@ -26,7 +26,8 @@
       post: {
         posted: '发表于',
         edited: '更新于',
-        in: '分类于'
+        in: '分类于',
+        readMore: '阅读全文'
       },
       search: {
         placeholder: '搜索...',
@@ -69,7 +70,8 @@
       post: {
         posted: 'Posted on',
         edited: 'Updated on',
-        in: 'In'
+        in: 'In',
+        readMore: 'Read more'
       },
       search: {
         placeholder: 'Search...',
@@ -244,6 +246,17 @@
       button.dataset.currentLang = lang;
       button.setAttribute('aria-label', t.accessibility.language);
       button.setAttribute('title', t.accessibility.language);
+    });
+    document.querySelectorAll('.post-block .post-button a').forEach(link => {
+      const postBlock = link.closest('.post-block');
+      const title = postBlock?.querySelector('.post-title')?.textContent.trim().replace(/\s+/g, ' ');
+      if (!title) return;
+      const postLang = link.getAttribute('href')?.includes('/en/') ? 'en' : link.getAttribute('href')?.includes('/zh/') ? 'zh-CN' : lang;
+      const readMoreText = dictionary[postLang]?.post.readMore || t.post.readMore;
+      link.innerHTML = `${readMoreText} &raquo;`;
+      const accessibleLabel = `${readMoreText}: ${title}`;
+      link.setAttribute('aria-label', accessibleLabel);
+      link.setAttribute('title', accessibleLabel);
     });
   };
 

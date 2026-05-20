@@ -1,14 +1,16 @@
 ---
 title: "ChatGPT Gemini Outline & Export 使用体验分享"
 date: 2026-05-19 21:50:00
+permalink: AI-工具/zh/chatgpt-gemini-outline-experience-review/
 categories:
-  - AI 工具
+  - 插件评测与对比
 tags:
   - ChatGPT
   - Gemini
-  - 使用体验
-  - Chrome 扩展
-  - 评测
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
+  - 结构化导出
+  - 产品评测
 description: "从一个重度 AI 用户的角度，分享 ChatGPT Gemini Outline & Export 的实际使用体验——包括目录、书签和导出三个核心功能在日常工作流中的表现。"
 lang: zh-CN
 ---

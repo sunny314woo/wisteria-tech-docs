@@ -1,19 +1,18 @@
 ---
 title: "Best Chrome Extensions for ChatGPT Power Users in 2026"
 date: 2026-05-19 13:00:00
+permalink: Product-Docs/en/13-best-chrome-extensions-for-chatgpt-power-users/
 categories:
-  - Product Docs
+  - Extension Reviews & Comparisons
 tags:
-  - chrome
-  - extension
-  - power-user
-  - productivity
+  - ChatGPT
+  - ChatGPT Gemini Outline & Export
+  - Chrome Extension
+  - Product Review
 lang: en
+description: "The best Chrome extensions for ChatGPT power users in 2026 — outline navigation, bookmarking, export, prompt management, and more. A curated guide."
 ---
 
-**Meta Description:** The best Chrome extensions for ChatGPT power users in 2026 — outline navigation, bookmarking, export, prompt management, and more. A curated guide.
-
----
 
 ## Quick Answer
 

@@ -1,14 +1,15 @@
 ---
 title: "ChatGPT 目录插件哪个好用？"
 date: 2026-05-19 22:00:00
+permalink: AI-工具/zh/which-chatgpt-outline-extension-is-good/
 categories:
-  - AI 工具
+  - 插件评测与对比
 tags:
   - ChatGPT
-  - 目录插件
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
   - Chrome 扩展
-  - 对比
-  - 推荐
+  - 产品评测
 description: "几款 ChatGPT 目录插件各有什么特点？从功能完整度、隐私、跨平台支持和价格四个维度对比，帮你选择最适合自己的那一款。"
 lang: zh-CN
 ---

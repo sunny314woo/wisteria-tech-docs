@@ -1,14 +1,16 @@
 ---
 title: "为什么我开发了 ChatGPT Gemini Outline & Export"
 date: 2026-05-19 22:15:00
+permalink: AI-工具/zh/why-i-built-chatgpt-gemini-outline/
 categories:
-  - AI 工具
+  - 产品理念
 tags:
-  - 产品故事
   - ChatGPT
   - Gemini
-  - Chrome 扩展
-  - Wisteria
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
+  - 结构化导出
+  - 产品理念
 description: "分享开发 ChatGPT Gemini Outline & Export 的初衷和过程——从一个长对话找内容翻到崩溃的真实经历，到做出同时支持 ChatGPT 和 Gemini 的导航与导出工具。"
 lang: zh-CN
 ---

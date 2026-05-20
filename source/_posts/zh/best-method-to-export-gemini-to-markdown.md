@@ -1,14 +1,14 @@
 ---
 title: "Gemini 对话导出 Markdown 的最佳方法"
 date: 2026-05-19 21:35:00
+permalink: AI-工具/zh/best-method-to-export-gemini-to-markdown/
 categories:
-  - AI 工具
+  - 结构化导出
 tags:
   - Gemini
-  - Markdown
-  - 导出
-  - 备份
-  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
+  - Markdown 导出
+  - 结构化导出
 description: "对比 Gemini 对话导出 Markdown 的可行方法：浏览器扩展、Google Takeout 和手工复制粘贴。分析各方法的速度、格式完整性和适用场景。"
 lang: zh-CN
 ---

@@ -1,11 +1,13 @@
 ---
 title: Inbox 更新日志
 date: 2026-05-18 10:15:00
+permalink: Changelog/changelog/inbox-changelog/
 categories:
-  - Changelog
+  - 产品动态
 tags:
-  - inbox
-  - release
+  - ChatGPT Gemini Outline & Export
+  - Inbox
+  - 产品动态
 ---
 
 ## 1.0.0 (2026-05-18)

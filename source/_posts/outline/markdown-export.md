@@ -1,11 +1,13 @@
 ---
 title: Markdown 导出
 date: 2026-05-18 10:03:00
+permalink: Outline/outline/markdown-export/
 categories:
-  - Outline
+  - 产品指南
 tags:
-  - export
-  - markdown
+  - ChatGPT Gemini Outline & Export
+  - Markdown 导出
+  - 结构化导出
 ---
 
 ## 导出格式

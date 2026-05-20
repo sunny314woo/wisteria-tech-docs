@@ -1,14 +1,13 @@
 ---
 title: "如何快速定位 ChatGPT 长对话中的关键信息"
 date: 2026-05-19 21:00:00
+permalink: AI-工具/zh/how-to-quickly-locate-key-info-in-chatgpt-long-conversations/
 categories:
-  - AI 工具
+  - AI 对话导航
 tags:
   - ChatGPT
-  - 长对话
-  - 导航
-  - 效率
-  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 description: "ChatGPT 长对话超过几十轮后，很难快速找到之前的关键信息。本文介绍通过侧边栏目录、书签标记和结构化导出来定位重要内容的方法。"
 lang: zh-CN
 ---
