@@ -17,6 +17,14 @@ favicon:
   small: /images/favicon-16x16.png
   medium: /images/favicon-32x32.png
 
+# Open Graph and social preview
+open_graph:
+  enable: true
+  options:
+    image: /images/social-card.png
+    twitter_card: summary_large_image
+    twitter_image: /images/social-card.png
+
 # Menu
 menu:
   home: / || fa fa-home

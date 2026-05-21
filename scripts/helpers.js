@@ -18,6 +18,13 @@ function namesFromCollection(collection) {
   return [];
 }
 
+function firstFromCollection(collection) {
+  if (!collection) return null;
+  if (Array.isArray(collection)) return collection[0] || null;
+  if (typeof collection.toArray === 'function') return collection.toArray()[0] || null;
+  return null;
+}
+
 function absoluteUrl(pathname) {
   const siteUrl = String(hexo.config.url || '').replace(/\/$/, '');
   const root = String(hexo.config.root || '/').replace(/\/$/, '');
@@ -89,7 +96,9 @@ function postSchema(post) {
   const categories = namesFromCollection(post.categories);
   const tags = namesFromCollection(post.tags);
   const keywords = Array.isArray(post.keywords) ? post.keywords : tags;
+  const categoryItem = firstFromCollection(post.categories);
   const url = absoluteUrl(post.path);
+  const category = categories[0];
 
   const graph = [{
     '@type': 'BlogPosting',
@@ -117,10 +126,39 @@ function postSchema(post) {
         url: absoluteUrl('/images/favicon-32x32.png')
       }
     },
-    articleSection: categories[0],
+    articleSection: category,
     keywords: keywords.join(', '),
     url
   }];
+
+  const breadcrumbItems = [{
+    '@type': 'ListItem',
+    position: 1,
+    name: hexo.config.title || 'Wisteria Blog',
+    item: absoluteUrl('/')
+  }];
+
+  if (category) {
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      position: 2,
+      name: category,
+      item: absoluteUrl(categoryItem && categoryItem.path ? categoryItem.path : `categories/${category.replace(/\s+/g, '-')}/`)
+    });
+  }
+
+  breadcrumbItems.push({
+    '@type': 'ListItem',
+    position: breadcrumbItems.length + 1,
+    name: post.title,
+    item: url
+  });
+
+  graph.push({
+    '@type': 'BreadcrumbList',
+    '@id': `${url}#breadcrumb`,
+    itemListElement: breadcrumbItems
+  });
 
   const faqItems = extractFaqItems(post);
   if (faqItems.length >= 2) {
