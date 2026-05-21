@@ -1,6 +1,11 @@
 ---
 title: Inbox 更新日志
 date: 2026-05-18 10:15:00
+description: "Inbox 更新日志，记录 Wisteria Software 产品在功能、体验和工作流上的更新，帮助用户了解 ChatGPT Gemini Outline & Export 的近期变化。"
+keywords:
+  - ChatGPT Gemini Outline & Export
+  - Inbox
+  - 产品动态
 permalink: Changelog/changelog/inbox-changelog/
 categories:
   - 产品动态
@@ -8,6 +13,7 @@ tags:
   - ChatGPT Gemini Outline & Export
   - Inbox
   - 产品动态
+lang: zh-CN
 ---
 
 ## 1.0.0 (2026-05-18)

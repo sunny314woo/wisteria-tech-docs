@@ -7,7 +7,13 @@ categories:
 tags:
   - ChatGPT Gemini Outline & Export
   - 本地优先
+  - 本地优先知识管理
 lang: zh-CN
+description: "为什么 AI 重度用户需要本地优先的对话归档工作流，围绕本地优先知识管理说明常见问题、适用场景和推荐工作流，帮助用户更好地整理、导航和导出 AI 对话内容。"
+keywords:
+  - 本地优先知识管理
+  - ChatGPT Gemini Outline & Export
+  - 本地优先
 ---
 
 AI 重度用户需要本地优先的对话归档工作流，因为 ChatGPT 和 Gemini 对话正在变成一种个人知识资产。只依赖平台历史记录，意味着你很难跨对话搜索、整理、复用，也无法完全控制长期保存方式。

@@ -9,6 +9,10 @@ tags:
   - ChatGPT Gemini Outline & Export
   - 书签与重点标记
 description: "ChatGPT 缺少原生重点标记功能。本文对比多种标记方案，包括浏览器扩展、手动摘录和第三方笔记工具，给出不同场景下的推荐选择。"
+keywords:
+  - ChatGPT
+  - ChatGPT Gemini Outline & Export
+  - 书签与重点标记
 lang: zh-CN
 ---
 
@@ -123,6 +127,6 @@ ChatGPT 重点标记的最佳方案是用浏览器扩展给对话加书签——
 
 ## 建议内部链接
 
-- [如何在 ChatGPT 中收藏重要回答](how-to-bookmark-important-chatgpt-answers.md)
-- [如何只导出 ChatGPT 中标记的重点内容](how-to-export-only-bookmarked-chatgpt-messages.md)
-- [如何将 ChatGPT 对话导出为 Markdown 文件](how-to-export-chatgpt-to-markdown.md)
+- [如何在 ChatGPT 中收藏重要回答](/AI-工具/zh/how-to-bookmark-important-chatgpt-answers/)
+- [如何只导出 ChatGPT 中标记的重点内容](/AI-工具/zh/how-to-export-only-bookmarked-chatgpt-messages/)
+- [如何将 ChatGPT 对话导出为 Markdown 文件](/AI-工具/zh/how-to-export-chatgpt-to-markdown/)

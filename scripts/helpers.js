@@ -18,6 +18,132 @@ function namesFromCollection(collection) {
   return [];
 }
 
+function absoluteUrl(pathname) {
+  const siteUrl = String(hexo.config.url || '').replace(/\/$/, '');
+  const root = String(hexo.config.root || '/').replace(/\/$/, '');
+  const cleanPath = String(pathname || '').replace(/^\//, '');
+  return `${siteUrl}${root}/${cleanPath}`.replace(/([^:]\/)\/+/g, '$1');
+}
+
+function stripHtml(value) {
+  return String(value || '')
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, '\'')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function markdownToPlainText(value) {
+  return stripHtml(String(value || '')
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, ' ')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/^\s*[-*+]\s+/gm, '')
+    .replace(/^\s*\d+\.\s+/gm, '')
+    .replace(/[*_~>]/g, ' '));
+}
+
+function extractFaqItems(post) {
+  const raw = post.raw || post._content || post.content || '';
+  const faqStart = String(raw).search(/^##\s+(FAQ|常见问题)/im);
+  if (faqStart < 0) return [];
+
+  const faqSection = String(raw).slice(faqStart).replace(/^##\s+.+$/m, '');
+  const endMatch = faqSection.search(/\n##\s+(?!#)/);
+  const body = endMatch >= 0 ? faqSection.slice(0, endMatch) : faqSection;
+  let matches = [...body.matchAll(/^###\s+(.+?)\s*\n([\s\S]*?)(?=\n###\s+|\n##\s+|$)/gm)];
+  if (!matches.length) {
+    matches = [...body.matchAll(/^\*\*(.+?)\*\*\s*\n([\s\S]*?)(?=\n\*\*.+?\*\*\s*\n|\n##\s+|$)/gm)];
+  }
+
+  return matches
+    .map(match => ({
+      '@type': 'Question',
+      name: markdownToPlainText(match[1]),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: markdownToPlainText(match[2]).slice(0, 900)
+      }
+    }))
+    .filter(item => item.name && item.acceptedAnswer.text)
+    .slice(0, 8);
+}
+
+function dateToIso(value) {
+  if (!value) return undefined;
+  if (typeof value.toISOString === 'function') return value.toISOString();
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? undefined : date.toISOString();
+}
+
+function postSchema(post) {
+  const categories = namesFromCollection(post.categories);
+  const tags = namesFromCollection(post.tags);
+  const keywords = Array.isArray(post.keywords) ? post.keywords : tags;
+  const url = absoluteUrl(post.path);
+
+  const graph = [{
+    '@type': 'BlogPosting',
+    '@id': `${url}#blogposting`,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url
+    },
+    headline: post.title,
+    description: post.description || stripHtml(post.excerpt || '').slice(0, 180),
+    inLanguage: post.lang || hexo.config.language || 'zh-CN',
+    datePublished: dateToIso(post.date),
+    dateModified: dateToIso(post.updated || post.date),
+    author: {
+      '@type': 'Organization',
+      name: hexo.config.author || 'Wisteria Software',
+      url: 'https://wisteriasoftware.uk/'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Wisteria Software',
+      url: 'https://wisteriasoftware.uk/',
+      logo: {
+        '@type': 'ImageObject',
+        url: absoluteUrl('/images/favicon-32x32.png')
+      }
+    },
+    articleSection: categories[0],
+    keywords: keywords.join(', '),
+    url
+  }];
+
+  const faqItems = extractFaqItems(post);
+  if (faqItems.length >= 2) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: faqItems
+    });
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph
+  };
+}
+
+hexo.extend.filter.register('after_post_render', data => {
+  if (!data || !data.content || !data.title || !data.date || !data.path) return data;
+  const jsonLd = '<script type="application/ld+json">' + JSON.stringify(postSchema(data)) + '</script>';
+  data.content += `\n${jsonLd}`;
+  return data;
+});
+
 hexo.extend.helper.register('recent_posts_sidebar', function(limit) {
   limit = limit || 10;
   const posts = this.site.posts.sort('-date').limit(limit).toArray();

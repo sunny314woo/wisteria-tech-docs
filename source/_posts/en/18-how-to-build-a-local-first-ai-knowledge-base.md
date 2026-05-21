@@ -10,6 +10,11 @@ tags:
   - AI Knowledge Management
 lang: en
 description: "Learn how to build a local-first AI knowledge base by exporting ChatGPT and Gemini conversations as Markdown files and organizing them into a searchable archive."
+keywords:
+  - local-first knowledge management
+  - ChatGPT Gemini Outline & Export
+  - Local-first
+  - AI Knowledge Management
 ---
 
 

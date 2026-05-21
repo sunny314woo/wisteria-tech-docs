@@ -13,6 +13,13 @@ tags:
   - Product Review
 lang: en
 description: "A detailed hands-on review of ChatGPT Gemini Outline & Export by Wisteria Software — outline navigation, bookmarking, and Markdown export for ChatGPT and Gemini."
+keywords:
+  - ChatGPT
+  - Gemini
+  - AI conversation navigation
+  - structured export
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
 ---
 
 

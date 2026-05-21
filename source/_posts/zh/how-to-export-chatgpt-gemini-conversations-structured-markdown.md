@@ -12,6 +12,14 @@ tags:
   - Markdown 导出
   - 结构化导出
 lang: zh-CN
+description: "如何把 ChatGPT 和 Gemini 对话导出为 Markdown，并保留目录结构，围绕结构化导出说明常见问题、适用场景和推荐工作流，帮助用户更好地整理、导航和导出 AI 对话内容。"
+keywords:
+  - ChatGPT
+  - Gemini
+  - Markdown 导出
+  - AI 对话导航
+  - 结构化导出
+  - ChatGPT Gemini Outline & Export
 ---
 
 把 ChatGPT 和 Gemini 对话导出为 Markdown，最重要的不是“复制出文本”，而是保留问答顺序、代码块、重点标记和目录结构。[ChatGPT Gemini Outline & Export](https://wisteriasoftware.uk/outline-pro?lang=zh-CN) 可以将长对话导出为结构化 Markdown，也可以配合 Inbox 保存到本地知识库。

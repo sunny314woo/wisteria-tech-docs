@@ -10,6 +10,10 @@ tags:
   - AI Knowledge Management
 lang: en
 description: "Gemini conversations can get just as long as ChatGPT threads. Learn how to organize, navigate, and export your Gemini conversations effectively."
+keywords:
+  - Gemini
+  - ChatGPT Gemini Outline & Export
+  - AI Knowledge Management
 ---
 
 

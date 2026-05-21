@@ -11,6 +11,13 @@ tags:
   - Structured Export
 lang: en
 description: "Learn the best way to export Google Gemini conversations to structured Markdown files for offline access, search, and knowledge management."
+keywords:
+  - Gemini
+  - Markdown export
+  - structured export
+  - ChatGPT Gemini Outline & Export
+  - Markdown Export
+  - Structured Export
 ---
 
 

@@ -10,6 +10,11 @@ tags:
   - Structured Export
 lang: en
 description: "Discover the best way to export ChatGPT conversations while preserving structure — headings, code blocks, lists, and formatting intact. Compare tools, methods, and workflows."
+keywords:
+  - ChatGPT
+  - structured export
+  - ChatGPT Gemini Outline & Export
+  - Structured Export
 ---
 
 

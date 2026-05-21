@@ -10,6 +10,11 @@ tags:
   - Outline Navigation
 lang: en
 description: "Learn how to navigate long ChatGPT conversations without endless scrolling using outlines, bookmarks, and smart export tools. A practical guide for power users."
+keywords:
+  - ChatGPT
+  - AI conversation navigation
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
 ---
 
 

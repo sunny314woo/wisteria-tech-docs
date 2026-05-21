@@ -7,8 +7,13 @@ categories:
 tags:
   - ChatGPT Gemini Outline & Export
   - Structured Export
+  - Markdown Export
 lang: en
 description: "Copy and paste might seem easy, but structured Markdown export preserves formatting, saves time, and integrates with your workflow. Here is why it is the better choice."
+keywords:
+  - structured export
+  - ChatGPT Gemini Outline & Export
+  - Structured Export
 ---
 
 

@@ -10,6 +10,10 @@ tags:
   - Outline Navigation
 lang: en
 description: "If your ChatGPT conversation is too long and you cannot find answers, this guide shows practical methods to locate information fast using outlines, bookmarks, and structured export."
+keywords:
+  - ChatGPT
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
 ---
 
 

@@ -9,6 +9,10 @@ tags:
   - ChatGPT Gemini Outline & Export
   - 目录导航
 description: "ChatGPT 对话超过 200 轮后，默认界面几乎无法有效导航。本文介绍目录、书签和分段导出三种应对长对话导航的方法。"
+keywords:
+  - ChatGPT
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 lang: zh-CN
 ---
 
@@ -114,6 +118,6 @@ ChatGPT Gemini Outline & Export 为超长对话场景提供了完整的目录导
 
 ## 建议内部链接
 
-- [如何在 ChatGPT 中一键跳转到任意问题](one-click-jump-to-any-message-in-chatgpt.md)
-- [如何避免在 ChatGPT 中反复滚动查找历史回答](avoid-endless-scrolling-in-chatgpt.md)
-- [如何将 ChatGPT 对话导出为 Markdown 文件](how-to-export-chatgpt-to-markdown.md)
+- [如何在 ChatGPT 中一键跳转到任意问题](/AI-工具/zh/one-click-jump-to-any-message-in-chatgpt/)
+- [如何避免在 ChatGPT 中反复滚动查找历史回答](/AI-工具/zh/avoid-endless-scrolling-in-chatgpt/)
+- [如何将 ChatGPT 对话导出为 Markdown 文件](/AI-工具/zh/how-to-export-chatgpt-to-markdown/)

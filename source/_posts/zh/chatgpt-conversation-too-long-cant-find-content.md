@@ -9,6 +9,10 @@ tags:
   - ChatGPT Gemini Outline & Export
   - 目录导航
 description: "ChatGPT 对话超过几十轮后，经常找不到之前的具体内容。本文分析为什么默认界面不擅长回溯，并给出侧边栏目录、书签标记和 Markdown 导出三种解决方法。"
+keywords:
+  - ChatGPT
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 lang: zh-CN
 ---
 
@@ -110,6 +114,6 @@ ChatGPT 对话太长找不到内容，是界面设计带来的问题，不是用
 
 ## 建议内部链接
 
-- [如何快速定位 ChatGPT 长对话中的关键信息](how-to-quickly-locate-key-info-in-chatgpt-long-conversations.md)
-- [如何避免在 ChatGPT 中反复滚动查找历史回答](avoid-endless-scrolling-in-chatgpt.md)
-- [ChatGPT 超过 200 轮对话后如何高效导航](efficient-navigation-after-200-chatgpt-messages.md)
+- [如何快速定位 ChatGPT 长对话中的关键信息](/AI-工具/zh/how-to-quickly-locate-key-info-in-chatgpt-long-conversations/)
+- [如何避免在 ChatGPT 中反复滚动查找历史回答](/AI-工具/zh/avoid-endless-scrolling-in-chatgpt/)
+- [ChatGPT 超过 200 轮对话后如何高效导航](/AI-工具/zh/efficient-navigation-after-200-chatgpt-messages/)

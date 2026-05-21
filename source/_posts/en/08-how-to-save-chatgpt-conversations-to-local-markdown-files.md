@@ -10,6 +10,12 @@ tags:
   - Markdown Export
 lang: en
 description: "Learn how to save ChatGPT conversations to local Markdown files for permanent, searchable, offline-accessible archives. Step-by-step guide with best practices."
+keywords:
+  - ChatGPT
+  - Markdown export
+  - local-first knowledge management
+  - ChatGPT Gemini Outline & Export
+  - Markdown Export
 ---
 
 

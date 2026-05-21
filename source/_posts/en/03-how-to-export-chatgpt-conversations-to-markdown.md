@@ -11,6 +11,13 @@ tags:
   - Structured Export
 lang: en
 description: "Learn how to export ChatGPT conversations to Markdown with full structure — headings, code blocks, and formatting preserved. A complete step-by-step guide."
+keywords:
+  - ChatGPT
+  - Markdown export
+  - structured export
+  - ChatGPT Gemini Outline & Export
+  - Markdown Export
+  - Structured Export
 ---
 
 

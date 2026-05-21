@@ -10,6 +10,11 @@ tags:
   - 书签与重点标记
   - 结构化导出
 description: "长对话中只有一小部分是真正值得保存的。本文介绍如何在 ChatGPT 中标记重点内容，然后只导出这些标记部分，生成干净精炼的 Markdown 文件。"
+keywords:
+  - ChatGPT
+  - 结构化导出
+  - ChatGPT Gemini Outline & Export
+  - 书签与重点标记
 lang: zh-CN
 ---
 
@@ -105,6 +110,6 @@ ChatGPT Gemini Outline & Export 的书签标记和选择性导出功能就是为
 
 ## 建议内部链接
 
-- [如何在 ChatGPT 中收藏重要回答](how-to-bookmark-important-chatgpt-answers.md)
-- [ChatGPT 重点标记功能最佳解决方案](best-solution-for-chatgpt-bookmarking.md)
-- [如何将 ChatGPT 对话导出为 Markdown 文件](how-to-export-chatgpt-to-markdown.md)
+- [如何在 ChatGPT 中收藏重要回答](/AI-工具/zh/how-to-bookmark-important-chatgpt-answers/)
+- [ChatGPT 重点标记功能最佳解决方案](/AI-工具/zh/best-solution-for-chatgpt-bookmarking/)
+- [如何将 ChatGPT 对话导出为 Markdown 文件](/AI-工具/zh/how-to-export-chatgpt-to-markdown/)

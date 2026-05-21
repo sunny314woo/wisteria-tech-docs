@@ -11,6 +11,14 @@ tags:
   - Markdown Export
   - Structured Export
 lang: en
+description: "How to Export Long ChatGPT and Gemini Conversations to Structured Markdown. Learn how structured Markdown export helps preserve AI conversation context, formatting, and reusable knowledge outside the chat interface."
+keywords:
+  - ChatGPT
+  - Gemini
+  - Markdown export
+  - structured export
+  - ChatGPT Gemini Outline & Export
+  - Markdown Export
 ---
 
 ## Conversations Are Not Just for the Moment
@@ -94,4 +102,4 @@ The export contains only what you can see in the conversation page — your prom
 - [Website](https://wisteriasoftware.uk/)
 - [Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)
 - [Demo Video](https://www.youtube.com/watch?v=1BZpejb1oT0)
-- 中文版：[如何把 ChatGPT 和 Gemini 长对话导出为结构化 Markdown](/zh/how-to-export-chatgpt-gemini-conversations-structured-markdown/)
+- 中文版：[如何把 ChatGPT 和 Gemini 长对话导出为结构化 Markdown](/产品文档/zh/how-to-export-chatgpt-gemini-conversations-structured-markdown/)

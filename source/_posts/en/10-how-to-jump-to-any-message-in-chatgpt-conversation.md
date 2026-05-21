@@ -10,6 +10,11 @@ tags:
   - Outline Navigation
 lang: en
 description: "Stop scrolling through long ChatGPT threads. Learn how to jump to any message instantly using outline navigation tools."
+keywords:
+  - ChatGPT
+  - AI conversation navigation
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
 ---
 
 

@@ -13,6 +13,13 @@ tags:
   - Product Review
 lang: en
 description: "ChatGPT Gemini Outline & Export and Superpower ChatGPT are two leading ChatGPT extensions. Compare their features, strengths, and weaknesses to choose the right one."
+keywords:
+  - ChatGPT
+  - Gemini
+  - AI conversation navigation
+  - structured export
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
 ---
 
 

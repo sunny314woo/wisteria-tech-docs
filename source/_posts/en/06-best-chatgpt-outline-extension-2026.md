@@ -12,6 +12,13 @@ tags:
   - Product Review
 lang: en
 description: "Looking for the best ChatGPT outline extension in 2026? We review the top tools for navigating, bookmarking, and exporting ChatGPT conversations."
+keywords:
+  - ChatGPT
+  - Chrome extension
+  - AI conversation navigation
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
+  - Chrome Extension
 ---
 
 

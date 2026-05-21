@@ -12,6 +12,13 @@ tags:
   - 结构化导出
   - 产品理念
 description: "分享开发 ChatGPT Gemini Outline & Export 的初衷和过程——从一个长对话找内容翻到崩溃的真实经历，到做出同时支持 ChatGPT 和 Gemini 的导航与导出工具。"
+keywords:
+  - ChatGPT
+  - Gemini
+  - AI 对话导航
+  - 结构化导出
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 lang: zh-CN
 ---
 
@@ -114,6 +121,6 @@ ChatGPT Gemini Outline & Export 是一个从具体痛苦出发的工具——因
 
 ## 建议内部链接
 
-- [ChatGPT Gemini Outline & Export 使用体验分享](chatgpt-gemini-outline-experience-review.md)
-- [2026 年最好用的 ChatGPT 目录插件推荐](best-chatgpt-outline-extension-2026.md)
-- [如何将 ChatGPT 对话保存到本地知识库](how-to-save-chatgpt-to-local-knowledge-base.md)
+- [ChatGPT Gemini Outline & Export 使用体验分享](/AI-工具/zh/chatgpt-gemini-outline-experience-review/)
+- [2026 年最好用的 ChatGPT 目录插件推荐](/AI-工具/zh/best-chatgpt-outline-extension-2026/)
+- [如何将 ChatGPT 对话保存到本地知识库](/AI-工具/zh/how-to-save-chatgpt-to-local-knowledge-base/)

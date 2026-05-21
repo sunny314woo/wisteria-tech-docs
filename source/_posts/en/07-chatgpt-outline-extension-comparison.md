@@ -12,6 +12,13 @@ tags:
   - Product Review
 lang: en
 description: "Compare the top ChatGPT outline extensions side by side — features, pricing, pros, cons, and best use cases. Find the right tool for your workflow."
+keywords:
+  - ChatGPT
+  - Chrome extension
+  - AI conversation navigation
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
+  - Chrome Extension
 ---
 
 

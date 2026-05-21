@@ -10,6 +10,10 @@ tags:
   - Outline Navigation
 lang: en
 description: "Learn how to search old ChatGPT answers quickly using outline navigation, bookmarks, and Markdown export. Stop scrolling — start searching."
+keywords:
+  - ChatGPT
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
 ---
 
 

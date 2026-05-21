@@ -13,6 +13,13 @@ tags:
   - Product Philosophy
 lang: en
 description: "The story behind ChatGPT Gemini Outline & Export by Wisteria Software — why it was built, the problems it solves, and the philosophy behind it."
+keywords:
+  - ChatGPT
+  - Gemini
+  - AI conversation navigation
+  - structured export
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
 ---
 
 

@@ -10,6 +10,10 @@ tags:
   - Chrome 扩展
   - 产品评测
 description: "从导航、导出、提示词管理和隐私四个维度，推荐最值得安装的 ChatGPT Chrome 扩展组合。推荐最小化的工具组合，避免安装过多扩展。"
+keywords:
+  - ChatGPT
+  - Chrome 扩展
+  - ChatGPT Gemini Outline & Export
 lang: zh-CN
 ---
 
@@ -100,6 +104,6 @@ ChatGPT Chrome 扩展的选择原则是"最少够用"——不是越多越好。
 
 ## 建议内部链接
 
-- [2026 年最好用的 ChatGPT 目录插件推荐](best-chatgpt-outline-extension-2026.md)
-- [ChatGPT 目录插件哪个好用？](which-chatgpt-outline-extension-is-good.md)
-- [ChatGPT Gemini Outline & Export 使用体验分享](chatgpt-gemini-outline-experience-review.md)
+- [2026 年最好用的 ChatGPT 目录插件推荐](/AI-工具/zh/best-chatgpt-outline-extension-2026/)
+- [ChatGPT 目录插件哪个好用？](/AI-工具/zh/which-chatgpt-outline-extension-is-good/)
+- [ChatGPT Gemini Outline & Export 使用体验分享](/AI-工具/zh/chatgpt-gemini-outline-experience-review/)

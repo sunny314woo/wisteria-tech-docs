@@ -11,6 +11,12 @@ tags:
   - Chrome 扩展
   - 产品评测
 description: "2026 年 ChatGPT 目录插件有哪些选择？本文从功能、隐私和跨平台支持三个角度对比主流方案，给出不同需求下的推荐。"
+keywords:
+  - ChatGPT
+  - Chrome 扩展
+  - AI 对话导航
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 lang: zh-CN
 ---
 
@@ -114,6 +120,6 @@ ChatGPT Gemini Outline & Export 免费版包含了目录、基础书签和一定
 
 ## 建议内部链接
 
-- [ChatGPT 目录插件哪个好用？](which-chatgpt-outline-extension-is-good.md)
-- [最值得安装的 ChatGPT Chrome 扩展推荐](best-chatgpt-chrome-extensions.md)
-- [ChatGPT Gemini Outline & Export 与 Superpower ChatGPT 对比](chatgpt-gemini-outline-vs-superpower.md)
+- [ChatGPT 目录插件哪个好用？](/AI-工具/zh/which-chatgpt-outline-extension-is-good/)
+- [最值得安装的 ChatGPT Chrome 扩展推荐](/AI-工具/zh/best-chatgpt-chrome-extensions/)
+- [ChatGPT Gemini Outline & Export 与 Superpower ChatGPT 对比](/AI-工具/zh/chatgpt-gemini-outline-vs-superpower/)

@@ -7,8 +7,13 @@ categories:
 tags:
   - ChatGPT Gemini Outline & Export
   - AI Knowledge Management
+  - Local-first
 lang: en
 description: "Your AI conversations contain valuable insights, code, and ideas. Learn how to capture, organize, and reuse them effectively."
+keywords:
+  - local-first knowledge management
+  - ChatGPT Gemini Outline & Export
+  - AI Knowledge Management
 ---
 
 

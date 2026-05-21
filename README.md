@@ -91,6 +91,9 @@ npm run new -- "文章标题"
 # 生成静态文件
 npm run build
 
+# 检查文章 frontmatter 和站内链接
+npm run check:content
+
 # 清理缓存
 npm run clean
 
@@ -302,13 +305,17 @@ source/_posts/zh/how-to-use-chatgpt-outline.md
 ---
 title: 如何使用 ChatGPT 对话目录快速定位关键回答
 date: 2026-05-19 16:00:00
+description: "说明这篇文章解决什么问题、适合什么用户，以及和 Wisteria 产品工作流的关系。"
+keywords:
+  - ChatGPT
+  - 目录导航
+  - ChatGPT Gemini Outline & Export
 categories:
-  - 产品文档
+  - AI 对话导航
 tags:
   - ChatGPT
-  - 大纲
-  - 长对话
-  - Markdown
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 lang: zh-CN
 ---
 
@@ -319,9 +326,46 @@ lang: zh-CN
 
 - `title`：文章标题。
 - `date`：发布时间，格式建议 `YYYY-MM-DD HH:mm:ss`。
-- `categories`：分类。会影响 URL，因为当前 permalink 是 `:category/:title/`。
-- `tags`：标签，可以多个。
+- `description`：SEO/AEO 摘要，必须有。
+- `keywords`：3-6 个关键词，便于内容管理。
+- `categories`：只放 1 个一级分类。文章已发布后如果要改分类，必须保留原 `permalink`，避免旧链接断掉。
+- `tags`：3-6 个受控标签，可以多个。
 - `lang`：语言，中文写 `zh-CN`。
+
+### 当前分类与标签规范
+
+分类应该贴近产品主题和用户问题，不使用过泛的内部模块名。当前推荐分类：
+
+- `AI Conversation Navigation` / `AI 对话导航`
+- `Structured Export & Markdown` / `结构化导出`
+- `Local-first Knowledge Management` / `本地优先知识管理`
+- `Extension Reviews & Comparisons` / `插件评测与对比`
+- `Product Philosophy` / `产品理念`
+- `Product Guides` / `产品指南`
+- `产品动态`
+- `开发笔记`
+- `授权与支持`
+
+标签使用受控词表，优先表达产品、功能、理念和场景。常用标签：
+
+- `ChatGPT`
+- `Gemini`
+- `ChatGPT Gemini Outline & Export`
+- `Outline Navigation` / `目录导航`
+- `Markdown Export` / `Markdown 导出`
+- `Structured Export` / `结构化导出`
+- `Bookmarks` / `书签与重点标记`
+- `Local-first` / `本地优先`
+- `AI Knowledge Management` / `AI 知识管理`
+- `Chrome Extension` / `Chrome 扩展`
+- `Product Review` / `产品评测`
+
+写完文章后运行：
+
+```bash
+npm run check:content
+npm run build
+```
 
 ### 本地写博客的完整步骤
 
@@ -345,13 +389,18 @@ source/_posts/zh/export-chatgpt-long-conversation-to-markdown.md
 ---
 title: ChatGPT 长对话怎么导出为 Markdown？
 date: 2026-05-19 16:00:00
+description: "说明如何将 ChatGPT 长对话导出为 Markdown，并保留结构、代码块和可复用内容。"
+keywords:
+  - ChatGPT
+  - Markdown 导出
+  - 结构化导出
 categories:
-  - 产品文档
+  - 结构化导出
 tags:
   - ChatGPT
-  - Markdown
-  - 导出
-  - 长对话
+  - ChatGPT Gemini Outline & Export
+  - Markdown 导出
+  - 结构化导出
 lang: zh-CN
 ---
 ```
@@ -424,13 +473,18 @@ source/_posts/en/
 ---
 title: "How to Export ChatGPT Conversations to Markdown"
 date: 2026-05-19 10:00:00
-categories:
-  - Product Docs
-tags:
-  - Markdown
-  - export
+description: "Learn how to export ChatGPT conversations to Markdown while preserving structure, code blocks, and reusable AI conversation context."
+keywords:
   - ChatGPT
-  - archiving
+  - Markdown export
+  - structured export
+categories:
+  - Structured Export & Markdown
+tags:
+  - ChatGPT
+  - ChatGPT Gemini Outline & Export
+  - Markdown Export
+  - Structured Export
 lang: en
 ---
 ```
@@ -440,34 +494,35 @@ lang: en
 | 字段 | 中文 | 英文 |
 |---|---|---|
 | `title` | 中文标题 | 英文标题 |
-| `categories` | 产品文档 | Product Docs |
-| `tags` | 中文标签 | 英文小写标签，多个词用连字符（如 `long-conversation`） |
+| `categories` | `AI 对话导航`、`结构化导出` 等 | `AI Conversation Navigation`、`Structured Export & Markdown` 等 |
+| `tags` | 中文主题标签 + 产品名 | 英文主题标签 + 产品名 |
 | `lang` | zh-CN | en |
 
 **重要：** `lang: en` 必须写，否则 Hexo 会把文章当成中文处理，URL 和页面渲染都会出问题。
 
 ### 标签命名规范
 
-英文标签建议用全小写，多个词用连字符连接：
+推荐使用上面列出的受控标签。不要为同一个意思创造多个写法，例如 `export`、`导出`、`Structured Export`、`结构化保存` 混用会分散标签页权重。
 
 推荐：
 
 ```yaml
 tags:
-  - long-conversation
   - Markdown
-  - knowledge-management
-  - local-first
+  - ChatGPT
+  - ChatGPT Gemini Outline & Export
+  - Structured Export
+---
 ```
 
 不推荐：
 
 ```yaml
 tags:
-  - Long Conversation
+  - export
+  - 导出
   - markdown
-  - Knowledge Management
-  - local_first
+  - 结构化保存
 ```
 
 保持标签写法前后一致，否则 Hexo 会生成两个不同标签页。
@@ -480,17 +535,18 @@ tags:
 ---
 title: "How to Do Something in ChatGPT"
 date: 2026-05-19 10:00:00
+description: "A concise summary of the problem, answer, and workflow covered by this article."
+keywords:
+  - ChatGPT
+  - AI conversation navigation
+  - ChatGPT Gemini Outline & Export
 categories:
-  - Product Docs
+  - AI Conversation Navigation
 tags:
   - ChatGPT
-  - productivity
-  - guide
+  - ChatGPT Gemini Outline & Export
+  - Outline Navigation
 lang: en
----
-
-**Meta Description:** A one-sentence summary of what this article teaches.
-
 ---
 
 ## Quick Answer
@@ -588,12 +644,15 @@ git push origin main
 - [ ] 文件在 `source/_posts/en/` 下
 - [ ] `title` 是英文
 - [ ] `date` 格式正确（`YYYY-MM-DD HH:mm:ss`）
-- [ ] `categories` 写的是 `Product Docs`（或对应英文分类）
-- [ ] `tags` 全是英文小写，多词用连字符
+- [ ] `categories` 使用当前受控分类，例如 `AI Conversation Navigation`、`Structured Export & Markdown`
+- [ ] `tags` 使用当前受控标签，例如 `ChatGPT Gemini Outline & Export`、`Outline Navigation`
+- [ ] `description` 已写
+- [ ] `keywords` 有 3-6 个
 - [ ] `lang: en` 已写
 - [ ] frontmatter 的 `---` 上下对齐，没有多余空格
 - [ ] 正文有 `Quick Answer` / `Why This Matters` / `Step-by-Step Guide` / `FAQ` / `Final Thoughts`
 - [ ] CTA 链接指向 Chrome Web Store 和 wisteriasoftware.uk
+- [ ] 本地 `npm run check:content` 通过
 - [ ] 本地 `npm run build` 通过
 - [ ] 本地预览 `http://localhost:4000/` 能正常显示
 - [ ] `git push origin main` 成功后等 GitHub Actions 变绿
@@ -631,14 +690,16 @@ source/_posts/zh/
 title: "ChatGPT 长对话怎么快速定位关键内容"
 date: 2026-05-19 21:00:00
 categories:
-  - AI 工具
+  - AI 对话导航
 tags:
   - ChatGPT
-  - 长对话
-  - 导航
-  - Chrome 扩展
-  - 效率
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 description: "120-160 字中文 SEO 摘要，说明这篇文章解决什么问题、适合什么用户。"
+keywords:
+  - ChatGPT
+  - AI 对话导航
+  - 目录导航
 lang: zh-CN
 ---
 ```
@@ -648,10 +709,11 @@ lang: zh-CN
 | 字段 | 中文 | 英文 |
 |---|---|---|
 | `title` | 中文标题 | 英文标题 |
-| `categories` | AI 工具 / 产品文档 等 | Product Docs 等 |
-| `tags` | 中文标签（如 导出、导航、效率） | 英文小写标签（如 export、navigation） |
+| `categories` | AI 对话导航 / 结构化导出 等 | AI Conversation Navigation / Structured Export & Markdown 等 |
+| `tags` | 中文主题标签 + 产品名 | 英文主题标签 + 产品名 |
 | `lang` | zh-CN | en |
 | `description` | 中文 120-160 字摘要（必须有） | 英文摘要 |
+| `keywords` | 3-6 个关键词 | 3-6 个关键词 |
 
 **重要：**
 - `lang: zh-CN` 必须写，不能写成 `zh` 或 `zh-cn`。
@@ -667,11 +729,15 @@ lang: zh-CN
 title: "问题型标题"
 date: 2026-05-19 21:00:00
 categories:
-  - AI 工具
+  - AI 对话导航
 tags:
   - ChatGPT
   - ...
 description: "..."
+keywords:
+  - ChatGPT
+  - 目录导航
+  - ChatGPT Gemini Outline & Export
 lang: zh-CN
 ---
 
@@ -789,9 +855,10 @@ git push origin main
 - [ ] 文件在 `source/_posts/zh/` 下
 - [ ] `title` 用问题型中文标题
 - [ ] `date` 时间较晚，确保首页可见
-- [ ] `categories` 写的是 `AI 工具`（或已有中文分类名）
-- [ ] `tags` 用中文关键词，覆盖文章核心主题
+- [ ] `categories` 使用当前受控分类，例如 `AI 对话导航`、`结构化导出`
+- [ ] `tags` 使用当前受控标签，例如 `ChatGPT Gemini Outline & Export`、`目录导航`
 - [ ] `description` 写了 120-160 字中文摘要
+- [ ] `keywords` 有 3-6 个
 - [ ] `lang: zh-CN` 已写，不是 `zh` 或 `zh-cn`
 - [ ] frontmatter 的 `---` 上下对齐，没有多余空格
 - [ ] 有 ## 快速回答（AI 可直接引用）
@@ -799,6 +866,7 @@ git push origin main
 - [ ] FAQ 用真实用户提问方式，至少 5 个
 - [ ] 末尾有 ## 相关链接 和 ## 建议内部链接
 - [ ] CTA 链接使用短版 Chrome 商店链接
+- [ ] 本地 `npm run check:content` 通过
 - [ ] 本地 `npm run build` 通过
 - [ ] `grep` 确认文章在 `public/index.html` 首页可见
 - [ ] `git push origin main` 成功后等 GitHub Actions 变绿

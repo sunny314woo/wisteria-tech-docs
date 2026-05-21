@@ -10,6 +10,13 @@ tags:
   - ChatGPT Gemini Outline & Export
   - 目录导航
 lang: zh-CN
+description: "ChatGPT 长对话怎么快速定位关键回答？用目录大纲解决滚动查找，围绕AI 对话导航说明常见问题、适用场景和推荐工作流，帮助用户更好地整理、导航和导出 AI 对话内容。"
+keywords:
+  - ChatGPT
+  - AI 对话导航
+  - Gemini
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
 ---
 
 ChatGPT 长对话可以通过自动生成目录来快速定位关键回答。Wisteria 的 [ChatGPT Gemini Outline & Export](https://wisteriasoftware.uk/outline-pro?lang=zh-CN) 会在浏览器本地为 ChatGPT 和 Gemini 对话生成可点击的大纲，让你像翻文档目录一样跳转到某个问题、回答或已标记内容。

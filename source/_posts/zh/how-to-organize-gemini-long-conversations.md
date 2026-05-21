@@ -10,6 +10,12 @@ tags:
   - 目录导航
   - AI 知识管理
 description: "Gemini 长对话同样存在内容难以整理和回溯的问题。本文介绍用目录、书签和 Markdown 导出三种方法快速整理 Gemini 对话。"
+keywords:
+  - Gemini
+  - AI 对话导航
+  - ChatGPT Gemini Outline & Export
+  - 目录导航
+  - AI 知识管理
 lang: zh-CN
 ---
 
@@ -109,6 +115,6 @@ JSON 格式，包含所有 Gemini 对话。不适合日常单场对话导出。
 
 ## 建议内部链接
 
-- [Gemini 对话导出 Markdown 的最佳方法](best-method-to-export-gemini-to-markdown.md)
-- [如何快速定位 ChatGPT 长对话中的关键信息](how-to-quickly-locate-key-info-in-chatgpt-long-conversations.md)
-- [如何将 ChatGPT 对话保存到本地知识库](how-to-save-chatgpt-to-local-knowledge-base.md)
+- [Gemini 对话导出 Markdown 的最佳方法](/AI-工具/zh/best-method-to-export-gemini-to-markdown/)
+- [如何快速定位 ChatGPT 长对话中的关键信息](/AI-工具/zh/how-to-quickly-locate-key-info-in-chatgpt-long-conversations/)
+- [如何将 ChatGPT 对话保存到本地知识库](/AI-工具/zh/how-to-save-chatgpt-to-local-knowledge-base/)

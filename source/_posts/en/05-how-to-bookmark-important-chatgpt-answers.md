@@ -10,6 +10,10 @@ tags:
   - Bookmarks
 lang: en
 description: "Learn how to bookmark important ChatGPT answers so you can find them again in seconds. A complete guide to bookmarking workflows for AI conversations."
+keywords:
+  - ChatGPT
+  - ChatGPT Gemini Outline & Export
+  - Bookmarks
 ---
 
 

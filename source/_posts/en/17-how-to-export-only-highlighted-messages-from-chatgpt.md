@@ -11,6 +11,12 @@ tags:
   - Structured Export
 lang: en
 description: "Learn how to export only highlighted or bookmarked messages from ChatGPT conversations, creating focused summaries instead of full transcripts."
+keywords:
+  - ChatGPT
+  - structured export
+  - ChatGPT Gemini Outline & Export
+  - Bookmarks
+  - Structured Export
 ---
 
 

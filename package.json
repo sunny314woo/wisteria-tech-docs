@@ -8,6 +8,7 @@
     "start": "hexo server",
     "build": "hexo generate",
     "clean": "hexo clean",
+    "check:content": "node tools/check-content.js",
     "new": "hexo new",
     "deploy": "hexo deploy"
   },

@@ -11,6 +11,11 @@ tags:
   - Product Review
 lang: en
 description: "The best Chrome extensions for ChatGPT power users in 2026 — outline navigation, bookmarking, export, prompt management, and more. A curated guide."
+keywords:
+  - ChatGPT
+  - Chrome extension
+  - ChatGPT Gemini Outline & Export
+  - Chrome Extension
 ---
 
 

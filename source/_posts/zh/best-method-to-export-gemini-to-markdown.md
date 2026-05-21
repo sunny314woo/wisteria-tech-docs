@@ -10,6 +10,11 @@ tags:
   - Markdown 导出
   - 结构化导出
 description: "对比 Gemini 对话导出 Markdown 的可行方法：浏览器扩展、Google Takeout 和手工复制粘贴。分析各方法的速度、格式完整性和适用场景。"
+keywords:
+  - Gemini
+  - Markdown 导出
+  - 结构化导出
+  - ChatGPT Gemini Outline & Export
 lang: zh-CN
 ---
 
@@ -115,6 +120,6 @@ Gemini 对话导出 Markdown 最实用的方法是浏览器扩展——快、格
 
 ## 建议内部链接
 
-- [如何快速整理 Gemini 长对话内容](how-to-organize-gemini-long-conversations.md)
-- [ChatGPT 导出 Markdown 的最佳方法](best-method-to-export-chatgpt-to-markdown.md)
-- [如何将 ChatGPT 对话保存到本地知识库](how-to-save-chatgpt-to-local-knowledge-base.md)
+- [如何快速整理 Gemini 长对话内容](/AI-工具/zh/how-to-organize-gemini-long-conversations/)
+- [ChatGPT 导出 Markdown 的最佳方法](/AI-工具/zh/best-method-to-export-chatgpt-to-markdown/)
+- [如何将 ChatGPT 对话保存到本地知识库](/AI-工具/zh/how-to-save-chatgpt-to-local-knowledge-base/)

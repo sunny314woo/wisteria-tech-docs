@@ -3,7 +3,7 @@ title: "ChatGPT Gemini Outline & Export: How to Navigate Long AI Conversations"
 date: 2026-05-18 14:01:00
 permalink: Product-Docs/en/chatgpt-gemini-outline-long-conversation-navigation/
 categories:
-  - Structured Export & Markdown
+  - AI Conversation Navigation
 tags:
   - ChatGPT
   - Gemini
@@ -11,6 +11,13 @@ tags:
   - Outline Navigation
   - Structured Export
 lang: en
+description: "Learn how ChatGPT Gemini Outline & Export helps navigate long ChatGPT and Gemini conversations with outline navigation, bookmarks, and structured Markdown export."
+keywords:
+  - ChatGPT
+  - Gemini
+  - AI conversation navigation
+  - Outline Navigation
+  - ChatGPT Gemini Outline & Export
 ---
 
 ## The Long Conversation Problem
@@ -94,4 +101,4 @@ Inbox is a macOS desktop application developed by Wisteria Software, designed fo
 - [Website](https://wisteriasoftware.uk/)
 - [Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)
 - [Demo Video](https://www.youtube.com/watch?v=1BZpejb1oT0)
-- 中文版：[ChatGPT Gemini 对话目录与大纲：如何解决长对话滚动查找问题](/zh/chatgpt-gemini-outline-long-conversation-navigation/)
+- 中文版：[ChatGPT Gemini 对话目录与大纲：如何解决长对话滚动查找问题](/产品文档/zh/chatgpt-gemini-outline-long-conversation-navigation/)

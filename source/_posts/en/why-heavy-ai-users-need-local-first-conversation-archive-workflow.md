@@ -7,7 +7,13 @@ categories:
 tags:
   - ChatGPT Gemini Outline & Export
   - Local-first
+  - AI Knowledge Management
 lang: en
+description: "Why Heavy AI Users Need a Local-First Conversation Archive Workflow. Learn how local-first AI knowledge workflows help preserve, search, and reuse valuable ChatGPT and Gemini conversations."
+keywords:
+  - local-first knowledge management
+  - ChatGPT Gemini Outline & Export
+  - Local-first
 ---
 
 ## Your Conversations Are a Knowledge Asset
@@ -86,4 +92,4 @@ Inbox is designed specifically for local archiving. It includes a tag system, fu
 - [Website](https://wisteriasoftware.uk/)
 - [Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)
 - [Demo Video](https://www.youtube.com/watch?v=1BZpejb1oT0)
-- 中文版：[为什么 AI 重度用户需要本地优先的对话归档工作流](/zh/why-heavy-ai-users-need-local-first-archive-workflow/)
+- 中文版：[为什么 AI 重度用户需要本地优先的对话归档工作流](/产品文档/zh/why-heavy-ai-users-need-local-first-archive-workflow/)
