@@ -110,12 +110,16 @@ npm run clean && npm run build
 ├── package.json                   # npm 命令和依赖
 ├── README.md                      # 当前接手指南
 ├── scripts/
-│   └── helpers.js                 # 自定义 Hexo helper，例如侧栏近期文章
+│   ├── helpers.js                 # 自定义 Hexo helper，例如侧栏近期文章和结构化数据
+│   └── seo-assets.js              # 自动生成 sitemap、robots、Atom feed、llms.txt
+├── tools/
+│   └── check-content.js           # 检查文章 frontmatter 和站内链接
 ├── _templates/
 │   └── sidebar-recent-posts.njk   # 自定义侧栏模板
 ├── source/
 │   ├── _data/
 │   │   ├── body-end.njk           # 页面底部注入脚本：UI 中英文切换逻辑
+│   │   ├── head.njk               # 页面 head 注入：Atom feed 和 sitemap 发现链接
 │   │   ├── header.njk             # 头部注入内容：中英文切换按钮
 │   │   └── styles.styl            # 自定义主题样式，UI 主要改这里
 │   ├── _posts/                    # 所有博客文章
@@ -163,6 +167,24 @@ url: https://blog.wisteriasoftware.uk
 - `keywords`：站点关键词。
 - `url`：线上域名。
 - `permalink`：文章 URL 结构。目前是 `:category/:title/`。
+
+### SEO / AEO 自动生成文件
+
+构建时会自动生成以下站点级文件，不需要手动编辑 `public/`：
+
+- `/sitemap.xml`：提交给 Google Search Console 和其他搜索引擎。
+- `/robots.txt`：允许抓取，并声明 sitemap 地址。
+- `/atom.xml`：给订阅阅读器和内容聚合工具使用。
+- `/llms.txt`：给 AI 搜索、问答和索引工具快速理解站点主题、产品边界和重点文章。
+
+这些文件由 `scripts/seo-assets.js` 生成。每次新增、删除、改名文章后，运行：
+
+```bash
+npm run check:content
+npm run clean && npm run build
+```
+
+`source/_data/head.njk` 会在页面 `<head>` 中暴露 Atom feed 和 sitemap 链接。
 
 ### 主题、菜单和侧栏
 
