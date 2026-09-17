@@ -12,10 +12,10 @@ theme_color:
   light: "#ffffff"
   dark: "#121214"
 
-# Favicon
+# Favicon — same abstract Wisteria flower mark used across Docs.
 favicon:
-  small: /images/favicon-16x16.png
-  medium: /images/favicon-32x32.png
+  small: /images/favicon.svg
+  medium: /images/favicon.svg
 
 # Open Graph and social preview
 open_graph:
