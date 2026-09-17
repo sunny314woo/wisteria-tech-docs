@@ -1,0 +1,137 @@
+/* Wisteria Docs — branded footer */
+.footer {
+  background: var(--wt-bg) !important;
+  border-top: 1px solid var(--wt-border) !important;
+  color: var(--wt-muted) !important;
+  margin-top: 72px !important;
+  padding: 0 !important;
+}
+
+.footer-inner {
+  box-sizing: border-box;
+  margin: 0 auto !important;
+  max-width: 1180px !important;
+  padding: 34px 24px 38px !important;
+  text-align: left !important;
+}
+
+.footer .copyright,
+.footer .powered-by,
+.footer .theme-info,
+.footer .with-love {
+  display: none !important;
+}
+
+.wt-footer {
+  font-size: 14px;
+}
+
+.wt-footer-inner {
+  display: grid;
+  gap: 18px;
+}
+
+.wt-footer-brand-row {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.wt-footer-brand {
+  align-items: center;
+  border: 0 !important;
+  color: var(--wt-text) !important;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-weight: 650;
+  gap: 8px;
+  text-decoration: none !important;
+}
+
+.wt-footer-brand:hover,
+.wt-footer-brand:focus-visible {
+  color: var(--wt-primary) !important;
+}
+
+.wt-footer-mark {
+  background: transparent url("/images/wisteria-mark.svg") center / contain no-repeat;
+  display: inline-block;
+  flex: 0 0 22px;
+  height: 22px;
+  width: 22px;
+}
+
+.wt-footer-external {
+  color: var(--wt-muted);
+  font-size: 12px;
+}
+
+.wt-footer-note {
+  color: var(--wt-muted);
+  line-height: 1.5;
+  text-align: right;
+}
+
+.wt-footer-links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.wt-footer-links a {
+  border: 0 !important;
+  color: var(--wt-menu-text) !important;
+  font-size: 13.5px;
+  text-decoration: none !important;
+}
+
+.wt-footer-links a:hover,
+.wt-footer-links a:focus-visible {
+  color: var(--wt-primary) !important;
+}
+
+.wt-footer-meta {
+  color: var(--wt-muted);
+  font-size: 12.5px;
+  padding-top: 2px;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    margin-top: 54px !important;
+  }
+
+  .footer-inner {
+    padding: 28px 20px 32px !important;
+  }
+
+  .wt-footer-inner {
+    gap: 20px;
+  }
+
+  .wt-footer-brand-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .wt-footer-note {
+    max-width: 30rem;
+    text-align: left;
+  }
+
+  .wt-footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .wt-footer-links a {
+    align-items: center;
+    display: flex;
+    min-height: 44px;
+    width: 100%;
+  }
+}
