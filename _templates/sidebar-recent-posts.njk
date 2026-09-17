@@ -1,12 +1,13 @@
-{{ recent_posts_sidebar(3) }}
 {% if is_home() %}
+{{ recent_posts_sidebar(3) }}
 <div class="wt-sidebar-author" aria-label="Author and social links">
   <div class="wt-sidebar-author-name">Anna · Wisteria Software</div>
   <div class="wt-sidebar-author-role">Independent developer</div>
   <div class="wt-sidebar-author-links">
     <a href="https://x.com/jerry654cat" target="_blank" rel="noopener noreferrer" aria-label="Anna on X">X · @jerry654cat</a>
-    <a href="https://xhslink.cn/o/7h6KJN3efl6" target="_blank" rel="noopener noreferrer" aria-label="OutlineSave on Xiaohongshu">小红书 · OutlineSave</a>
+    <a href="https://xhslink.cn/o/7h6KJN3efl6" target="_blank" rel="noopener noreferrer" aria-label="Outlinesave on Xiaohongshu">小红书 · Outlinesave</a>
   </div>
 </div>
-{% endif %}
+{% else %}
 {{ related_posts_sidebar(3) }}
+{% endif %}
