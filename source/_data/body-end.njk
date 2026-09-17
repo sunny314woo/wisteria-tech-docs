@@ -5,7 +5,7 @@
   const dictionary = {
     'zh-CN': {
       subtitle: 'AI 对话整理、导出与本地知识管理',
-      siteDescription: 'Wisteria Software 的 AI 对话工作流博客，分享 ChatGPT、Gemini、Outline、Inbox、本地优先归档与隐私友好的知识管理实践。',
+      siteDescription: 'Wisteria Software 官方技术文档，提供 ChatGPT、Gemini、Outlinesave、Inbox、本地优先归档与隐私友好知识管理的教程、FAQ 与故障排查。',
       nav: {
         home: '首页',
         categories: '分类',
@@ -17,11 +17,11 @@
       sidebar: {
         toc: '文章目录',
         overview: '站点概览',
-        posts: '日志',
+        posts: '文档',
         categories: '分类',
         tags: '标签',
-        recent: '近期文章',
-        related: '相关文章'
+        recent: '最近更新',
+        related: '相关指南'
       },
       post: {
         posted: '发表于',
@@ -30,7 +30,7 @@
         readMore: '阅读全文'
       },
       search: {
-        placeholder: '搜索...',
+        placeholder: '搜索文档...',
         empty: '没有找到任何搜索结果：${query}',
         hits_time: '找到 ${hits} 个搜索结果（用时 ${time} 毫秒）',
         hits: '找到 ${hits} 个搜索结果'
@@ -42,14 +42,14 @@
         language: '语言',
         theme: '切换明暗模式'
       },
-      officialSite: '官网',
+      officialSite: 'Wisteria Software',
       topbarSubtitle: 'AI 对话工作流',
       searchButton: '搜索',
       theme: '主题'
     },
     en: {
       subtitle: 'AI conversation workflows, export, and local knowledge management',
-      siteDescription: 'Wisteria Software blog for AI conversation workflows, ChatGPT, Gemini, Outline, Inbox, local-first archiving, and privacy-friendly knowledge management.',
+      siteDescription: 'Official Wisteria Software documentation for ChatGPT, Gemini, Outlinesave, Inbox, local-first archiving, tutorials, FAQ, and troubleshooting.',
       nav: {
         home: 'Home',
         categories: 'Categories',
@@ -61,11 +61,11 @@
       sidebar: {
         toc: 'Table of Contents',
         overview: 'Overview',
-        posts: 'Posts',
+        posts: 'Docs',
         categories: 'Categories',
         tags: 'Tags',
-        recent: 'Recent Posts',
-        related: 'Related Posts'
+        recent: 'Latest updates',
+        related: 'Related guides'
       },
       post: {
         posted: 'Posted on',
@@ -74,7 +74,7 @@
         readMore: 'Read more'
       },
       search: {
-        placeholder: 'Search...',
+        placeholder: 'Search documentation...',
         empty: 'No results found for: ${query}',
         hits_time: '${hits} results found in ${time} ms',
         hits: '${hits} results found'
@@ -86,7 +86,7 @@
         language: 'Language',
         theme: 'Toggle color theme'
       },
-      officialSite: 'Official',
+      officialSite: 'Wisteria Software',
       topbarSubtitle: 'AI conversation workflows',
       searchButton: 'Search',
       theme: 'Theme'
@@ -306,32 +306,15 @@
     });
   };
 
-  const placeRelatedPosts = () => {
-    const related = document.querySelector('[data-sidebar-related]');
-    if (!related || related.dataset.placed === 'true') return;
-
-    const backToTop = document.querySelector('.sidebar-inner .back-to-top');
-    const activeSidebar = document.querySelector('.sidebar-inner.sidebar-nav-active') || document.querySelector('.sidebar-inner');
-    if (!activeSidebar) return;
-
-    if (backToTop) {
-      backToTop.insertAdjacentElement('afterend', related);
-    } else {
-      activeSidebar.appendChild(related);
-    }
-    related.dataset.placed = 'true';
-  };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       updateSearchShortcut();
-      placeRelatedPosts();
       applyTheme(getInitialTheme());
       applyLanguage(getInitialLanguage());
     });
   } else {
     updateSearchShortcut();
-    placeRelatedPosts();
     applyTheme(getInitialTheme());
     applyLanguage(getInitialLanguage());
   }
