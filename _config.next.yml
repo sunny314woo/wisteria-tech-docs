@@ -52,7 +52,7 @@ sidebar:
 # Recent Posts
 recent_posts:
   enable: true
-  title: 近期文章
+  title: 最近更新
   count: 20
 
 # ---------------------------------------------------------------
