@@ -1,0 +1,23 @@
+/* Wisteria Tech Docs — sidebar reading behavior overrides.
+ * Keep the article/overview panel visually stable while the main document scrolls.
+ */
+
+@media (min-width: 992px) {
+  .sidebar-inner {
+    height: calc(100vh - var(--wt-topbar-height) - 28px) !important;
+    max-height: calc(100vh - var(--wt-topbar-height) - 28px) !important;
+  }
+
+  .sidebar-panel-container {
+    flex: 1 1 auto !important;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+
+  .sidebar-inner > .wt-related-posts {
+    flex: 0 0 auto;
+  }
+}
