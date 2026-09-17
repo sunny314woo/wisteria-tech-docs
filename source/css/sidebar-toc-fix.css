@@ -1,5 +1,6 @@
 /* Wisteria Tech Docs — sidebar reading behavior overrides.
- * Keep the article/overview panel visually stable while the main document scrolls.
+ * Keep the sidebar quiet: no TOC recentering, no animated expansion,
+ * no active background/indicator. Only the current item changes text color.
  */
 
 @media (min-width: 992px) {
@@ -20,4 +21,52 @@
   .sidebar-inner > .wt-related-posts {
     flex: 0 0 auto;
   }
+}
+
+/* Minimal article TOC -------------------------------------------------
+ * NexT normally animates nested sections and styles every active ancestor.
+ * For this documentation site we intentionally disable those visual effects.
+ */
+.post-toc,
+.post-toc-wrap,
+.post-toc .nav,
+.post-toc .nav * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Keep all TOC levels visible; do not collapse/expand as the article scrolls. */
+.post-toc .nav .nav-child {
+  height: auto !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  visibility: visible !important;
+}
+
+/* Neutral state: plain text only. */
+.post-toc .nav .nav-item > .nav-link,
+.post-toc .nav .active > .nav-link {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--wt-muted) !important;
+  font-weight: 400 !important;
+}
+
+/* Hover should not compete with the article for attention. */
+.post-toc .nav .nav-item > .nav-link:hover,
+.post-toc .nav .active > .nav-link:hover {
+  background: transparent !important;
+  color: var(--wt-muted) !important;
+}
+
+/* The only reading-position cue: current heading text color. */
+.post-toc .nav .active-current > .nav-link,
+.post-toc .nav .active-current > .nav-link:hover,
+.post-toc .nav .active-current > .nav-link .nav-number {
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--wt-primary) !important;
+  font-weight: 400 !important;
 }
