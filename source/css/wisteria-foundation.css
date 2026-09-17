@@ -1,0 +1,340 @@
+/* Wisteria Docs — visual foundation override
+ * Strike 1: bright white documentation system with restrained wisteria accents.
+ * Keep this layer small and reversible; structural IA/layout work comes later.
+ */
+
+:root,
+html[data-theme="light"] {
+  --wt-primary: #71629a;
+  --wt-primary-hover: #605184;
+  --wt-accent: #71629a;
+  --wt-accent-soft: #f7f4fa;
+  --wt-primary-soft: #eee8f3;
+  --wt-primary-light: #f7f4fa;
+  --wt-primary-shadow: rgba(113, 98, 154, 0.14);
+  --wt-text: #1d1e22;
+  --wt-body-text: #34363b;
+  --wt-muted: #72757d;
+  --wt-menu-text: #4b4e55;
+  --wt-border: #e7e5e9;
+  --wt-bg: #ffffff;
+  --wt-surface: #ffffff;
+  --wt-sidebar-bg: #ffffff;
+  --wt-sidebar-panel: #ffffff;
+  --wt-page-bg: #ffffff;
+  --wt-code-bg: #f3f4f6;
+  --wt-code-text: #374151;
+  --wt-code-block-bg: #17191d;
+  --wt-code-caption: #8a8d94;
+  --wt-table-alt-bg: #fbfbfc;
+  --wt-scrollbar: #d6d3d9;
+  --wt-scrollbar-hover: #b6b1bc;
+  --wt-brand-panel: #ffffff;
+  --wt-brand-border: #e7e5e9;
+  --wt-brand-title: #1d1e22;
+  --wt-brand-muted: #72757d;
+  --wt-brand-mark: #71629a;
+  --wt-brand-shadow: transparent;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --wt-primary: #b8aad2;
+    --wt-primary-hover: #c9bee0;
+    --wt-accent: #b8aad2;
+    --wt-accent-soft: rgba(184, 170, 210, 0.10);
+    --wt-primary-soft: rgba(184, 170, 210, 0.18);
+    --wt-primary-light: rgba(184, 170, 210, 0.08);
+    --wt-primary-shadow: transparent;
+    --wt-text: #f3f2f4;
+    --wt-body-text: #d6d3d8;
+    --wt-muted: #a29ea7;
+    --wt-menu-text: #d2cfd5;
+    --wt-border: #2a292e;
+    --wt-bg: #121214;
+    --wt-surface: #18181b;
+    --wt-sidebar-bg: #121214;
+    --wt-sidebar-panel: #121214;
+    --wt-page-bg: #121214;
+    --wt-code-bg: #202126;
+    --wt-code-text: #e5e3e8;
+    --wt-code-block-bg: #0d0e10;
+    --wt-code-caption: #9a969f;
+    --wt-table-alt-bg: #161619;
+    --wt-scrollbar: #37353b;
+    --wt-scrollbar-hover: #4d4952;
+    --wt-brand-panel: #121214;
+    --wt-brand-border: #2a292e;
+    --wt-brand-title: #f3f2f4;
+    --wt-brand-muted: #a29ea7;
+    --wt-brand-mark: #b8aad2;
+    --wt-brand-shadow: transparent;
+    color-scheme: dark;
+  }
+}
+
+html[data-theme="dark"] {
+  --wt-primary: #b8aad2;
+  --wt-primary-hover: #c9bee0;
+  --wt-accent: #b8aad2;
+  --wt-accent-soft: rgba(184, 170, 210, 0.10);
+  --wt-primary-soft: rgba(184, 170, 210, 0.18);
+  --wt-primary-light: rgba(184, 170, 210, 0.08);
+  --wt-primary-shadow: transparent;
+  --wt-text: #f3f2f4;
+  --wt-body-text: #d6d3d8;
+  --wt-muted: #a29ea7;
+  --wt-menu-text: #d2cfd5;
+  --wt-border: #2a292e;
+  --wt-bg: #121214;
+  --wt-surface: #18181b;
+  --wt-sidebar-bg: #121214;
+  --wt-sidebar-panel: #121214;
+  --wt-page-bg: #121214;
+  --wt-code-bg: #202126;
+  --wt-code-text: #e5e3e8;
+  --wt-code-block-bg: #0d0e10;
+  --wt-code-caption: #9a969f;
+  --wt-table-alt-bg: #161619;
+  --wt-scrollbar: #37353b;
+  --wt-scrollbar-hover: #4d4952;
+  --wt-brand-panel: #121214;
+  --wt-brand-border: #2a292e;
+  --wt-brand-title: #f3f2f4;
+  --wt-brand-muted: #a29ea7;
+  --wt-brand-mark: #b8aad2;
+  --wt-brand-shadow: transparent;
+  color-scheme: dark;
+}
+
+/* Bright, flat page foundation. */
+body,
+.main,
+.main-inner,
+.content-wrap,
+.content,
+.sidebar,
+.sidebar-inner,
+.sidebar-panel,
+.site-overview-wrap {
+  background: var(--wt-page-bg) !important;
+}
+
+body {
+  color: var(--wt-text) !important;
+}
+
+/* Remove the current glassy / blue-gray topbar treatment. */
+.wt-topbar {
+  background: var(--wt-bg) !important;
+  border-bottom: 1px solid var(--wt-border) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.site-tools-link,
+.site-tools-button,
+.ui-language-switch,
+.wt-search-trigger,
+.wt-tool,
+.wt-icon-link {
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Keep the official-site exit visible; only restyle it. */
+.wt-icon-link,
+.wt-icon-link:visited {
+  color: var(--wt-menu-text) !important;
+}
+
+.wt-icon-link:hover,
+.wt-icon-link:focus-visible {
+  color: var(--wt-primary) !important;
+}
+
+/* Brand/nav interaction: text-led, no gradient pills. */
+.site-nav .menu-item-active a,
+.site-nav .menu-item a:hover,
+.wt-nav-link:hover,
+.wt-nav-link:focus-visible,
+.wt-nav-link.is-active {
+  background: transparent !important;
+  background-image: none !important;
+  color: var(--wt-primary) !important;
+  box-shadow: none !important;
+}
+
+.site-nav .menu-item-active a {
+  font-weight: 600 !important;
+}
+
+/* Article typography remains neutral and crisp. */
+.post-body,
+.post-body p,
+.post-body li {
+  color: var(--wt-body-text) !important;
+}
+
+.post-title,
+.post-title a,
+.post-header h1,
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5,
+.post-body h6 {
+  color: var(--wt-text) !important;
+}
+
+.post-title a:hover,
+.post-body a,
+.post-meta-item a:hover,
+.post-button a,
+.category-list a:hover,
+.tag-cloud a:hover,
+.posts-collapse .post-header a:hover {
+  color: var(--wt-primary) !important;
+}
+
+.post-body a {
+  border-bottom-color: rgba(113, 98, 154, 0.24) !important;
+}
+
+.post-body a:hover {
+  color: var(--wt-primary-hover) !important;
+  border-bottom-color: var(--wt-primary) !important;
+}
+
+html[data-theme="dark"] .post-body a {
+  border-bottom-color: rgba(184, 170, 210, 0.30) !important;
+}
+
+/* Inline code is technical UI, not brand UI. */
+.post-body code {
+  background: var(--wt-code-bg) !important;
+  color: var(--wt-code-text) !important;
+  box-shadow: none !important;
+}
+
+/* Code blocks: neutral charcoal, no navy cast or branded border. */
+.post-body pre,
+figure.highlight,
+.highlight {
+  background: var(--wt-code-block-bg) !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Ordinary quotes stay neutral. Quick Answer gets its own component later. */
+.post-body blockquote {
+  background: transparent !important;
+  border-left-color: var(--wt-border) !important;
+  color: var(--wt-body-text) !important;
+  box-shadow: none !important;
+}
+
+/* Tables should read like documentation, not branded cards. */
+.post-body th {
+  background: #f7f7f8 !important;
+  color: var(--wt-text) !important;
+  border-color: var(--wt-border) !important;
+}
+
+.post-body td {
+  background: var(--wt-bg) !important;
+  border-color: var(--wt-border) !important;
+}
+
+.post-body tr:nth-child(even) td {
+  background: var(--wt-table-alt-bg) !important;
+}
+
+html[data-theme="dark"] .post-body th {
+  background: #202024 !important;
+}
+
+/* TOC stays quiet: no filled active background. */
+.post-toc .nav .nav-item > .nav-link,
+.post-toc .nav .active > .nav-link,
+.post-toc .nav .active-current > .nav-link {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.post-toc .nav .active-current > .nav-link,
+.post-toc .nav .active-current > .nav-link:hover,
+.post-toc .nav .active-current > .nav-link .nav-number {
+  color: var(--wt-primary) !important;
+}
+
+/* Search: only the actual match gets a soft wisteria cue. */
+.local-search-popup .search-result-list li:hover {
+  background: var(--wt-primary-light) !important;
+}
+
+.local-search-popup .search-keyword {
+  background: #f2eef6 !important;
+  color: #5f527d !important;
+}
+
+html[data-theme="dark"] .local-search-popup .search-keyword {
+  background: rgba(184, 170, 210, 0.14) !important;
+  color: #d4c9e5 !important;
+}
+
+/* Pagination: quiet current state instead of a solid purple tile. */
+.pagination .page-number.current {
+  background: var(--wt-primary-light) !important;
+  border-color: var(--wt-primary-soft) !important;
+  color: var(--wt-primary) !important;
+}
+
+.pagination .page-number:hover:not(.current) {
+  background: transparent !important;
+  border-color: var(--wt-border) !important;
+  color: var(--wt-primary) !important;
+}
+
+/* Back-to-top: utility, not a brand CTA. */
+.back-to-top,
+.back-to-top:hover {
+  background: var(--wt-bg) !important;
+  border: 1px solid var(--wt-border) !important;
+  box-shadow: none !important;
+  color: var(--wt-muted) !important;
+  transform: none !important;
+}
+
+.back-to-top:hover {
+  color: var(--wt-primary) !important;
+  border-color: var(--wt-primary-soft) !important;
+}
+
+/* Cards/images remain flat. */
+.post-block,
+.post-body img,
+.site-brand-container,
+.column .site-brand-container {
+  box-shadow: none !important;
+}
+
+/* Focus must stay visible even with a soft palette. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid rgba(113, 98, 154, 0.55) !important;
+  outline-offset: 2px;
+}
+
+html[data-theme="dark"] a:focus-visible,
+html[data-theme="dark"] button:focus-visible,
+html[data-theme="dark"] input:focus-visible,
+html[data-theme="dark"] [tabindex]:focus-visible {
+  outline-color: rgba(184, 170, 210, 0.72) !important;
+}
