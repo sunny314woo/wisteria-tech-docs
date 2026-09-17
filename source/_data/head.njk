@@ -1,2 +1,35 @@
 <link rel="alternate" type="application/atom+xml" title="Wisteria Blog" href="/atom.xml">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+{# Canonical URL: use the final Hexo permalink for each generated page. #}
+<link rel="canonical" href="{{ url_for(page.path, { absolute: true }) }}">
+
+{# Machine-readable Article metadata for posts. FAQ content remains visible HTML;
+   do not manufacture FAQ rich-result markup for pages that are not genuine FAQs. #}
+{% if page.layout === 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ page.title | json_encode | safe }},
+  "description": {{ (page.description or config.description) | json_encode | safe }},
+  "url": {{ url_for(page.path, { absolute: true }) | json_encode | safe }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ url_for(page.path, { absolute: true }) | json_encode | safe }}
+  },
+  "datePublished": {{ page.date.toISOString() | json_encode | safe }},
+  "dateModified": {{ (page.updated or page.date).toISOString() | json_encode | safe }},
+  "author": {
+    "@type": "Organization",
+    "name": "Wisteria Software"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Wisteria Software",
+    "url": "https://wisteriasoftware.uk"
+  },
+  "inLanguage": {{ (page.lang or config.language or 'en') | json_encode | safe }}
+}
+</script>
+{% endif %}
