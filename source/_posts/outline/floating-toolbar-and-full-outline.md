@@ -1,14 +1,15 @@
 ---
-title: Outlinesave 浮动工具栏与完整目录：4 种显示状态怎么用
+title: "Outlinesave 工具栏怎么用？ChatGPT 目录、书签、跳转与导出功能说明"
 date: 2026-09-17 16:30:00
-description: "了解 Outlinesave 在 ChatGPT 中的隐藏、边缘按钮、快捷工具栏和完整目录四种显示状态，以及如何切换、恢复和选择适合自己的使用方式。"
+updated: 2026-09-17 19:44:00
+description: "Outlinesave 工具栏怎么用、消失后怎么恢复？了解 Edge Button、Quick Toolbar 和 Full Outline，以及 ChatGPT 目录、书签筛选、上一项/下一项跳转和导出入口。"
 keywords:
-  - Outlinesave
+  - Outlinesave 工具栏怎么用
+  - Outlinesave 不见了
+  - ChatGPT 目录工具栏
   - ChatGPT Outline
-  - ChatGPT 目录
-  - 浮动工具栏
-  - 完整目录
-  - 长对话导航
+  - ChatGPT 书签筛选
+  - Outlinesave Full Outline
 permalink: Outline/outline/floating-toolbar-and-full-outline/
 categories:
   - 产品指南
@@ -16,127 +17,65 @@ tags:
   - Outlinesave
   - ChatGPT Outline
   - 目录导航
-  - 产品指南
 lang: zh-CN
 ---
 
-Outlinesave 在 ChatGPT 页面中并不是只有一个固定侧边栏。为了在“随时可用”和“不占阅读空间”之间取得平衡，它提供了几种不同的显示状态。
+## Outlinesave 工具栏怎么用？
 
-如果你第一次使用时觉得按钮变小了、目录收起来了，或者完全找不到 Outlinesave，这通常不代表插件失效。先了解下面四种状态，就会容易很多。
+Outlinesave 在 ChatGPT 页面里有几种显示状态。最容易记的方法是：**隐藏 → Edge Button → Quick Toolbar → Full Outline**。Edge Button 最省空间，Quick Toolbar 提供常用操作，Full Outline 用于查看和导航完整长对话结构。
 
-## 先记住这条路径
+如果你突然找不到 Outlinesave，通常先判断它是折叠了，还是在扩展 Popup 中被关闭了。
 
-在 ChatGPT 中，可以把 Outlinesave 理解成四种状态：
+## Quick Toolbar 有哪些功能？
 
-**隐藏 → 边缘按钮 → 快捷工具栏 → 完整目录**
+当前 ChatGPT Quick Toolbar 有 6 个主要入口：打开 Full Outline、Bookmark Filter、上一项、下一项、导出，以及折叠为 Edge Button。
 
-前三种主要控制它占用多少页面空间，完整目录则用于真正阅读和导航长对话。
+它适合在不一直占用侧边空间的情况下快速使用常用功能。
 
-## 1. 隐藏：页面上不显示 Outlinesave
+## Full Outline 是什么？
 
-如果你在扩展 Popup 中关闭了浮动工具栏，ChatGPT 页面上的 Outlinesave 页面工具会隐藏。
+Full Outline 是完整目录视图。一级目录以用户问题为主要结构，AI 回答中的标题可以作为二级目录。它适合几十到几百轮的长 conversation：先看结构，再选择目标，而不是不断向上滚动。
 
-这种状态适合暂时完全不需要目录、标注或导出工具的时候。
+完整目录顶部还提供上一项、下一项、导出和书签筛选等操作。关闭 Full Outline 或按 Esc 后，会回到 Quick Toolbar。
 
-需要注意：隐藏以后，页面里不会保留一个额外的恢复按钮。要重新显示 Outlinesave，请点击浏览器工具栏中的 Outlinesave 扩展图标，在 Popup 中重新开启浮动工具栏。
+## Bookmark Filter 是什么？
 
-如果你只是希望少占一点空间，而不是完全关闭，通常更适合使用下面的“边缘按钮”。
+目录和书签不是一回事。Outline 展示 conversation 的整体结构；Bookmark 是你主动添加的“这里重要”标记。
 
-## 2. 边缘按钮：最省空间的常驻状态
+打开 Bookmark Filter 后，可以把完整目录缩小到已标记的重要部分。对于 200+ 轮的对话，这通常比重新浏览整个目录更适合复习。
 
-边缘按钮是 Outlinesave 在页面上的最小形态。
+## 为什么有些长对话不能一次跳到目标？
 
-它适合：
+ChatGPT 超长 conversation 的历史消息不一定全部同时加载在当前页面。Outlinesave 可能已经发现目标位置，但对应内容仍未进入可直接定位状态。
 
-- 正在专心阅读或继续和 ChatGPT 对话；
-- 暂时不需要目录；
-- 希望保留快速恢复入口，但又不想让工具栏占空间。
+这时导航可能需要逐步接近目标。加载阶段的目录编号也可能重新校准；完成后再把编号作为当前完整 conversation 的稳定顺序。
 
-点击边缘按钮，会恢复为快捷工具栏。
+## Outlinesave 不见了怎么恢复？
 
-## 3. 快捷工具栏：常用功能入口
+如果还能看到 Edge Button，点击它恢复 Quick Toolbar；如果能看到 Quick Toolbar 但没有目录，点击目录按钮打开 Full Outline。
 
-快捷工具栏适合日常使用。你不需要一直打开完整目录，也可以快速进入常用操作。
+如果页面上完全没有 Outlinesave，请打开浏览器扩展栏中的 Outlinesave Popup，检查浮动工具栏是否被关闭。Popup 中还可以使用 Replay onboarding 重新查看新手引导。
 
-当前 ChatGPT 快捷工具栏提供 6 个入口：
+## 我应该保持哪种状态？
 
-1. 打开完整目录；
-2. 只看已加书签的内容；
-3. 跳到上一项；
-4. 跳到下一项；
-5. 打开导出菜单；
-6. 折叠为边缘按钮。
+专心聊天、希望最少占空间时使用 Edge Button；频繁上一项/下一项、Bookmark 或导出时使用 Quick Toolbar；阅读长 conversation 时打开 Full Outline；暂时完全不需要页面工具时才在 Popup 中关闭。
 
-如果你经常在一个长对话里阅读、标记、查找和导出内容，这通常是最方便的常驻状态。
+## 常见问题
 
-### 快捷工具栏和完整目录不是同一个东西
+### Quick Toolbar 和 Full Outline 是同一个东西吗？
 
-快捷工具栏的作用是“快速操作”。
+不是。Quick Toolbar 是快捷操作入口；Full Outline 是完整 conversation 结构和导航视图。
 
-完整目录的作用则是“看见整段对话的结构并导航”。
+### 关闭 Full Outline 会把 Outlinesave 关掉吗？
 
-点击快捷工具栏中的目录按钮，即可展开完整目录。
+不会。通常会回到 Quick Toolbar。
 
-## 4. 完整目录：阅读长对话时最重要的状态
+### Bookmark 按钮是不是目录按钮？
 
-打开完整目录后，Outlinesave 会在侧边显示当前对话的结构。
+不是。目录负责“在哪里”，Bookmark 负责“什么重要”。Bookmark Filter 用于只查看你主动标记的部分。
 
-一级目录以用户提问为主要结构；AI 回答中的标题可以作为二级目录，帮助你在一个很长的回答内部继续定位。
+### ChatGPT 更新后工具栏或导航表现异常怎么办？
 
-这也是 Outlinesave 最适合长对话的使用方式：你不必依靠不断向上滚动来回忆“那段回答大概在哪里”，而可以先从目录结构找到目标，再进行跳转。
+Outlinesave 工作在 ChatGPT 的实时网页界面上。如果 ChatGPT 改变渲染、DOM 或加载方式，行为可能暂时变化，直到兼容性更新完成。
 
-完整目录顶部还提供上一项、下一项、导出、书签筛选等操作。
-
-关闭完整目录或按 Esc 后，Outlinesave 会回到快捷工具栏，而不是直接消失。
-
-## 我应该使用哪一种状态？
-
-可以按下面的方法选择：
-
-- **只想专心聊天，不想占空间：** 边缘按钮；
-- **经常使用上一项、下一项、书签或导出：** 快捷工具栏；
-- **正在阅读几十条甚至上百条消息的长对话：** 完整目录；
-- **暂时完全不需要 Outlinesave：** 在 Popup 中关闭浮动工具栏。
-
-大多数情况下，没有必要频繁彻底关闭 Outlinesave。把它折叠成边缘按钮即可保留快速入口。
-
-## 为什么有些长对话目录项暂时不能直接跳转？
-
-ChatGPT 的超长对话并不一定会把所有历史消息同时加载到当前页面中。
-
-因此，Outlinesave 可能已经知道某个较早的对话位置存在，但对应内容还没有进入当前可直接定位的页面状态。
-
-在这种情况下，Outlinesave 会尝试帮助页面逐步接近并加载目标位置。非常长的距离有时不能一次完成，但你可以看到导航正在向目标推进；再次点击时，会基于已经加载到的新位置继续尝试。
-
-当目标内容已经加载后，后续定位通常会更直接。
-
-这也是“完整目录”和“当前页面已经加载了哪些内容”之间的区别。关于超长对话、目录状态和远距离跳转，我们会在独立的《长对话导航》教程中详细说明，而不会要求普通用户理解内部实现。
-
-## 找不到 Outlinesave 了怎么办？
-
-先判断是哪一种情况：
-
-**还能看到页面边缘的小按钮**  
-点击它，恢复快捷工具栏。
-
-**能看到快捷工具栏，但没有完整目录**  
-点击目录按钮，展开完整目录。
-
-**页面上完全没有 Outlinesave**  
-点击浏览器工具栏中的 Outlinesave 扩展图标，检查浮动工具栏是否被关闭。
-
-**忘记第一次安装时怎么操作**  
-打开 Outlinesave Popup，使用 Replay onboarding（重新播放新手引导）重新查看核心流程。
-
-## 下一步
-
-如果你刚开始使用 Outlinesave，建议先阅读《Outlinesave 快速开始：5 分钟学会目录、标注与导出》。
-
-接下来最值得了解的是：
-
-- 如何导航超长 ChatGPT 对话；
-- 如何理解长对话中暂时未加载的目录项；
-- 如何使用书签和书签筛选快速找回重要回答；
-- 如何把对话导出为可搜索的离线 HTML 或 Markdown。
-
-这些功能共同解决的是同一个问题：**让有价值的 AI 长对话以后仍然找得到、看得懂、用得上。**
+*Outlinesave is developed by Wisteria Software.*
