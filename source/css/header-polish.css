@@ -7,6 +7,18 @@ html[data-theme="dark"] .wt-actions {
   padding: 0 !important;
 }
 
+/* The Wisteria mark is now a compact square flower rather than the old wide W. */
+.wt-brand {
+  min-width: 172px !important;
+}
+
+.wt-brand-mark {
+  flex: 0 0 28px !important;
+  width: 28px !important;
+  height: 28px !important;
+  background-size: 28px 28px !important;
+}
+
 .wt-search-trigger kbd,
 html[data-theme="dark"] .wt-search-trigger kbd {
   background: var(--wt-bg) !important;
