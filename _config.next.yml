@@ -9,8 +9,8 @@ darkmode: true
 
 # Browser header panel color
 theme_color:
-  light: "#f8fafc"
-  dark: "#0b1120"
+  light: "#ffffff"
+  dark: "#121214"
 
 # Favicon
 favicon:
