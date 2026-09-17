@@ -231,7 +231,7 @@ hexo.extend.helper.register('related_posts_sidebar', function(limit) {
     })
     .filter(item => item.score > 0)
     .sort((a, b) => {
-      if (b.score !== a.score) return b.score - a.post.date;
+      if (b.score !== a.score) return b.score - a.score;
       return b.post.date - a.post.date;
     })
     .slice(0, limit)
