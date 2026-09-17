@@ -12,7 +12,7 @@ function addBodyClass(html, className) {
 function transformRelatedGuides(block) {
   return block
     .replace('class="wt-related-posts links-of-blogroll animated" data-sidebar-related', 'class="wt-article-related"')
-    .replace(/<div class="links-of-blogroll-title" data-i18n="related_posts">[\s\S]*?<\/div>/, '<h2 class="wt-article-related-title" data-i18n="related_posts">相关文章</h2>')
+    .replace(/<div class="links-of-blogroll-title" data-i18n="related_posts">[\s\S]*?<\/div>/, '<h2 class="wt-article-related-title" data-i18n="related_posts">相关指南</h2>')
     .replace('class="links-of-blogroll-list"', 'class="wt-article-related-list"')
     .replace(/class="links-of-blogroll-item"/g, 'class="wt-article-related-item"');
 }
