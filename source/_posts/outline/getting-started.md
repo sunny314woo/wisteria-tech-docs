@@ -1,15 +1,16 @@
 ---
-title: Outlinesave 快速开始：5 分钟学会目录、标注与导出
+title: "Outlinesave 怎么用？ChatGPT 目录、高亮、书签与导出完整教程"
 date: 2026-05-18 10:00:00
-updated: 2026-09-17 16:30:00
-description: "Outlinesave 官方快速开始：打开已有 AI 对话，使用目录快速定位内容，添加高亮与备注，并将重要对话导出为离线 HTML 或 Markdown。"
+updated: 2026-09-17 19:42:00
+description: "Outlinesave 怎么用？这篇快速教程介绍如何为 ChatGPT 长对话生成目录、跳转旧回答、添加高亮和书签，并导出 Markdown 或可搜索的离线 HTML。"
 keywords:
-  - Outlinesave
-  - ChatGPT Outline
-  - ChatGPT 长对话
+  - Outlinesave 怎么用
+  - Outlinesave 教程
+  - ChatGPT 目录
+  - ChatGPT 书签
+  - ChatGPT 高亮
   - ChatGPT 导出
-  - 离线 HTML
-  - Markdown 导出
+  - ChatGPT Outline
 permalink: Outline/outline/getting-started/
 categories:
   - 产品指南
@@ -21,83 +22,80 @@ tags:
 lang: zh-CN
 ---
 
-Outlinesave 用来整理和保存长 AI 对话。它把对话变成可以导航、标注、筛选和导出的知识页，尤其适合经常回到旧对话查找答案的用户。
+## Outlinesave 怎么用？
 
-这篇快速开始只讲第一次使用最需要知道的几个动作。更复杂的长对话导航、书签筛选、离线 HTML、Google Drive 备份等功能会在独立教程中详细说明。
+Outlinesave 是一个用于整理 ChatGPT 等 AI 长对话的浏览器扩展。安装后，你可以把 conversation 变成**可导航的两级目录**，给重要内容添加**高亮、下划线、备注和书签**，通过筛选快速找回重点，并将对话保存为 **Markdown 或可搜索的离线 HTML**。
 
-## 1. 安装 Outlinesave
+第一次使用只需要记住一个流程：
 
-从 Chrome Web Store 安装 Outlinesave，然后打开一个已经有内容的 ChatGPT 对话。
+**打开旧对话 → 用目录定位 → Bookmark / Highlight 重要内容 → Filter 聚焦 → Export 保存。**
 
-Outlinesave 也支持 Gemini、Claude 和 DeepSeek，但不同网站的界面和部分功能可能不同。本教程首先以 ChatGPT 为例。
+## 1. 安装后打开一个已有 ChatGPT 对话
 
-## 2. 打开目录
+安装 Outlinesave 后，先打开一个已经有内容的 ChatGPT conversation。Outlinesave 也支持其他 AI 平台，但本教程以 ChatGPT 为主要示例，不同网站的界面和部分能力可能不同。
 
-在 ChatGPT 对话页面中找到 Outlinesave 的浮动工具栏，点击目录按钮打开 **Full Outline（完整目录）**。
+## 2. 用 Full Outline 查看完整目录
 
-目录的一级条目对应你的提问。展开一级条目后，还可以看到 AI 回答中的标题作为二级目录。
+在页面中的 Outlinesave 工具栏点击目录按钮，打开 **Full Outline**。
 
-点击目录条目即可定位到对应内容。对于很长、尚未完全加载的 ChatGPT 对话，远处的条目可能需要一些时间逐步加载和定位；这是长对话导航的正常情况。Outlinesave 会尽可能帮助页面接近并加载目标位置。
+一级目录对应你的问题；AI 回答中的标题可以成为二级目录。这样即使 conversation 已经有几十或几百轮，也可以先看结构，再决定跳到哪里。
 
-> 如果你主要使用几十到几百轮的超长对话，请继续阅读“长对话导航”专题。那里会单独解释目录状态、远距离跳转以及为什么有些旧内容不能立即到达。
+对于尚未完全加载的超长对话，远距离历史位置可能需要逐步加载。加载/发现尚未完成时，目录编号也可能暂时重新校准；完成后再把编号理解为当前完整 conversation 的稳定顺序。
 
-## 3. 标记真正重要的内容
+## 3. 目录和书签不是同一个东西
 
-Outlinesave 不只是目录工具。
+目录负责回答“内容在哪里”，Bookmark 负责回答“什么值得以后回来”。
 
-阅读回答时，你可以使用高亮、下划线和备注，把真正需要保留的结论从长回答中标出来。对于以后还需要重新访问的位置，可以使用书签。
+一级 turn 和 AI 二级标题都可以留下 Bookmark。之后打开 **Bookmark Filter**，可以把一个 200+ 轮的完整目录缩成你真正标记的重要部分。
 
-书签特别适合长对话：你不需要再次浏览整个目录，而可以使用书签筛选，把目录收窄到自己真正关心的项目。
+## 4. 用 Highlight、Underline 和 Note 精读
 
-## 4. 导出和保存对话
+Bookmark 适合标记重要位置；Highlight / Underline 适合标记正文里的具体文字；Note 适合加入自己的解释、问题或下一步想法。
 
-点击 Outlinesave 的导出按钮可以选择适合自己的保存方式。
+一个实用组合是：**Bookmark 重要回答 → Highlight 关键句 → 写 Note → 以后 Filter 回来复习。**
 
-### 离线 HTML
+## 5. 导出 Markdown 还是 HTML？
 
-适合希望把完整 AI 对话保存成一个可离线打开的知识页面的用户。Outlinesave 的 HTML 导出可以保留目录和标注，并用于长期阅读、查找和复习。
+如果你想继续编辑、进入 PKM、Git 或文本工作流，优先使用 **Markdown**。
 
-### Markdown
+如果你想长期保存一个可以直接用浏览器打开、保留目录和标注结构的知识页，优先使用 **离线 HTML**。普通无额外资源的 conversation 可以生成单个 `.html` 文件；需要保存外部资源时，Outlinesave 可能把 HTML 与资源一起打包以避免内容丢失。
 
-适合继续编辑、版本管理，或者把 AI 内容放入自己的 Markdown / PKM 工作流。
+Bookmark Filter 还可以参与导出范围：你既可以保存完整 conversation，也可以先筛选 Bookmark，再导出更聚焦的重要一级 turns。
 
-HTML 和 Markdown 的用途不同。如果你不知道该选哪一个，可以先看后续的“HTML 和 Markdown 导出有什么区别”教程。
+## 6. Outlinesave 不见了怎么办？
 
-## 5. 不小心隐藏了 Outlinesave？
+页面工具可以理解为：
 
-ChatGPT 页面上的 Outlinesave 可以在完整目录、浮动工具栏和靠边按钮之间切换。
+**隐藏 → Edge Button → Quick Toolbar → Full Outline**
 
-如果你只是把完整目录关闭了，可以从浮动工具栏重新打开；如果浮动工具栏折叠到了页面边缘，点击靠边按钮即可恢复。
+如果只是折叠到边缘，点击 Edge Button 即可恢复 Quick Toolbar；如果在扩展 Popup 中彻底关闭了浮动工具栏，则需要重新打开 Popup 开启它。
 
-如果你在扩展 Popup 中关闭了“显示浮动工具栏”，页面上不会继续保留恢复入口。此时点击浏览器工具栏中的 Outlinesave 图标，在 Popup 中重新开启浮动工具栏即可。
+## 7. 隐私方面需要知道什么？
 
-## 6. 跳过了首次教学也没关系
+Outlinesave 采用 local-first 设计，不要求注册 Outlinesave 用户账号，也不会为了普通目录、标注和本地导出而把你的 AI conversation 上传到 Outlinesave 的聊天存储服务器。
 
-Outlinesave 首次安装时会提供一个简短的四步教学：
+只有当你主动使用 Google Drive 等外部服务时，才会连接你明确选择的目标服务。
 
-1. 打开已有对话
-2. 使用目录导航
-3. 使用高亮和备注
-4. 下载对话
+## 常见问题
 
-如果安装时点了 **Skip**，或者之后忘记了操作，可以打开 Outlinesave 的扩展 Popup，使用 **Replay onboarding** 重新查看首次教学。
+### Outlinesave 只是 ChatGPT 目录插件吗？
 
-## 7. 隐私与本地优先
+不是。目录是入口，完整工作流还包括 Bookmark、Highlight、Note、Search / Filter，以及 Markdown 和离线 HTML 保存。
 
-Outlinesave 采用本地优先的设计，不要求注册 Outlinesave 用户账号，也不会把你的 AI 对话上传到 Outlinesave 的服务器。
+### ChatGPT 对话太长，旧回答跳不过去怎么办？
 
-只有当你主动使用需要外部服务的功能，例如把内容保存到自己的 Google Drive 时，相关功能才会连接对应服务。
+超长 conversation 的旧内容可能尚未加载到当前页面。Outlinesave 会尝试逐步接近目标；当目标真正加载后，定位会更直接。
 
-## 下一步学什么？
+### 我只想保存重要回答怎么办？
 
-如果你已经完成上面的快速开始，建议按自己的需求继续：
+先给重要 turn 或二级标题加 Bookmark，再打开 Bookmark Filter 后导出。聚焦导出最终以对应的一级 conversation turn 为单位保留上下文。
 
-- 经常阅读超长 ChatGPT 对话：学习 **长对话目录与导航**
-- 经常回头找重要答案：学习 **书签与书签筛选**
-- 想长期保存 AI 内容：学习 **离线 HTML 与 Markdown 导出**
-- 想自己保管备份：学习 **Google Drive 备份**
-- 想精读研究材料：学习 **高亮、下划线与备注**
+### HTML 和 Markdown 应该选哪个？
 
-快速开始的目标不是一次学完所有功能，而是先建立一个简单工作流：
+**继续编辑选 Markdown；长期离线阅读、保留更丰富结构选 HTML。**
 
-**打开旧对话 → 用目录定位 → 标记重要内容 → 导出保存。**
+## 下一步
+
+根据自己的问题继续阅读长对话导航、ChatGPT 书签、Markdown 导出和离线 HTML 专题即可，不需要一次学完所有功能。
+
+*Outlinesave is developed by Wisteria Software.*
