@@ -62,12 +62,12 @@ function homePortalHtml() {
           <h2 id="wt-home-outlinesave-zh">整理和保存长 AI 对话</h2>
           <p>目录导航、标注、搜索筛选，以及 HTML / Markdown 导出。</p>
         </div>
-        <a class="wt-home-text-link" href="/categories/Product-Guides/">查看全部指南 →</a>
+        <a class="wt-home-text-link" href="/categories/产品指南/">查看全部指南 →</a>
       </div>
       <div class="wt-home-topic-grid">
         <a href="/Product-Docs/zh/chatgpt-long-conversation-outline-incomplete-or-missing/"><strong>长对话导航</strong><span>理解长对话为什么难以完整加载，并快速定位旧回答。</span></a>
         <a href="/Outline/outline/offline-html-export/"><strong>离线 HTML</strong><span>把重要对话保存成本地、可搜索的知识页。</span></a>
-        <a href="/Product-Docs/en/how-to-export-chatgpt-to-markdown-with-outlinesave/"><strong>Markdown 导出</strong><span>继续编辑、版本管理，或进入自己的知识库工作流。</span></a>
+        <a href="/Outline/outline/markdown-export/"><strong>Markdown 导出</strong><span>继续编辑、版本管理，或进入自己的知识库工作流。</span></a>
         <a href="/categories/FAQ/"><strong>FAQ</strong><span>查找目录、加载、导出和使用过程中的常见问题。</span></a>
       </div>
     </section>
