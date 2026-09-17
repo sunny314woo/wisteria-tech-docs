@@ -115,16 +115,12 @@ creative_commons:
   post: false
   language:
 
-# Footer
+# Footer — custom Wisteria Docs footer replaces NexT branding.
 footer:
-  since: 2025
-  icon:
-    name: fa fa-heart
-    animated: false
-    color: '#808080'
-  powered: true
+  copyright: false
+  powered: false
   theme:
-    enable: true
+    enable: false
 
 # Social (不启用)
 social:
@@ -164,6 +160,7 @@ custom_file_path:
   head: source/_data/head.njk
   header: source/_data/header.njk
   bodyEnd: source/_data/body-end.njk
+  footer: source/_data/footer.njk
   style: source/_data/styles.styl
   sidebar: _templates/sidebar-recent-posts.njk
 
