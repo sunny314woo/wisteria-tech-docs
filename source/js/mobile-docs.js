@@ -25,7 +25,13 @@
   const currentLanguage = () => document.documentElement.dataset.uiLang === 'en' ? 'en' : 'zh-CN';
 
   const applyMobileLabels = () => {
-    const t = labels[currentLanguage()];
+    const lang = currentLanguage();
+    const t = labels[lang];
+    const outlinesaveHref = lang === 'en' ? '/categories/Product-Guides/' : '/categories/产品指南/';
+
+    document.querySelectorAll('[data-doc-route="outlinesave"]').forEach(link => {
+      link.setAttribute('href', outlinesaveHref);
+    });
     document.querySelectorAll('[data-i18n="nav_outlinesave"]').forEach(el => { el.textContent = t.outlinesave; });
     document.querySelectorAll('[data-i18n="nav_guides"]').forEach(el => { el.textContent = t.guides; });
     document.querySelectorAll('[data-i18n="nav_faq"]').forEach(el => { el.textContent = t.faq; });
