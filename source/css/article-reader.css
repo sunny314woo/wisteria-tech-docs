@@ -1,0 +1,361 @@
+/* Wisteria Docs — Strike 3 article reader
+ * Desktop: content-first reader with a quiet right-side TOC.
+ * The source posts, URLs and SEO metadata remain unchanged.
+ */
+
+@media (min-width: 992px) {
+  .wt-docs-article .main {
+    box-sizing: border-box;
+    display: grid !important;
+    grid-template-columns: minmax(0, 740px) 224px;
+    column-gap: 64px;
+    width: 100% !important;
+    max-width: 1076px !important;
+    margin: 0 auto !important;
+    padding: calc(var(--wt-topbar-height) + 46px) 24px 0 !important;
+  }
+
+  .wt-docs-article .main > .main-inner.post.posts-expand {
+    grid-column: 1;
+    grid-row: 1;
+    box-sizing: border-box;
+    width: 100% !important;
+    max-width: 740px !important;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .wt-docs-article .main > .column {
+    grid-column: 2;
+    grid-row: 1;
+    box-sizing: border-box;
+    width: 224px !important;
+    min-width: 0;
+    position: relative !important;
+    inset: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .wt-docs-article .sidebar {
+    box-sizing: border-box;
+    display: block !important;
+    position: sticky !important;
+    top: calc(var(--wt-topbar-height) + 28px) !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 224px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .wt-docs-article .sidebar-inner {
+    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column;
+    width: 224px !important;
+    height: calc(100vh - var(--wt-topbar-height) - 56px) !important;
+    max-height: calc(100vh - var(--wt-topbar-height) - 56px) !important;
+    position: static !important;
+    inset: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .wt-docs-article .sidebar-nav,
+  .wt-docs-article .site-overview-wrap,
+  .wt-docs-article .sidebar .back-to-top,
+  .wt-docs-article .sidebar-blogroll,
+  .wt-docs-article .sidebar-post-related {
+    display: none !important;
+  }
+
+  .wt-docs-article .sidebar-panel-container {
+    flex: 1 1 auto !important;
+    min-height: 0;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+
+  .wt-docs-article .post-toc-wrap {
+    box-sizing: border-box;
+    display: block !important;
+    width: 100%;
+    padding: 0 0 26px 0 !important;
+    background: transparent !important;
+  }
+
+  .wt-docs-article .post-toc-wrap::before {
+    content: "ON THIS PAGE";
+    display: block;
+    margin: 2px 0 14px;
+    color: var(--wt-muted);
+    font-size: 0.69rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    line-height: 1.2;
+  }
+
+  html[lang^="zh"] .wt-docs-article .post-toc-wrap::before {
+    content: "本页目录";
+    letter-spacing: 0.06em;
+  }
+
+  .wt-docs-article .post-toc {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .wt-docs-article .post-toc .nav {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .wt-docs-article .post-toc .nav .nav-item > .nav-link,
+  .wt-docs-article .post-toc .nav .active > .nav-link {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 4px 0 !important;
+    color: var(--wt-muted) !important;
+    font-size: 0.82rem !important;
+    font-weight: 400 !important;
+    line-height: 1.42 !important;
+    text-decoration: none !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  .wt-docs-article .post-toc .nav .nav-child {
+    margin: 1px 0 3px 12px !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+
+  .wt-docs-article .post-toc .nav .nav-item > .nav-link:hover {
+    color: var(--wt-text) !important;
+  }
+
+  .wt-docs-article .post-toc .nav .active-current > .nav-link,
+  .wt-docs-article .post-toc .nav .active-current > .nav-link:hover {
+    color: var(--wt-primary) !important;
+    font-weight: 500 !important;
+  }
+}
+
+/* Article itself ---------------------------------------------------- */
+.wt-docs-article .post-block {
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.wt-docs-article .post-content {
+  width: 100%;
+  min-width: 0;
+}
+
+.wt-docs-article .post-header {
+  margin: 0 0 36px !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+.wt-docs-article .post-header h1.post-title {
+  margin: 0 0 18px !important;
+  color: var(--wt-text) !important;
+  font-size: clamp(2.15rem, 4vw, 2.5rem) !important;
+  font-weight: 680 !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1.16 !important;
+}
+
+.wt-docs-article .post-description {
+  max-width: 700px;
+  margin: 12px 0 0 !important;
+  color: var(--wt-muted) !important;
+  font-size: 1.04rem !important;
+  line-height: 1.65 !important;
+}
+
+.wt-docs-article .post-meta {
+  justify-content: flex-start !important;
+  margin-top: 14px !important;
+  color: var(--wt-muted) !important;
+  font-size: 0.78rem !important;
+  line-height: 1.4;
+}
+
+.wt-docs-article .post-meta-item-icon {
+  display: none !important;
+}
+
+.wt-docs-article .post-body,
+.wt-docs-article .post-body p,
+.wt-docs-article .post-body li {
+  color: var(--wt-body-text) !important;
+  font-size: 1.03125rem !important;
+  line-height: 1.75 !important;
+}
+
+.wt-docs-article .post-body p {
+  margin: 0 0 20px !important;
+}
+
+.wt-docs-article .post-body h2 {
+  margin: 56px 0 18px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--wt-text) !important;
+  font-size: 1.75rem !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.025em;
+  line-height: 1.25 !important;
+}
+
+.wt-docs-article .post-body h3 {
+  margin: 36px 0 12px !important;
+  color: var(--wt-text) !important;
+  font-size: 1.3rem !important;
+  font-weight: 630 !important;
+  letter-spacing: -0.015em;
+  line-height: 1.35 !important;
+}
+
+.wt-docs-article .post-body h4 {
+  margin: 28px 0 10px !important;
+  color: var(--wt-text) !important;
+  font-size: 1.08rem !important;
+  font-weight: 650 !important;
+}
+
+.wt-docs-article .post-body img {
+  display: block;
+  max-width: 100%;
+  margin: 30px auto;
+  border: 1px solid var(--wt-border) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+.wt-docs-article .post-body blockquote {
+  margin: 26px 0 !important;
+  padding: 2px 0 2px 18px !important;
+  border-left: 2px solid var(--wt-border) !important;
+  background: transparent !important;
+}
+
+.wt-docs-article .post-body table {
+  margin: 28px 0 !important;
+}
+
+.wt-docs-article .post-body pre,
+.wt-docs-article figure.highlight,
+.wt-docs-article .highlight {
+  margin-top: 26px !important;
+  margin-bottom: 26px !important;
+}
+
+/* Blog-style footer metadata is intentionally visually de-emphasized. */
+.wt-docs-article .post-tags {
+  display: none !important;
+}
+
+/* Related content belongs after the article, never inside the TOC rail. */
+.wt-docs-article .wt-article-related {
+  margin: 72px 0 0;
+  padding: 30px 0 0;
+  border-top: 1px solid var(--wt-border);
+}
+
+.wt-docs-article .wt-article-related-title {
+  margin: 0 0 12px;
+  color: var(--wt-text);
+  font-size: 1.08rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.wt-docs-article .wt-article-related-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wt-docs-article .wt-article-related-item {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--wt-border-light, #f0eef1);
+}
+
+.wt-docs-article .wt-article-related-item a {
+  display: block;
+  padding: 13px 0;
+  color: var(--wt-text) !important;
+  font-size: 0.94rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-decoration: none !important;
+  border: 0 !important;
+}
+
+.wt-docs-article .wt-article-related-item a::after {
+  content: " →";
+  color: var(--wt-muted);
+}
+
+.wt-docs-article .wt-article-related-item a:hover,
+.wt-docs-article .wt-article-related-item a:focus-visible {
+  color: var(--wt-primary) !important;
+}
+
+.wt-docs-article .post-footer {
+  margin-top: 34px !important;
+}
+
+/* Mobile gets a clean single-column article. A collapsible mobile TOC is Strike 4. */
+@media (max-width: 991px) {
+  .wt-docs-article .main-inner.post.posts-expand {
+    box-sizing: border-box;
+    width: 100% !important;
+    max-width: 780px !important;
+    margin: 0 auto !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .wt-docs-article .post-header h1.post-title {
+    font-size: clamp(2rem, 8.5vw, 2.2rem) !important;
+    line-height: 1.18 !important;
+  }
+
+  .wt-docs-article .post-body h2 {
+    margin-top: 46px !important;
+    font-size: 1.55rem !important;
+  }
+
+  .wt-docs-article .post-body h3 {
+    margin-top: 32px !important;
+    font-size: 1.2rem !important;
+  }
+
+  .wt-docs-article .post-body,
+  .wt-docs-article .post-body p,
+  .wt-docs-article .post-body li {
+    font-size: 1rem !important;
+    line-height: 1.72 !important;
+  }
+}
