@@ -1,0 +1,30 @@
+/* Header polish shared by Docs pages. */
+.wt-actions,
+html[data-theme="dark"] .wt-actions {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.wt-search-trigger kbd,
+html[data-theme="dark"] .wt-search-trigger kbd {
+  background: var(--wt-bg) !important;
+  border-color: var(--wt-border) !important;
+  color: var(--wt-muted) !important;
+}
+
+.wt-official-link {
+  gap: 5px !important;
+  padding-left: 9px !important;
+  padding-right: 9px !important;
+}
+
+.wt-official-link > span:last-child {
+  color: var(--wt-muted);
+  font-size: 0.72rem;
+}
+
+.wt-official-link:hover > span:last-child {
+  color: var(--wt-primary);
+}
