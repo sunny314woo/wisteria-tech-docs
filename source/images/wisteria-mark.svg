@@ -1,41 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 230" role="img" aria-labelledby="title">
-  <title id="title">Wisteria W logo</title>
-  <defs>
-    <linearGradient id="wisteriaViolet" x1="34" y1="28" x2="305" y2="212" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#c4a1ff"/>
-      <stop offset=".45" stop-color="#7c3aed"/>
-      <stop offset="1" stop-color="#4c1d95"/>
-    </linearGradient>
-    <linearGradient id="wisteriaLight" x1="58" y1="18" x2="270" y2="104" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ddd0ff"/>
-      <stop offset="1" stop-color="#9f7aea"/>
-    </linearGradient>
-    <clipPath id="wClip">
-      <path d="M37 62 90 27l69 167 32-135 50 145 55-190 44-14-78 203-48 18-35-109-24 101-47 4Z"/>
-    </clipPath>
-  </defs>
-  <g clip-path="url(#wClip)">
-    <path d="M37 62 90 27l69 167 32-135 50 145 55-190 44-14-78 203-48 18-35-109-24 101-47 4Z" fill="url(#wisteriaViolet)"/>
-
-    <polygon points="37,62 90,27 79,101" fill="#c5a7ff"/>
-    <polygon points="37,62 79,101 108,217" fill="#8b5cf6"/>
-    <polygon points="79,101 124,86 159,194 108,217" fill="#6d28d9"/>
-    <polygon points="90,27 124,86 79,101" fill="#a78bfa"/>
-    <polygon points="124,86 191,59 159,194" fill="#8b5cf6"/>
-    <polygon points="124,86 141,43 191,59" fill="#c4b5fd"/>
-    <polygon points="159,194 191,59 179,112" fill="#a78bfa"/>
-    <polygon points="159,194 179,112 214,221" fill="#5b21b6"/>
-    <polygon points="179,112 241,204 214,221" fill="#7c3aed"/>
-    <polygon points="191,59 241,204 179,112" fill="#9f7aea"/>
-    <polygon points="191,59 224,36 270,93" fill="url(#wisteriaLight)"/>
-    <polygon points="191,59 270,93 241,204" fill="#8b5cf6"/>
-    <polygon points="241,204 270,93 262,203" fill="#6d28d9"/>
-    <polygon points="270,93 296,14 262,203" fill="#8b5cf6"/>
-    <polygon points="296,14 340,0 315,70" fill="#c4b5fd"/>
-    <polygon points="270,93 315,70 262,203" fill="#7c3aed"/>
-    <polygon points="315,70 340,0 296,122" fill="#a78bfa"/>
-    <polygon points="296,122 340,0 262,203" fill="#6d28d9"/>
-    <polygon points="108,217 159,194 155,213" fill="#4c1d95"/>
-    <polygon points="214,221 262,203 241,204" fill="#4c1d95"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Wisteria flower logo</title>
+  <mask id="flower-cutout">
+    <rect width="64" height="64" fill="white"/>
+    <circle cx="32" cy="32" r="4.4" fill="black"/>
+  </mask>
+  <g fill="#71629A" mask="url(#flower-cutout)">
+    <path d="M32 7.5c6.4 3.1 10.1 8.4 9.2 14.2-.7 4.9-4.1 8.5-9.2 11.1-5.1-2.6-8.5-6.2-9.2-11.1-.9-5.8 2.8-11.1 9.2-14.2Z"/>
+    <path d="M56.5 31.5c-3.1-6.4-8.4-10.1-14.2-9.2-4.9.7-8.5 4.1-11.1 9.2 2.6 5.1 6.2 8.5 11.1 9.2 5.8.9 11.1-2.8 14.2-9.2Z"/>
+    <path d="M32 57.5c-7-3.6-10.8-9.4-9.4-15.7 1-4.6 4.4-8.1 9.4-10.6 5 2.5 8.4 6 9.4 10.6 1.4 6.3-2.4 12.1-9.4 15.7Z"/>
+    <path d="M7.5 31.5c3.1-6.4 8.4-10.1 14.2-9.2 4.9.7 8.5 4.1 11.1 9.2-2.6 5.1-6.2 8.5-11.1 9.2-5.8.9-11.1-2.8-14.2-9.2Z"/>
   </g>
 </svg>
