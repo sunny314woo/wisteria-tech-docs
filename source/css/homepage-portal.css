@@ -1,0 +1,338 @@
+/* Wisteria Docs homepage portal — Strike 2 */
+
+.wt-docs-home .sidebar,
+.wt-docs-home .main-inner.index > .post-block,
+.wt-docs-home .main-inner.index > .pagination {
+  display: none !important;
+}
+
+.wt-docs-home .main {
+  padding-top: calc(var(--wt-topbar-height) + 8px) !important;
+}
+
+.wt-docs-home .main-inner.index {
+  box-sizing: border-box;
+  margin: 0 auto !important;
+  max-width: 1180px !important;
+  padding: 0 28px 84px !important;
+  width: 100% !important;
+}
+
+.wt-docs-home-portal {
+  color: var(--wt-text);
+  margin: 0 auto;
+  max-width: 1040px;
+}
+
+.wt-home-lang-en {
+  display: none;
+}
+
+html[data-ui-lang="en"] .wt-home-lang-zh {
+  display: none;
+}
+
+html[data-ui-lang="en"] .wt-home-lang-en {
+  display: block;
+}
+
+html[data-ui-lang="zh-CN"] .wt-home-lang-zh {
+  display: block;
+}
+
+html[data-ui-lang="zh-CN"] .wt-home-lang-en {
+  display: none;
+}
+
+.wt-home-hero {
+  max-width: 720px;
+  padding: 76px 0 72px;
+}
+
+.wt-home-eyebrow,
+.wt-home-product-label {
+  color: var(--wt-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.wt-home-hero h1 {
+  color: var(--wt-text);
+  font-size: clamp(2.45rem, 4.8vw, 3.4rem);
+  font-weight: 680;
+  letter-spacing: -0.045em;
+  line-height: 1.06;
+  margin: 0 0 18px;
+}
+
+.wt-home-hero p {
+  color: var(--wt-body-text);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin: 0 0 30px;
+  max-width: 680px;
+}
+
+.wt-home-search {
+  align-items: center;
+  appearance: none;
+  background: var(--wt-bg);
+  border: 1px solid var(--wt-border);
+  border-radius: 9px;
+  color: var(--wt-muted);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 14px;
+  text-align: left;
+  transition: border-color 120ms ease, color 120ms ease;
+  width: min(100%, 650px);
+}
+
+.wt-home-search:hover,
+.wt-home-search:focus-visible {
+  border-color: var(--wt-primary-soft);
+  color: var(--wt-text);
+}
+
+.wt-home-search-icon {
+  color: var(--wt-primary);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.wt-home-search > span:nth-child(2) {
+  flex: 1;
+}
+
+.wt-home-search kbd {
+  background: transparent;
+  border: 1px solid var(--wt-border);
+  border-radius: 5px;
+  color: var(--wt-muted);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 7px;
+}
+
+.wt-home-section {
+  border-top: 1px solid var(--wt-border-light);
+  padding: 58px 0 6px;
+}
+
+.wt-home-section + .wt-home-section {
+  margin-top: 54px;
+}
+
+.wt-home-section-head {
+  align-items: flex-end;
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.wt-home-section-head h2 {
+  color: var(--wt-text);
+  font-size: 1.48rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.wt-home-section-head p {
+  color: var(--wt-muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+  margin: 9px 0 0;
+  max-width: 640px;
+}
+
+.wt-home-text-link,
+.wt-home-text-link:visited {
+  border: 0 !important;
+  color: var(--wt-muted) !important;
+  flex: 0 0 auto;
+  font-size: 0.84rem;
+  font-weight: 550;
+  text-decoration: none;
+}
+
+.wt-home-text-link:hover,
+.wt-home-text-link:focus-visible {
+  color: var(--wt-primary) !important;
+}
+
+.wt-home-list {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.wt-home-list-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 36px;
+}
+
+.wt-home-list a,
+.wt-home-update {
+  align-items: center;
+  border-bottom: 1px solid var(--wt-border-light) !important;
+  color: var(--wt-text) !important;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 12px 0;
+  text-decoration: none;
+}
+
+.wt-home-list a:hover,
+.wt-home-list a:focus-visible,
+.wt-home-update:hover,
+.wt-home-update:focus-visible {
+  color: var(--wt-primary) !important;
+}
+
+.wt-home-arrow {
+  color: var(--wt-muted);
+  flex: 0 0 auto;
+  transition: color 120ms ease;
+}
+
+.wt-home-list a:hover .wt-home-arrow,
+.wt-home-update:hover .wt-home-arrow {
+  color: var(--wt-primary);
+}
+
+.wt-home-topic-grid {
+  display: grid;
+  gap: 0 28px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wt-home-topic-grid a {
+  border-bottom: 1px solid var(--wt-border-light) !important;
+  color: var(--wt-text) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 92px;
+  padding: 18px 0 20px;
+  text-decoration: none;
+}
+
+.wt-home-topic-grid strong {
+  font-size: 0.96rem;
+  font-weight: 620;
+}
+
+.wt-home-topic-grid span {
+  color: var(--wt-muted);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.wt-home-topic-grid a:hover strong,
+.wt-home-topic-grid a:focus-visible strong {
+  color: var(--wt-primary);
+}
+
+.wt-home-updates {
+  display: grid;
+}
+
+.wt-home-update {
+  justify-content: flex-start;
+}
+
+.wt-home-update time {
+  color: var(--wt-muted);
+  flex: 0 0 92px;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.wt-home-update > span:nth-child(2) {
+  flex: 1;
+}
+
+.wt-home-latest {
+  padding-bottom: 24px;
+}
+
+html[data-theme="dark"] .wt-home-search {
+  background: var(--wt-surface);
+}
+
+@media (max-width: 900px) {
+  .wt-docs-home .main-inner.index {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .wt-home-hero {
+    padding-top: 56px;
+  }
+
+  .wt-home-list-two,
+  .wt-home-topic-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .wt-docs-home .main-inner.index {
+    padding: 0 18px 64px !important;
+  }
+
+  .wt-home-hero {
+    padding: 42px 0 52px;
+  }
+
+  .wt-home-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .wt-home-hero p {
+    font-size: 1rem;
+  }
+
+  .wt-home-search {
+    min-height: 50px;
+  }
+
+  .wt-home-search kbd {
+    display: none;
+  }
+
+  .wt-home-section {
+    padding-top: 44px;
+  }
+
+  .wt-home-section + .wt-home-section {
+    margin-top: 42px;
+  }
+
+  .wt-home-section-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .wt-home-update {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+  }
+
+  .wt-home-update time {
+    flex-basis: 100%;
+  }
+}
