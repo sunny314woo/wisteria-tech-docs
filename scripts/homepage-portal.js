@@ -21,7 +21,7 @@ function latestUpdatesHtml() {
   const posts = hexo.locals.get('posts');
   if (!posts || typeof posts.sort !== 'function') return '';
 
-  return posts.sort('-date').limit(3).toArray().map(post => {
+  return posts.sort('-updated').limit(3).toArray().map(post => {
     const title = escapeHtml(post.title);
     const date = formatDate(post.updated || post.date);
     const path = '/' + String(post.path || '').replace(/^\/+/, '');
