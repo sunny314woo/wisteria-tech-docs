@@ -70,3 +70,48 @@
   color: var(--wt-primary) !important;
   font-weight: 400 !important;
 }
+
+/* Home sidebar author/social block ------------------------------------
+ * A quiet identity/signature area below the short recent-post list.
+ */
+.wt-sidebar-author {
+  border-top: 1px solid var(--wt-border);
+  margin-top: 18px;
+  padding-top: 16px;
+  text-align: left;
+}
+
+.wt-sidebar-author-name {
+  color: var(--wt-text);
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.wt-sidebar-author-role {
+  color: var(--wt-muted);
+  font-size: 0.76rem;
+  line-height: 1.45;
+  margin-top: 3px;
+}
+
+.wt-sidebar-author-links {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 10px;
+}
+
+.wt-sidebar-author-links a {
+  border: 0 !important;
+  color: var(--wt-menu-text);
+  font-size: 0.79rem;
+  line-height: 1.4;
+  padding: 2px 0;
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+
+.wt-sidebar-author-links a:hover {
+  color: var(--wt-primary);
+}
