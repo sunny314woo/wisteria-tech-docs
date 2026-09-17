@@ -1,0 +1,52 @@
+/* Wisteria Tech Docs — homepage author/social signature.
+ * Intentionally quiet: content first, identity second.
+ */
+
+.wt-sidebar-author {
+  border-top: 1px solid var(--wt-border, #dbe3ee) !important;
+  margin-top: 18px;
+  padding-top: 16px;
+  text-align: left;
+}
+
+.wt-sidebar-author-name {
+  color: var(--wt-text, #0f172a);
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.wt-sidebar-author-role {
+  color: var(--wt-muted, #64748b);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.45;
+  margin-top: 3px;
+}
+
+.wt-sidebar-author-links {
+  display: block !important;
+  margin-top: 10px;
+}
+
+.wt-sidebar-author-links > a {
+  border: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  color: var(--wt-muted, #64748b) !important;
+  display: block !important;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.45;
+  margin: 0 0 4px 0;
+  padding: 0 !important;
+  text-decoration: none !important;
+}
+
+.wt-sidebar-author-links > a:hover,
+.wt-sidebar-author-links > a:focus {
+  border: 0 !important;
+  border-bottom: 0 !important;
+  color: var(--wt-primary, #2563eb) !important;
+  text-decoration: none !important;
+}
