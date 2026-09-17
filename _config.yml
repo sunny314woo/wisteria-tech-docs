@@ -67,11 +67,36 @@ meta_generator: true
 # Date / Time format
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-updated_option: mtime
+updated_option: date
 
 # Pagination
 per_page: 10
 pagination_dir: page
+
+# List ordering — documentation-first: recently updated content comes first.
+# If a post has no explicit `updated:`, Hexo falls back to its creation date.
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -updated
+  pagination_dir: page
+
+category_generator:
+  per_page: 10
+  order_by: -updated
+
+tag_generator:
+  per_page: 10
+  order_by: -updated
+
+archive_generator:
+  enabled: true
+  per_page: 10
+  yearly: true
+  monthly: true
+  daily: false
+  order_by: -updated
+
 
 # Include / Exclude file(s)
 include:
