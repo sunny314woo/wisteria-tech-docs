@@ -1,7 +1,7 @@
 ---
 title: "Outlinesave 工具栏怎么用？ChatGPT 目录、书签、跳转与导出功能说明"
 date: 2026-09-17 16:30:00
-updated: 2026-09-17 19:44:00
+updated: 2026-09-22 08:47:00
 description: "Outlinesave 工具栏怎么用、消失后怎么恢复？了解 Edge Button、Quick Toolbar 和 Full Outline，以及 ChatGPT 目录、书签筛选、上一项/下一项跳转和导出入口。"
 keywords:
   - Outlinesave 工具栏怎么用
@@ -48,13 +48,13 @@ Full Outline 是完整目录视图。一级目录以用户问题为主要结构�
 
 ChatGPT 超长 conversation 的历史消息不一定全部同时加载在当前页面。Outlinesave 可能已经发现目标位置，但对应内容仍未进入可直接定位状态。
 
-这时导航可能需要逐步接近目标。加载阶段的目录编号也可能重新校准；完成后再把编号作为当前完整 conversation 的稳定顺序。
+新版把“目录全量发现”和“正文跳转”明确分开：完整目录仍在加载时，深色条目可以直接打开，灰色条目暂时等待；目录完成后，灰色的远距离目标可以触发渐进式正文定位。加载阶段编号仍可能重新校准，完成后再把编号作为稳定顺序。
 
 ## Outlinesave 不见了怎么恢复？
 
 如果还能看到 Edge Button，点击它恢复 Quick Toolbar；如果能看到 Quick Toolbar 但没有目录，点击目录按钮打开 Full Outline。
 
-如果页面上完全没有 Outlinesave，请打开浏览器扩展栏中的 Outlinesave Popup，检查浮动工具栏是否被关闭。Popup 中还可以使用 Replay onboarding 重新查看新手引导。
+如果页面上完全没有 Outlinesave，请打开浏览器扩展栏中的 Outlinesave Popup，检查浮动工具栏是否被关闭。Popup 底部还提供 **详细教程、BUG 反馈、重播初始引导** 三个入口；出现兼容性问题时可以直接从 BUG 反馈提交问题和可选截图。
 
 ## 我应该保持哪种状态？
 
