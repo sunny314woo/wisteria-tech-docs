@@ -26,7 +26,7 @@ lang: en
 
 This approach **does not fix ChatGPT's online virtual scrolling**. Nor can it recover messages that were unavailable during export. To rely on an archive, open the file afterward and verify that the sections you need are actually present.
 
-This article focuses on *why* to save long chats for local reading. For searching questions and AI headings within an active conversation, see the [searchable conversation outline guide](https://blog.wisteriasoftware.uk/ai-conversation-navigation/chatgpt-long-conversation-search-navigation-2026/).
+This article focuses on *why* to save long chats for local reading. For searching questions and AI headings within an active conversation, see the [searchable conversation outline guide](https://github.com/sunny314woo/wisteria-tech-docs/blob/main/source/_posts/en/chatgpt-long-conversation-search-navigation-2026.md).
 
 ## 1. Why Do Older Messages Take So Long to Reach?
 
@@ -186,7 +186,7 @@ If you need this for coding, learning or research threads, see [Outlinesave on t
 
 ### Related reading
 
-- [How to Search Within Long ChatGPT Conversations: Ctrl+F, Searchable Outlines and Offline HTML](https://blog.wisteriasoftware.uk/ai-conversation-navigation/chatgpt-long-conversation-search-navigation-2026/)
+- [How to Search Within Long ChatGPT Conversations: Ctrl+F, Searchable Outlines and Offline HTML](https://github.com/sunny314woo/wisteria-tech-docs/blob/main/source/_posts/en/chatgpt-long-conversation-search-navigation-2026.md)
 - [OpenAI Developer Community: Searchable conversation navigator for long chats](https://community.openai.com/t/beyond-prompt-markers-a-searchable-conversation-navigator-for-long-chats-web-desktop/1404593)
 
 *This guide describes the current Outlinesave approach and common long-conversation use cases. ChatGPT behavior and extension compatibility may change.*
