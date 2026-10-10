@@ -26,7 +26,7 @@ lang: zh-CN
 
 这**不会修复 ChatGPT 在线网页的虚拟滚动**，也不保证所有旧内容都能自动导出。正确做法是：先取得需要保存的内容，导出完成后打开本地文件，核验首尾消息、目录、公式、标注和搜索功能。
 
-本篇重点解答“长对话加载慢，为什么值得导出到本地”。如果你的主要问题是“在一个长对话里怎么搜索旧提问”，请阅读[ChatGPT 长对话搜索与目录定位指南](/ai-对话导航/chatgpt-long-conversation-search-navigation-2026/)（若站点永久链接不同，可从博客内搜索文章标题）。
+本篇重点解答“长对话加载慢，为什么值得导出到本地”。如果你的主要问题是“在一个长对话里怎么搜索旧提问”，请阅读[ChatGPT 长对话搜索与目录定位指南](https://github.com/sunny314woo/wisteria-tech-docs/blob/main/source/_posts/zh/chatgpt-long-conversation-search-navigation-2026.md)。
 
 ## 一、为什么 ChatGPT 长对话越长，旧消息越难看？
 
@@ -185,7 +185,7 @@ Outlinesave 主要面向单条对话，不应当作全账号批量导出工具�
 
 ### 相关阅读
 
-- [ChatGPT 长对话搜索不到旧内容？完整目录、关键词定位与离线 HTML 指南](https://blog.wisteriasoftware.uk/ai-对话导航/chatgpt-long-conversation-search-navigation-2026/)
+- [ChatGPT 长对话搜索不到旧内容？完整目录、关键词定位与离线 HTML 指南](https://github.com/sunny314woo/wisteria-tech-docs/blob/main/source/_posts/zh/chatgpt-long-conversation-search-navigation-2026.md)
 - [OpenAI Developer Community：长对话可搜索导航需求](https://community.openai.com/t/beyond-prompt-markers-a-searchable-conversation-navigator-for-long-chats-web-desktop/1404593)
 
 *本文基于 Outlinesave 当前产品说明和真实长对话使用场景。ChatGPT 的加载机制、扩展实现及导出能力可能随版本变化。*
