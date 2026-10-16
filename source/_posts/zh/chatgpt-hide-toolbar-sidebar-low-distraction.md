@@ -1,0 +1,103 @@
+---
+title: "ChatGPT 插件如何减少界面干扰？OutlineSave 工具栏与目录侧边栏设置教程"
+date: 2026-10-16 21:00:00
+updated: 2026-10-16 21:00:00
+description: "OutlineSave 如何隐藏 ChatGPT 插件工具栏？了解五按钮折叠、完全隐藏浮动工具栏、Full TOC 目录侧边栏、J/K/Esc 快捷键和画线工具设置。"
+keywords:
+  - ChatGPT 插件隐藏工具栏
+  - ChatGPT 侧边栏怎么关闭
+  - OutlineSave 浮动工具栏
+  - Full TOC
+  - ChatGPT 目录插件
+  - ChatGPT 低打扰阅读
+permalink: Product-Docs/zh/chatgpt-hide-toolbar-sidebar-low-distraction/
+categories:
+  - 产品指南
+tags:
+  - OutlineSave
+  - ChatGPT Outline
+  - 工具栏
+  - 目录导航
+lang: zh-CN
+---
+
+## 快速回答：如何让 OutlineSave 尽量不干扰聊天？
+
+可以将右侧五个快捷按钮**折叠成一个边缘按钮**，或打开浏览器扩展栏中的 OutlineSave 菜单，关闭 **“显示浮动工具栏”**，把浮动工具栏和边缘按钮一起隐藏。需要目录时点击“目录”按钮打开 **Full TOC（完整目录）**；阅读时关闭目录侧边栏，或按 `Esc`。在当前页面未刷新的情况下，重新打开侧边栏不会仅因为关闭过就重载已获取的目录。
+
+本教程以 ChatGPT 为例。OutlineSave 同时面向 ChatGPT、Gemini、Claude 和 DeepSeek；各平台界面及功能入口可能存在差异。
+
+## 1. 五按钮快捷工具栏：展开使用，折叠阅读
+
+页面右侧浮动快捷工具栏包含五类操作：**目录、上一条/下一条导航、下载、搜索、收起**。其中上一条和下一条属于一组上下导航控制。
+
+需要导航、检索或导出时保留工具栏；希望界面简洁时点击收起，将整列工具折叠为一个边缘按钮（Edge Button）。再次展开即可继续使用，无须卸载扩展。
+
+## 2. 完全隐藏浮动工具栏
+
+折叠并不等于隐藏：折叠后还会留下一个按钮。
+
+想完全隐藏时，点击浏览器工具栏中的 **OutlineSave 扩展图标**，在弹出的菜单中关闭 **“显示浮动工具栏”**（英文 UI：**Show floating toolbar**）。这项设置控制受支持页面上的浮动工具栏、边缘按钮和侧边栏。想恢复时，在同一菜单重新开启。
+
+## 3. 打开与关闭 Full TOC
+
+**Full TOC** 是完整目录视图的文档名称，而**不是一个写着“Full TOC”的实体按钮**。打开方法是点击快捷工具栏中的 **“目录”**（英文按钮：**Outline**），展开目录侧边栏。
+
+侧边栏中的目录可滚动浏览，支持两级结构（Two-Level TOC）：第一级为用户提出的问题，第二级为 AI 回答中的标题。对于超长聊天，完整目录可能需要逐步加载；不要把“打开 Full TOC”理解成历史消息已经全部加载完成。
+
+侧边栏可调整顶部位置及显示尺寸，包括宽度和高度。阅读时可以关闭它，让正文重新成为焦点；再次点击“目录”即可打开。**在页面未刷新的情况下，已加载的目录仍可继续使用**。刷新或重新打开聊天后则不作相同保证。
+
+## 4. 用快捷键减少操作干扰
+
+| 快捷键 | 操作 |
+| --- | --- |
+| `J` | 下一条（Next） |
+| `K` | 上一条（Previous） |
+| `Esc` | 关闭目录侧边栏 |
+
+这些快捷键对应的英文界面提示包括 **Next (J)** 和 **Previous (K)**。实际使用时，请以输入焦点和当前页面状态为准。
+
+## 5. 不想使用画线工具时
+
+OutlineSave 可对重要文字进行高亮、下划线和备注。若当前只需要阅读、选择文本或复制内容，可以通过插件提供的标注工具开关暂时关闭画线工具；需要做笔记时再开启。
+
+## 6. 适合不同阅读习惯的三种设置
+
+**专注写作：** 隐藏浮动工具栏，关闭侧边栏，暂时停用不需要的画线工具。
+
+**偶尔找旧回答：** 把五按钮工具栏折叠为 Edge Button；查找时打开 Full TOC，读完再关闭。
+
+**研究或技术长对话：** 打开 Full TOC 查看两级目录，调整侧边栏位置与大小；需要精读时收起，使用 J/K 在条目间导航。
+
+## 常见问题（FAQ）
+
+### Full TOC 在哪里？为什么找不到这个按钮？
+
+Full TOC 是“完整目录视图”的名称，**按钮实际标为“目录”（英文 Outline）**。点击右侧快捷工具栏的目录按钮即可打开。不要在界面中寻找写着 Full TOC 的按钮。
+
+### Full TOC、Two-Level TOC 与 TOC Sidebar 有什么区别？
+
+**Full TOC** 指完整目录视图；**Two-Level TOC** 指用户问题与 AI 回答标题的两级结构；**TOC Sidebar** 指承载目录、可打开或关闭的侧边栏。三者不是三个按钮。
+
+### 工具栏折叠成一个按钮后，还能彻底隐藏吗？
+
+可以。在浏览器的 OutlineSave 扩展菜单中关闭“显示浮动工具栏”。该设置同时隐藏边缘按钮。
+
+### 关闭目录后再打开，需要重新加载吗？
+
+当前网页没有刷新时，已加载的目录会保留；刷新网页后的恢复情况不能由此推断。
+
+### 怎么关闭目录侧边栏？
+
+点击侧边栏的关闭控件，或按 `Esc`。需要再次查看时，点击工具栏中的“目录”。
+
+### OutlineSave 只能用于 ChatGPT 吗？
+
+不是。产品支持 ChatGPT、Gemini、Claude 和 DeepSeek。本文以 ChatGPT 为主要示例，不应假定所有平台的具体 UI 完全一致。
+
+## 相关教程
+
+- [OutlineSave 快捷工具栏与 Full TOC 使用说明](/Outline/outline/floating-toolbar-and-full-outline/)
+- [OutlineSave 入门教程](/Outline/outline/getting-started/)
+
+[安装 OutlineSave（Chrome Web Store）](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)
