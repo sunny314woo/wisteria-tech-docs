@@ -1,11 +1,11 @@
 ---
-title: "Outlinesave 怎么用？ChatGPT 目录、高亮、书签与导出完整教程"
+title: "OutlineSave 怎么用？ChatGPT 目录、高亮、书签与导出完整教程"
 date: 2026-05-18 10:00:00
 updated: 2026-09-22 08:46:00
-description: "Outlinesave 怎么用？这篇快速教程介绍如何为 ChatGPT 长对话生成目录、跳转旧回答、添加高亮和书签，并导出 Markdown 或可搜索的离线 HTML。"
+description: "OutlineSave 怎么用？这篇快速教程介绍如何为 ChatGPT 长对话生成目录、跳转旧回答、添加高亮和书签，并导出 Markdown 或可搜索的离线 HTML。"
 keywords:
-  - Outlinesave 怎么用
-  - Outlinesave 教程
+  - OutlineSave 怎么用
+  - OutlineSave 教程
   - ChatGPT 目录
   - ChatGPT 书签
   - ChatGPT 高亮
@@ -15,16 +15,16 @@ permalink: Outline/outline/getting-started/
 categories:
   - 产品指南
 tags:
-  - Outlinesave
+  - OutlineSave
   - ChatGPT Outline
   - 目录导航
   - 对话导出
 lang: zh-CN
 ---
 
-## Outlinesave 怎么用？
+## OutlineSave 怎么用？
 
-Outlinesave 是一个用于整理 ChatGPT 等 AI 长对话的浏览器扩展。安装后，你可以把 conversation 变成**可导航的两级目录**，给重要内容添加**高亮、下划线、备注和书签**，通过筛选快速找回重点，并将对话保存为 **Markdown 或可搜索的离线 HTML**。
+OutlineSave 是一个用于整理 ChatGPT 等 AI 长对话的浏览器扩展。安装后，你可以把 conversation 变成**可导航的两级目录**，给重要内容添加**高亮、下划线、备注和书签**，通过筛选快速找回重点，并将对话保存为 **Markdown 或可搜索的离线 HTML**。
 
 第一次使用只需要记住一个流程：
 
@@ -32,11 +32,11 @@ Outlinesave 是一个用于整理 ChatGPT 等 AI 长对话的浏览器扩展。�
 
 ## 1. 安装后打开一个已有 ChatGPT 对话
 
-安装 Outlinesave 后，先打开一个已经有内容的 ChatGPT conversation。Outlinesave 也支持其他 AI 平台，但本教程以 ChatGPT 为主要示例，不同网站的界面和部分能力可能不同。
+安装 OutlineSave 后，先打开一个已经有内容的 ChatGPT conversation。OutlineSave 也支持其他 AI 平台，但本教程以 ChatGPT 为主要示例，不同网站的界面和部分能力可能不同。
 
-## 2. 用 Full Outline 查看完整目录
+## 2. 用 Full TOC 查看完整目录
 
-在页面中的 Outlinesave 工具栏点击目录按钮，打开 **Full Outline**。
+在页面中的 OutlineSave 工具栏点击 **“目录”**（英文 **Outline**）按钮，打开 **Full TOC（完整目录视图）**。Full TOC 是教程采用的视图名称，不是另一个叫 Full TOC 的按钮。
 
 一级目录对应你的问题；AI 回答中的标题可以成为二级目录。这样即使 conversation 已经有几十或几百轮，也可以先看结构，再决定跳到哪里。
 
@@ -58,29 +58,29 @@ Bookmark 适合标记重要位置；Highlight / Underline 适合标记正文里�
 
 如果你想继续编辑、进入 PKM、Git 或文本工作流，优先使用 **Markdown**。
 
-如果你想长期保存一个可以直接用浏览器打开、保留目录和标注结构的知识页，优先使用 **离线 HTML**。普通无额外资源的 conversation 可以生成单个 `.html` 文件；需要保存外部资源时，Outlinesave 可能把 HTML 与资源一起打包以避免内容丢失。
+如果你想长期保存一个可以直接用浏览器打开、保留目录和标注结构的知识页，优先使用 **离线 HTML**。普通无额外资源的 conversation 可以生成单个 `.html` 文件；需要保存外部资源时，OutlineSave 可能把 HTML 与资源一起打包以避免内容丢失。
 
 Bookmark Filter 还可以参与导出范围：你既可以保存完整 conversation，也可以先筛选 Bookmark，再导出更聚焦的重要一级 turns。
 
-## 6. Outlinesave 不见了怎么办？
+## 6. OutlineSave 不见了怎么办？
 
 页面工具可以理解为：
 
-**隐藏 → Edge Button → Quick Toolbar → Full Outline**
+**隐藏 → Edge Button → Quick Toolbar → Full TOC**
 
 如果只是折叠到边缘，点击 Edge Button 即可恢复 Quick Toolbar；如果在扩展 Popup 中彻底关闭了浮动工具栏，则需要重新打开 Popup 开启它。
 
 ## 7. 隐私方面需要知道什么？
 
-Outlinesave 采用 local-first 设计，不要求注册 Outlinesave 用户账号，也不会为了普通目录、标注和本地导出而把你的 AI conversation 上传到 Outlinesave 的聊天存储服务器。
+OutlineSave 采用 local-first 设计，不要求注册 OutlineSave 用户账号，也不会为了普通目录、标注和本地导出而把你的 AI conversation 上传到 OutlineSave 的聊天存储服务器。
 
 只有当你主动使用 Google Drive 等外部服务时，才会连接你明确选择的目标服务。
 
-从 3.7.3 起，Outlinesave 还使用**最小化的匿名产品计数**来了解安装、卸载、HTML 导出和支付弹窗打开等关键漏斗。统计不会发送对话正文、问题/回答、标题、页面 URL、搜索词、高亮、备注、书签、导出内容或文件名，也不读取 Google/Chrome 账号信息。HTML 导出计数表示已经生成文件并触发浏览器下载，不代表操作系统最终写盘成功；购买数量来自既有的已验证支付记录，不与本地安装标识关联。
+从 3.7.3 起，OutlineSave 还使用**最小化的匿名产品计数**来了解安装、卸载、HTML 导出和支付弹窗打开等关键漏斗。统计不会发送对话正文、问题/回答、标题、页面 URL、搜索词、高亮、备注、书签、导出内容或文件名，也不读取 Google/Chrome 账号信息。HTML 导出计数表示已经生成文件并触发浏览器下载，不代表操作系统最终写盘成功；购买数量来自既有的已验证支付记录，不与本地安装标识关联。
 
 ## 常见问题
 
-### Outlinesave 只是 ChatGPT 目录插件吗？
+### OutlineSave 只是 ChatGPT 目录插件吗？
 
 不是。目录是入口，完整工作流还包括 Bookmark、Highlight、Note、Search / Filter，以及 Markdown 和离线 HTML 保存。
 
@@ -98,7 +98,7 @@ Outlinesave 采用 local-first 设计，不要求注册 Outlinesave 用户账号
 
 ## 8. 遇到问题怎么反馈？
 
-打开浏览器工具栏里的 Outlinesave Popup，底部依次提供 **详细教程 / BUG 反馈 / 重播初始引导**。BUG 反馈会打开独立反馈页，并自动附带扩展版本；你可以填写问题描述，并可选上传截图和邮箱。
+打开浏览器工具栏里的 OutlineSave Popup，底部依次提供 **详细教程 / BUG 反馈 / 重播初始引导**。BUG 反馈会打开独立反馈页，并自动附带扩展版本；你可以填写问题描述，并可选上传截图和邮箱。
 
 反馈页不会自动读取或上传你的 AI 对话正文、当前对话链接或页面截图。截图只在你主动选择时提交；邮箱仅用于反馈跟进。
 
@@ -106,4 +106,6 @@ Outlinesave 采用 local-first 设计，不要求注册 Outlinesave 用户账号
 
 根据自己的问题继续阅读长对话导航、ChatGPT 书签、Markdown 导出和离线 HTML 专题即可，不需要一次学完所有功能。
 
-*Outlinesave is developed by Wisteria Software.*
+关于隐藏工具栏、快捷键及侧边栏尺寸，请参阅[低打扰使用指南](/Product-Docs/zh/chatgpt-hide-toolbar-sidebar-low-distraction/)。
+
+*OutlineSave is developed by Wisteria Software.*
