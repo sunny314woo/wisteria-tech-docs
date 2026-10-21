@@ -1,12 +1,12 @@
 ---
-title: "ChatGPT 插件如何减少界面干扰？OutlineSave 工具栏与目录侧边栏设置教程"
+title: "ChatGPT 插件如何减少界面干扰？Outlinesave 工具栏与目录侧边栏设置教程"
 date: 2026-10-16 21:00:00
-updated: 2026-10-16 21:00:00
-description: "OutlineSave 如何隐藏 ChatGPT 插件工具栏？了解五按钮折叠、完全隐藏浮动工具栏、Full TOC 目录侧边栏、J/K/Esc 快捷键和画线工具设置。"
+updated: 2026-10-21 09:30:00
+description: "Outlinesave 如何隐藏 ChatGPT 插件工具栏？了解五按钮折叠、完全隐藏浮动工具栏、Full TOC 目录侧边栏、J/K/Esc 快捷键和画线工具设置。"
 keywords:
   - ChatGPT 插件隐藏工具栏
   - ChatGPT 侧边栏怎么关闭
-  - OutlineSave 浮动工具栏
+  - Outlinesave 浮动工具栏
   - Full TOC
   - ChatGPT 目录插件
   - ChatGPT 低打扰阅读
@@ -14,18 +14,29 @@ permalink: Product-Docs/zh/chatgpt-hide-toolbar-sidebar-low-distraction/
 categories:
   - 产品指南
 tags:
-  - OutlineSave
+  - Outlinesave
   - ChatGPT Outline
   - 工具栏
   - 目录导航
 lang: zh-CN
 ---
 
-## 快速回答：如何让 OutlineSave 尽量不干扰聊天？
+## 快速回答：如何让 Outlinesave 尽量不干扰聊天？
 
-可以将右侧五个快捷按钮**折叠成一个边缘按钮**，或打开浏览器扩展栏中的 OutlineSave 菜单，关闭 **“显示浮动工具栏”**，把浮动工具栏和边缘按钮一起隐藏。需要目录时点击“目录”按钮打开 **Full TOC（完整目录）**；阅读时关闭目录侧边栏，或按 `Esc`。在当前页面未刷新的情况下，重新打开侧边栏不会仅因为关闭过就重载已获取的目录。
+可以将右侧五个快捷按钮**折叠成一个边缘按钮**，或打开浏览器扩展栏中的 Outlinesave 菜单，关闭 **“显示浮动工具栏”**，把浮动工具栏和边缘按钮一起隐藏。需要目录时点击“目录”按钮打开 **Full TOC（完整目录）**；阅读时关闭目录侧边栏，或按 `Esc`。在当前页面未刷新的情况下，重新打开侧边栏不会仅因为关闭过就重载已获取的目录。
 
-本教程以 ChatGPT 为例。OutlineSave 同时面向 ChatGPT、Gemini、Claude 和 DeepSeek；各平台界面及功能入口可能存在差异。
+本教程以 ChatGPT 为例。Outlinesave 同时面向 ChatGPT、Gemini、Claude 和 DeepSeek；各平台界面及功能入口可能存在差异。
+
+## 新版：固定模式与灵活模式（低打扰）
+
+新版在浏览器工具栏的 **Outlinesave 扩展快捷菜单** 中提供侧边栏模式切换：
+
+- **固定模式**：侧边栏保持展开，适合需要持续查看两级目录、搜索和跳转的长对话。
+- **灵活模式（低打扰）**：采用鼠标悬停交互，移入侧边栏区域时显示，移开后自动收起。适合写作、阅读时减少遮挡；无需反复手动关闭目录。
+
+**这不是删除旧工具栏。** 右侧原有五个快捷操作（目录、上一条、下一条、下载、搜索，以及收起控制）继续保留；仍可折叠为单个边缘按钮，也可在扩展菜单中完全隐藏浮动工具栏。新版同时调整了右侧工具与侧边栏的位置，避开页面滚动条，减少滚动时的误触。
+
+如果希望目录一直可见，选择固定模式；希望鼠标移开后恢复干净的聊天界面，选择灵活模式。模式与浮动工具栏的“折叠/隐藏”是不同设置。
 
 ## 1. 五按钮快捷工具栏：展开使用，折叠阅读
 
@@ -37,7 +48,7 @@ lang: zh-CN
 
 折叠并不等于隐藏：折叠后还会留下一个按钮。
 
-想完全隐藏时，点击浏览器工具栏中的 **OutlineSave 扩展图标**，在弹出的菜单中关闭 **“显示浮动工具栏”**（英文 UI：**Show floating toolbar**）。这项设置控制受支持页面上的浮动工具栏、边缘按钮和侧边栏。想恢复时，在同一菜单重新开启。
+想完全隐藏时，点击浏览器工具栏中的 **Outlinesave 扩展图标**，在弹出的菜单中关闭 **“显示浮动工具栏”**（英文 UI：**Show floating toolbar**）。这项设置控制受支持页面上的浮动工具栏、边缘按钮和侧边栏。想恢复时，在同一菜单重新开启。
 
 ## 3. 打开与关闭 Full TOC
 
@@ -59,7 +70,7 @@ lang: zh-CN
 
 ## 5. 不想使用画线工具时
 
-OutlineSave 可对重要文字进行高亮、下划线和备注。若当前只需要阅读、选择文本或复制内容，可以通过插件提供的标注工具开关暂时关闭画线工具；需要做笔记时再开启。
+Outlinesave 可对重要文字进行高亮、下划线和备注。若当前只需要阅读、选择文本或复制内容，可以通过插件提供的标注工具开关暂时关闭画线工具；需要做笔记时再开启。
 
 ## 6. 适合不同阅读习惯的三种设置
 
@@ -81,7 +92,7 @@ Full TOC 是“完整目录视图”的名称，**按钮实际标为“目录”
 
 ### 工具栏折叠成一个按钮后，还能彻底隐藏吗？
 
-可以。在浏览器的 OutlineSave 扩展菜单中关闭“显示浮动工具栏”。该设置同时隐藏边缘按钮。
+可以。在浏览器的 Outlinesave 扩展菜单中关闭“显示浮动工具栏”。该设置同时隐藏边缘按钮。
 
 ### 关闭目录后再打开，需要重新加载吗？
 
@@ -91,13 +102,13 @@ Full TOC 是“完整目录视图”的名称，**按钮实际标为“目录”
 
 点击侧边栏的关闭控件，或按 `Esc`。需要再次查看时，点击工具栏中的“目录”。
 
-### OutlineSave 只能用于 ChatGPT 吗？
+### Outlinesave 只能用于 ChatGPT 吗？
 
 不是。产品支持 ChatGPT、Gemini、Claude 和 DeepSeek。本文以 ChatGPT 为主要示例，不应假定所有平台的具体 UI 完全一致。
 
 ## 相关教程
 
-- [OutlineSave 快捷工具栏与 Full TOC 使用说明](/Outline/outline/floating-toolbar-and-full-outline/)
-- [OutlineSave 入门教程](/Outline/outline/getting-started/)
+- [Outlinesave 快捷工具栏与 Full TOC 使用说明](/Outline/outline/floating-toolbar-and-full-outline/)
+- [Outlinesave 入门教程](/Outline/outline/getting-started/)
 
-[安装 OutlineSave（Chrome Web Store）](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)
+[安装 Outlinesave（Chrome Web Store）](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)
