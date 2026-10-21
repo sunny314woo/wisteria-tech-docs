@@ -1,31 +1,42 @@
 ---
 title: "How to Hide the ChatGPT Extension Toolbar and Reduce UI Clutter"
 date: 2026-10-16 21:00:00
-updated: 2026-10-16 21:00:00
-description: "Learn how to collapse or hide the OutlineSave floating toolbar, open the Full TOC sidebar, resize the conversation outline, and navigate with J, K, and Esc."
+updated: 2026-10-21 09:30:00
+description: "Learn how to collapse or hide the Outlinesave floating toolbar, open the Full TOC sidebar, resize the conversation outline, and navigate with J, K, and Esc."
 keywords:
   - hide ChatGPT extension toolbar
   - ChatGPT sidebar extension
   - minimize ChatGPT UI clutter
-  - OutlineSave Full TOC
+  - Outlinesave Full TOC
   - ChatGPT table of contents
   - collapsible floating toolbar
 permalink: Product-Docs/en/chatgpt-hide-toolbar-sidebar-low-distraction/
 categories:
   - Product Docs
 tags:
-  - OutlineSave
+  - Outlinesave
   - ChatGPT Outline
   - Full TOC
   - Navigation
 lang: en
 ---
 
-## Quick answer: How do I keep OutlineSave out of the way?
+## Quick answer: How do I keep Outlinesave out of the way?
 
-Collapse the five-control floating toolbar into an **Edge Button**, or open the **OutlineSave extension popup** and turn off **Show floating toolbar** to hide it completely, including the edge control. Open the **Full TOC** by clicking the **Outline** button when you need to navigate; press `Esc` or close the sidebar when you want to focus on reading.
+Collapse the five-control floating toolbar into an **Edge Button**, or open the **Outlinesave extension popup** and turn off **Show floating toolbar** to hide it completely, including the edge control. Open the **Full TOC** by clicking the **Outline** button when you need to navigate; press `Esc` or close the sidebar when you want to focus on reading.
 
-This guide uses ChatGPT for the walkthrough. OutlineSave also supports Gemini, Claude, and DeepSeek. Controls and behavior may vary by AI platform.
+This guide uses ChatGPT for the walkthrough. Outlinesave also supports Gemini, Claude, and DeepSeek. Controls and behavior may vary by AI platform.
+
+## New: Pinned and flexible sidebar modes
+
+Open the **Outlinesave extension popup** in your browser toolbar to choose the sidebar behavior:
+
+- **Pinned mode** keeps the sidebar open for ongoing outline navigation, searching, and jumping between answers.
+- **Flexible mode (low-distraction)** reveals the sidebar when you move your pointer over its area and automatically collapses it when you move away. This leaves more room for reading and writing.
+
+**The original quick controls are still available.** The right-side toolbar retains Outline, Previous, Next, Download, Search, and its collapse control. You can still fold it into a single Edge Button or hide the floating toolbar through the extension popup. The right-side placement has also been adjusted to avoid covering the page scrollbar.
+
+Pinned/flexible behavior is separate from collapsing or hiding the floating toolbar.
 
 ## 1. Collapse the floating toolbar to one button
 
@@ -39,7 +50,7 @@ This is a good default if you use the extension occasionally but don't want a co
 
 Collapsing and hiding are different. A collapsed toolbar still leaves the Edge Button visible.
 
-To remove the floating controls entirely, open the browser's **OutlineSave extension popup** and switch off **Show floating toolbar**. This setting controls the floating toolbar, Edge Button, and sidebar on supported pages. Turn it back on in the popup to restore them.
+To remove the floating controls entirely, open the browser's **Outlinesave extension popup** and switch off **Show floating toolbar**. This setting controls the floating toolbar, Edge Button, and sidebar on supported pages. Turn it back on in the popup to restore them.
 
 ## 3. Open the Full TOC only when needed
 
@@ -85,7 +96,7 @@ There isn't a button labeled **Full TOC**. Click **Outline** in the Quick Toolba
 
 ### Can I hide the Edge Button too?
 
-Yes. Turn off **Show floating toolbar** in the OutlineSave extension popup.
+Yes. Turn off **Show floating toolbar** in the Outlinesave extension popup.
 
 ### Does closing the sidebar reload the outline?
 
@@ -97,11 +108,11 @@ Use its close control or press `Esc`. Click **Outline** to bring it back.
 
 ### Does this only work on ChatGPT?
 
-No. OutlineSave supports ChatGPT, Gemini, Claude, and DeepSeek, although platform-specific controls can differ.
+No. Outlinesave supports ChatGPT, Gemini, Claude, and DeepSeek, although platform-specific controls can differ.
 
 ## Related guides
 
 - [How to Add an Outline Sidebar to ChatGPT](/Product-Docs/en/how-to-add-an-outline-sidebar-to-chatgpt-for-faster-navigation/)
 - [Quick Toolbar and Full TOC guide (Chinese)](/Outline/outline/floating-toolbar-and-full-outline/)
 
-[Get OutlineSave on the Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)
+[Get Outlinesave on the Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)
