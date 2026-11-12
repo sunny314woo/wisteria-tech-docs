@@ -51,8 +51,8 @@ jobs:
           ];
           for (const source of paths) {
             const raw = fs.readFileSync(source, 'utf8');
-            for (const [, href] of raw.matchAll(/href="(\\/[^"#?]+)(?:#[^"]*)?"/g)) {
-              const target = href === '/' ? 'public/index.html' : 'public/' + href.replace(/^\\//, '') + 'index.html';
+            for (const [, href] of raw.matchAll(/href="(\/[^"#?]+)(?:#[^"]*)?"/g)) {
+              const target = href === '/' ? 'public/index.html' : 'public/' + href.replace(/^\//, '') + 'index.html';
               if (!fs.existsSync(target)) throw new Error(source + ': broken internal link ' + href + ' -> ' + target);
             }
           }
