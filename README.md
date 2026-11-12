@@ -22,6 +22,20 @@
 
 这个项目没有后台、没有数据库、没有 CMS。所有内容都在本地文件里。
 
+## 产品信息中心首页
+
+首页是独立的产品信息中心，文章内页继续沿用 NexT。下文历史记录中的“首页分页、前 10 篇、首页侧栏”不再适用于当前首页；首页维护以本节为准。请修改以下文件，不要新建 `source/index.md`，避免首页重复生成或 HTML 被 Markdown 当成代码：
+
+- `source/_data/homepage.html`：首页模块、演示入口、FAQ 和版本公告。
+- `source/css/product-home.css`：首页排版、响应式与明暗主题。
+- `source/js/product-home.js`：全文搜索、文章筛选、中英文切换与演示弹窗。
+- `scripts/product-home.js`：从现有文章生成首页卡片和搜索索引；保留文章原有 URL。
+- `source/images/homepage/`：首页截图和交互示例，图片可直接放入仓库；未来可将地址换为媒体 CDN。
+
+“相关文章”自动读取原有文章，按 AI 工作流、工具比较、本地知识、开发笔记展示。新增文章仍写入 `source/_posts/`；产品文档、授权页和更新日志保留原有入口及归档。首页和文章内页的搜索索引都会移除 SEO 脚本，避免结果摘要显示 JSON 代码。
+
+完成修改后运行 `npm run clean && npm run build && npm run check:homepage`。部署工作流也会运行首页检查。`npm run check:content` 仍有 12 项原有内容问题，首页检查通过不代表旧文章审计全部通过。
+
 ## 第一次接手怎么跑起来
 
 先确认电脑里已经安装了 Node.js。建议使用 Node.js 20 或更新版本。

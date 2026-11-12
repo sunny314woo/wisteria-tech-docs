@@ -10,7 +10,8 @@
     "clean": "hexo clean",
     "check:content": "node tools/check-content.js",
     "new": "hexo new",
-    "deploy": "hexo deploy"
+    "deploy": "hexo deploy",
+    "check:homepage": "node tools/check-homepage.js"
   },
   "hexo": {
     "version": "7.3.0"

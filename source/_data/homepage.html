@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Wisteria 产品信息中心：查看 OutlineSave 使用教程、实际演示、产品更新与常见问题。">
+  <title>Wisteria Docs · 产品信息中心</title>
+  <link rel="icon" href="/images/homepage/wisteria-mark.svg" type="image/svg+xml">
+  <script>
+  try {
+    const saved = localStorage.getItem('wisteria-ui-theme');
+    document.documentElement.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  } catch (_) {}
+  </script>
+  <link rel="stylesheet" href="/css/product-home.css?v=20261112-1">
+  <link rel="canonical" href="https://blog.wisteriasoftware.uk/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wisteria Docs · 产品信息中心">
+  <meta property="og:description" content="产品指南、实际演示、版本更新与博客文章。">
+  <meta property="og:url" content="https://blog.wisteriasoftware.uk/">
+  <meta property="og:image" content="https://blog.wisteriasoftware.uk/images/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/atom+xml" title="Wisteria Docs" href="/atom.xml">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-title">跳到主要内容</a>
+  <noscript><p class="nojs">教程与文章链接可以直接打开。搜索、交互演示和公告预览需要启用 JavaScript。</p></noscript>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Wisteria Docs 首页"><img src="/images/homepage/wisteria-mark.svg" width="37" height="32" alt=""><span><span class="brand-name">Wisteria Docs</span><span class="brand-sub">产品信息中心</span></span></a>
+      <nav class="site-nav" id="site-nav" aria-label="主要导航"><a href="#guides">使用指南</a><a href="#demos">功能演示</a><a href="#updates">产品更新</a><a href="#faq">常见问题</a><a href="#articles">相关文章</a></nav>
+      <div class="header-tools"><button class="header-search" type="button" data-open-search aria-label="搜索文档"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg><span>搜索</span><kbd>⌘ K</kbd></button><button class="home-language" type="button" aria-label="切换语言">EN</button><button class="home-theme" type="button" aria-label="切换明暗模式">外观</button><a class="official" href="https://wisteriasoftware.uk/" target="_blank" rel="noopener">产品官网 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+</svg></a><button class="mobile-toggle" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="site-nav"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg></button></div>
+    </div>
+  </header>
+  <main class="wt-docs-home-portal">
+    <div class="wrap">
+      <section class="hero" aria-labelledby="main-title">
+        <div class="hero-copy"><div class="eyebrow"><span class="rule" aria-hidden="true"></span>WISTERIA SOFTWARE · 官方指南</div><h1 id="main-title" tabindex="-1">产品指南与动态，<br><span>一站找到。</span></h1><p class="hero-intro">从第一次上手，到长对话整理与内容保存。<br>教程、实际演示和产品更新，都在这里。</p>
+          <form class="hero-search wt-home-search" role="search" id="hero-search-form"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg><label class="sr-only" for="hero-query">搜索教程、功能或文章</label><input id="hero-query" type="search" placeholder="搜索教程、功能或文章" autocomplete="off"><button type="submit">搜索</button></form>
+          <div class="popular"><span>热门问题</span><button type="button" data-query="目录不完整">目录不完整</button><button type="button" data-query="HTML">离线 HTML</button><button type="button" data-query="免费">免费版与 PRO</button></div>
+        </div>
+        <figure class="hero-product"><div class="product-label"><strong>OutlineSave</strong><small>长对话整理与保存</small></div><button class="hero-shot" type="button" data-demo="export" aria-label="打开 OutlineSave 离线 HTML 交互演示"><img src="/images/homepage/export-preview.jpg" width="1464" height="690" alt="OutlineSave 中文离线导出：左侧两级目录，右侧保留高亮与备注的对话正文" fetchpriority="high"><span class="shot-action">打开交互演示 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+</svg></span></button><figcaption class="hero-caption"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+</svg>真实导出效果 · 可体验目录、搜索与书签</figcaption></figure>
+      </section>
+      <section class="announcement" aria-labelledby="announcement-title"><div class="announcement-symbol" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-megaphone" viewBox="0 0 16 16">
+  <path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 75 75 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0m-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233q.27.015.537.036c2.568.189 5.093.744 7.463 1.993zm-9 6.215v-4.13a95 95 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A61 61 0 0 1 4 10.065m-.657.975 1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68 68 0 0 0-1.722-.082z"/>
+</svg></div><div class="announcement-copy"><div class="announcement-heading"><span class="pill">产品更新</span><h2 id="announcement-title">PDF 导出与长对话导航优化</h2></div><p>OutlineSave 3.10.1 · 了解导出体验、导航改进及本次修复。</p></div><button class="text-link" type="button" data-release="3.10.1">阅读更新公告 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></button></section>
+      <section class="section" id="guides" aria-labelledby="guides-title"><div class="section-head"><div><span class="section-kicker">开始使用</span><h2 id="guides-title">你想了解什么？</h2><p>按使用任务找教程，从这里开始。</p></div><a class="text-link" href="/help/">全部使用指南 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></a></div>
+        <div class="task-grid">
+          <a class="task" href="/Outline/outline/getting-started/"><span class="task-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-rocket-takeoff" viewBox="0 0 16 16">
+  <path d="M9.752 6.193c.599.6 1.73.437 2.528-.362s.96-1.932.362-2.531c-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532"/>
+  <path d="M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9 9 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a10 10 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093q.1.026.16.045c.184.06.279.13.351.295l.029.073a3.5 3.5 0 0 1 .157.721c.055.485.051 1.178-.159 2.065m-4.828 7.475.04-.04-.107 1.081a1.54 1.54 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a9 9 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006M5.205 5c-.625.626-.94 1.351-1.004 2.09a9 9 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a3 3 0 0 0-.045-.283 3 3 0 0 0-.3-.041Z"/>
+  <path d="M7.009 12.139a7.6 7.6 0 0 1-1.804-1.352A7.6 7.6 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z"/>
+</svg></span><h3>安装与快速入门</h3><p>完成首次设置，<br>了解基本操作。</p><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></a>
+          <a class="task" href="/Outline/outline/long-conversation-outline/"><span class="task-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-list-ul" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+</svg></span><h3>目录与关键词检索</h3><p>理清对话结构，<br>找回以前的回答。</p><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></a>
+          <a class="task" href="/Outline/outline/bookmarks-and-highlights/"><span class="task-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-bookmark" viewBox="0 0 16 16">
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+</svg></span><h3>高亮、备注与书签</h3><p>留下重点与想法，<br>方便下一次回看。</p><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></a>
+          <a class="task" href="/Outline/outline/offline-html-export/"><span class="task-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-download" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+</svg></span><h3>导出与离线保存</h3><p>了解导出格式，<br>保存有价值的对话。</p><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></a>
+          <a class="task" href="/faq/"><span class="task-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-life-preserver" viewBox="0 0 16 16">
+  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m6.43-5.228a7.03 7.03 0 0 1-3.658 3.658l-1.115-2.788a4 4 0 0 0 1.985-1.985zM5.228 14.43a7.03 7.03 0 0 1-3.658-3.658l2.788-1.115a4 4 0 0 0 1.985 1.985zm9.202-9.202-2.788 1.115a4 4 0 0 0-1.985-1.985l1.115-2.788a7.03 7.03 0 0 1 3.658 3.658m-8.087-.87a4 4 0 0 0-1.985 1.985L1.57 5.228A7.03 7.03 0 0 1 5.228 1.57zM8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+</svg></span><h3>购买授权与支持</h3><p>试用、激活说明，<br>以及常见问题排查。</p><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></a>
+        </div>
+      </section>
+    </div>
+    <section class="demos-section" id="demos" aria-labelledby="demos-title"><div class="wrap"><div class="section-head"><div><span class="section-kicker">功能演示</span><h2 id="demos-title">看见效果，再开始操作。</h2><p>从真实界面了解产品，也可以亲手试一试。</p></div><a class="text-link" href="https://www.youtube.com/watch?v=C-CrMWfWOtg" target="_blank" rel="noopener">观看功能视频 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+</svg></a></div>
+      <div class="demo-grid">
+        <article class="demo-card"><button class="demo-cover" type="button" data-demo="export" aria-label="体验离线 HTML 的目录、搜索与书签"><img src="/images/homepage/export-preview.jpg" width="1464" height="690" alt="中文离线 HTML 的目录与高亮内容" loading="lazy"><span class="demo-kind">交互体验</span><span class="play-disc"><span><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-play-fill" viewBox="0 0 16 16">
+  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+</svg></span></span></button><div class="demo-meta"><span>离线 HTML</span><span>·</span><span>可直接操作</span></div><h3>保存后的对话，是什么样子？</h3><p>打开一个真实导出样例，试试两级目录、全文搜索与书签。</p><button class="text-link" type="button" data-demo="export">打开交互演示 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></button></article>
+        <article class="demo-card"><button class="demo-cover" type="button" data-demo="search" aria-label="查看长对话关键词检索的界面与步骤"><img src="/images/homepage/outline-search.webp" width="1086" height="1448" alt="OutlineSave 搜索面板：输入关键词，显示匹配的提问与目录条目" loading="lazy"><span class="demo-kind">图文演示</span><span class="play-disc"><span><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg></span></span></button><div class="demo-meta"><span>目录与检索</span><span>·</span><span>界面与操作步骤</span></div><h3>记得关键词，如何找到原回答？</h3><p>从关键词找到相关目录，再回到原始上下文继续阅读。</p><button class="text-link" type="button" data-demo="search">查看检索步骤 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></button></article>
+        <article class="demo-card"><a class="demo-cover" href="https://www.youtube.com/watch?v=C-CrMWfWOtg" target="_blank" rel="noopener" aria-label="在 YouTube 观看 OutlineSave 目录、搜索与导出功能视频"><img src="/images/homepage/video-poster.webp" width="1280" height="800" alt="OutlineSave 目录跳转功能视频封面" loading="lazy"><span class="demo-kind">功能视频</span><span class="play-disc"><span><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-play-fill" viewBox="0 0 16 16">
+  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+</svg></span></span></a><div class="demo-meta"><span>OutlineSave</span><span>·</span><span>目录、搜索与导出</span></div><h3>把长对话变成容易回看的内容</h3><p>观看完整功能演示，了解目录导航、查找、书签和内容保存。</p><a class="text-link" href="https://www.youtube.com/watch?v=C-CrMWfWOtg" target="_blank" rel="noopener">前往 YouTube 观看 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+</svg></a></article>
+      </div>
+    </div></section>
+    <div class="wrap">
+      <section class="section resources" aria-label="常见问题与产品更新">
+        <div id="faq"><div class="resource-title"><h2><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-question-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+</svg>常见问题</h2><a class="text-link" href="/faq/">全部 FAQ <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></a></div><div class="faq-list">
+          <details><summary>为什么长对话的目录不完整？ <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-chevron-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg></summary><p>长对话的历史内容可能还在分段加载。先确认插件已启用并等待目录获取完成；仍然缺失时，可按<a href="/Product-Docs/zh/chatgpt-long-conversation-outline-incomplete-or-missing/">目录排查指南</a>继续检查。</p></details>
+          <details><summary>HTML、PDF 和 Markdown 应该怎么选？ <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-chevron-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg></summary><p>交互式离线回看可选 HTML；固定版式阅读和打印可选 PDF；继续编辑或进入笔记工作流可选 Markdown。查看<a href="/Outline/outline/offline-html-export/">导出与保存指南</a>了解使用方式。</p></details>
+          <details><summary>试用结束后，还可以继续使用吗？ <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-chevron-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg></summary><p>可以继续使用免费版。不同功能的可用范围与额度，请以当前插件内的说明为准；已有许可证按购买时承诺的权益执行。详细说明见<a href="/faq/#free-pro">免费版与 PRO 问答</a>。</p></details>
+          <details><summary>购买后如何激活，或找回授权？ <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-chevron-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg></summary><p>请检查购买时使用的邮箱，按照授权邮件完成激活。找不到邮件或激活异常时，可以通过<a href="https://wisteriasoftware.uk/support.html" target="_blank" rel="noopener">官方支持页面</a>联系我们。请不要公开分享激活码。</p></details>
+          <details><summary>遇到问题，怎样提交反馈？ <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-chevron-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg></summary><p>可以从插件弹窗进入 BUG 反馈，或访问<a href="https://wisteriasoftware.uk/support.html" target="_blank" rel="noopener">官方支持页面</a>。说明使用的网站、插件版本与复现步骤；如需附截图，请先检查其中的私人内容。</p></details>
+        </div></div>
+        <div id="updates"><div class="resource-title"><h2><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-layers" viewBox="0 0 16 16">
+  <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882zm3.515 7.008L14.438 10 8 13.433 1.562 10 4.25 8.567l3.515 1.874a.5.5 0 0 0 .47 0zM8 9.433 1.562 6 8 2.567 14.438 6z"/>
+</svg>产品更新</h2><a class="text-link" href="/updates/">完整更新记录 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></a></div>
+          <a class="release-item" href="/updates/"><span class="release-version">3.10.1</span><div><h3>PDF 导出与长对话导航优化</h3><p>本地 PDF 导出，以及 HTML / PDF 下载与排版体验改进。</p><time datetime="2026-11-07">2026 年 11 月 7 日 · OutlineSave</time></div></a>
+          <a class="release-item" href="/Changelog/changelog/outline-changelog/"><span class="release-version">3.9.9</span><div><h3>授权读取与兼容性修复</h3><p>改善更新后的授权读取等问题。</p><time datetime="2026-10-30">2026 年 10 月 30 日 · OutlineSave</time></div></a>
+          <a class="release-item" href="/Changelog/changelog/outline-changelog/"><span class="release-version">3.7.3</span><div><h3>超长对话目录加载改进</h3><p>改进历史内容加载与远距离定位体验。</p><time datetime="2026-09-22">2026 年 9 月 22 日 · OutlineSave</time></div></a>
+        </div>
+      </section>
+      <section class="section" id="articles" aria-labelledby="articles-title"><div class="section-head"><div><span class="section-kicker">阅读与探索</span><h2 id="articles-title">相关文章</h2><p>产品教程之外，还有 AI 工作流、工具比较、本地知识与开发笔记。</p></div><div class="article-browse-links"><a class="text-link" href="/categories/">浏览分类 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-layers" viewBox="0 0 16 16">
+  <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882zm3.515 7.008L14.438 10 8 13.433 1.562 10 4.25 8.567l3.515 1.874a.5.5 0 0 0 .47 0zM8 9.433 1.562 6 8 2.567 14.438 6z"/>
+</svg></a><a class="text-link" href="/archives/">全部文章 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></a></div></div>
+        <div class="article-controls"><div class="article-filters" aria-label="按主题筛选相关文章"><button class="article-filter" type="button" data-topic="all" aria-pressed="true">全部主题</button><button class="article-filter" type="button" data-topic="AI 工作流" aria-pressed="false">AI 工作流</button><button class="article-filter" type="button" data-topic="工具比较" aria-pressed="false">工具比较</button><button class="article-filter" type="button" data-topic="本地知识" aria-pressed="false">本地知识</button><button class="article-filter" type="button" data-topic="开发笔记" aria-pressed="false">开发笔记</button></div><span class="article-count" id="article-count" aria-live="polite">__HOME_ARTICLE_COUNT__</span></div>
+        <div class="article-grid" id="related-article-grid">__HOME_ARTICLE_CARDS__</div>
+        <div class="article-more-wrap"><button class="article-more" id="article-more" type="button">展开更多文章（3）</button></div>
+        <noscript><p><a class="text-link" href="/archives/">浏览原博客的全部文章 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></a></p></noscript>
+      </section>
+      <template id="article-template"><article class="article-card"><span class="article-category"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-journal-text" viewBox="0 0 16 16">
+  <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+</svg><span data-article-group></span></span><h3><a data-article-title target="_blank" rel="noopener"></a></h3><p data-article-summary></p><div class="article-card-foot"><time data-article-date></time><a class="text-link" data-article-link target="_blank" rel="noopener">阅读文章 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></a></div></article></template>
+      <section class="support-band" aria-labelledby="support-title"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-life-preserver" viewBox="0 0 16 16">
+  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m6.43-5.228a7.03 7.03 0 0 1-3.658 3.658l-1.115-2.788a4 4 0 0 0 1.985-1.985zM5.228 14.43a7.03 7.03 0 0 1-3.658-3.658l2.788-1.115a4 4 0 0 0 1.985 1.985zm9.202-9.202-2.788 1.115a4 4 0 0 0-1.985-1.985l1.115-2.788a7.03 7.03 0 0 1 3.658 3.658m-8.087-.87a4 4 0 0 0-1.985 1.985L1.57 5.228A7.03 7.03 0 0 1 5.228 1.57zM8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+</svg><div class="support-copy"><h2 id="support-title">没有找到想要的答案？</h2><p>告诉我们你遇到的问题，或前往官网了解更多产品信息。</p></div><div class="support-actions"><a class="button button-primary" href="https://wisteriasoftware.uk/support.html" target="_blank" rel="noopener">联系支持 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+</svg></a><a class="button button-secondary" href="https://wisteriasoftware.uk/" target="_blank" rel="noopener">前往产品官网</a></div></section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap"><div class="footer-main"><a class="footer-brand" href="#top"><img src="/images/homepage/wisteria-mark.svg" width="27" height="25" alt="">Wisteria Software</a><nav class="footer-links" aria-label="页脚导航"><a href="#guides">使用指南</a><a href="#updates">产品更新</a><a href="/archives/">全部文章</a><a href="https://wisteriasoftware.uk/support.html" target="_blank" rel="noopener">支持</a><a href="https://wisteriasoftware.uk/privacy.html" target="_blank" rel="noopener">隐私</a><a href="https://github.com/sunny314woo" target="_blank" rel="noopener">GitHub</a></nav></div><div class="footer-bottom"><p>© 2026 Wisteria Software Ltd · 官方产品指南与实用教程</p><a class="back-top" href="#top">返回顶部 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+</svg></a></div></div></footer>
+
+  <dialog id="search-dialog" aria-labelledby="search-title" closedby="any"><div class="dialog-head"><h2 id="search-title">查找教程、问题与文章</h2><form method="dialog"><button class="icon-button" aria-label="关闭搜索"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-x-lg" viewBox="0 0 16 16">
+  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+</svg></button></form></div><div class="search-field"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg><label class="sr-only" for="search-query">搜索教程、功能或文章</label><input id="search-query" type="search" placeholder="试试“目录”“本地知识”或“开发笔记”" autocomplete="off" autofocus></div><div class="search-filters" aria-label="筛选搜索结果"><button class="filter" type="button" data-type="all" aria-pressed="true">全部</button><button class="filter" type="button" data-type="教程" aria-pressed="false">使用教程</button><button class="filter" type="button" data-type="常见问题" aria-pressed="false">常见问题</button><button class="filter" type="button" data-type="产品更新" aria-pressed="false">产品更新</button><button class="filter" type="button" data-type="相关文章" aria-pressed="false">博客文章</button></div><p class="result-count" id="search-count" aria-live="polite"></p><div class="search-results" id="search-results"></div></dialog>
+  <dialog id="release-dialog" aria-labelledby="release-title" closedby="any"><div class="dialog-head"><h2 id="release-title">PDF 导出与长对话导航优化</h2><form method="dialog"><button class="icon-button" aria-label="关闭更新公告"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-x-lg" viewBox="0 0 16 16">
+  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+</svg></button></form></div><div class="dialog-content"><div class="release-dialog-label"><span class="pill">OutlineSave 3.10.1</span><span>2026 年 11 月</span></div><p>这一版本重点改进对话保存与长对话回看的使用体验：</p><ul><li>支持本地 PDF 导出，方便固定版式阅读与打印。</li><li>优化长对话目录跳转体验。</li><li>改进 HTML / PDF 下载与部分导出内容排版。</li></ul><p>功能可用范围与具体说明，请以当前安装的插件版本及完整发布记录为准。</p><a class="button button-primary" href="/updates/">查看完整更新说明 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+</svg></a></div></dialog>
+  <dialog class="demo-dialog" id="demo-dialog" aria-labelledby="demo-title" closedby="any"><div class="dialog-head"><div><h2 id="demo-title">离线 HTML 交互演示</h2><p id="demo-subtitle">OutlineSave 实际导出样例</p></div><form method="dialog"><button class="icon-button" aria-label="关闭演示"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-x-lg" viewBox="0 0 16 16">
+  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+</svg></button></form></div><div id="demo-content"></div></dialog>
+  <script type="application/json" id="home-content">__HOME_CONTENT__</script>
+  <script defer src="/js/product-home.js?v=20261112-1"></script>
+</body>
+</html>
