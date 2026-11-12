@@ -1,21 +1,31 @@
 ---
-title: Outline 更新日志
+title: OutlineSave 更新日志
 date: 2026-05-18 10:14:00
-updated: 2026-09-22 08:48:00
-description: "Outline 更新日志，记录 Wisteria Software 产品在功能、体验和工作流上的更新，帮助用户了解 ChatGPT Gemini Outline & Export 的近期变化。"
+updated: 2026-11-12 11:10:00
+description: "OutlineSave 更新日志，记录 Wisteria Software 产品在功能、体验和工作流上的更新，帮助用户了解 OutlineSave 的近期变化。"
 keywords:
   - AI 对话导航
-  - ChatGPT Gemini Outline & Export
+  - OutlineSave
   - 目录导航
 permalink: Changelog/changelog/outline-changelog/
 categories:
   - 产品动态
 tags:
-  - ChatGPT Gemini Outline & Export
+  - OutlineSave
   - 目录导航
   - 产品动态
 lang: zh-CN
 ---
+
+> [查看产品更新公告与使用说明](/updates/) · 尚未正式发布的收费权益调整不列为已上线变更。
+
+## 3.10.1 (2026-11-07)
+
+- 新增本地 PDF 导出，提供封面、两级目录、书签与页码，适合固定版式阅读和打印。
+- 优化超长对话的目录定位与跳转，并改善 HTML/PDF 下载的稳定性和部分排版问题。
+- 修复部分代码、公式、标注及下载失败后的导出体验问题。具体可用性以已安装的商店版本为准。
+
+**状态说明：** 3.10.1 已由开发者确认上线；后续 3.10.11、3.10.1.2 的仓库记录涉及本地打包或候选版本，不能仅凭仓库 Changelog 推断它们均已正式上架。更多工程变更详见产品源码仓库。
 
 ## 3.7.3 (2026-09-22)
 
