@@ -4,8 +4,8 @@
 # Site
 title: Wisteria Docs
 subtitle: 'AI 对话整理、导出与本地知识管理'
-description: 'Wisteria Software 官方技术文档，提供 ChatGPT、Gemini、Outlinesave、Inbox、本地优先归档与隐私友好知识管理的教程、FAQ 与故障排查。'
-keywords: [Wisteria, Wisteria Docs, Outlinesave, ChatGPT, Gemini, Inbox, AI 对话, Markdown 导出, HTML 导出, 本地优先, 知识管理]
+description: 'Wisteria Software 官方技术文档，提供 ChatGPT、Gemini、OutlineSave、Inbox、本地优先归档与隐私友好知识管理的教程、FAQ 与故障排查。'
+keywords: [Wisteria, Wisteria Docs, OutlineSave, ChatGPT, Gemini, Inbox, AI 对话, Markdown 导出, HTML 导出, 本地优先, 知识管理]
 author: Wisteria Software
 language: zh-CN
 timezone: Asia/Shanghai
@@ -76,7 +76,8 @@ pagination_dir: page
 # List ordering — documentation-first: recently updated content comes first.
 # If a post has no explicit `updated:`, Hexo falls back to its creation date.
 index_generator:
-  path: ''
+  # Preserve the article archive while serving a curated help-center page at /.
+  path: 'articles/'
   per_page: 10
   order_by: -updated
   pagination_dir: page
