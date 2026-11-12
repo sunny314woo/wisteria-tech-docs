@@ -5,14 +5,18 @@
   const dictionary = {
     'zh-CN': {
       subtitle: 'AI 对话整理、导出与本地知识管理',
-      siteDescription: 'Wisteria Software 官方技术文档，提供 ChatGPT、Gemini、Outlinesave、Inbox、本地优先归档与隐私友好知识管理的教程、FAQ 与故障排查。',
+      siteDescription: 'Wisteria Software 官方技术文档，提供 ChatGPT、Gemini、OutlineSave、Inbox、本地优先归档与隐私友好知识管理的教程、FAQ 与故障排查。',
       nav: {
         home: '首页',
         categories: '分类',
         tags: '标签',
         archives: '归档',
         about: '关于',
-        search: '搜索'
+        search: '搜索',
+        start: '快速入门',
+        guides: '使用指南',
+        faq: 'FAQ',
+        updates: '更新日志'
       },
       sidebar: {
         toc: '文章目录',
@@ -49,14 +53,18 @@
     },
     en: {
       subtitle: 'AI conversation workflows, export, and local knowledge management',
-      siteDescription: 'Official Wisteria Software documentation for ChatGPT, Gemini, Outlinesave, Inbox, local-first archiving, tutorials, FAQ, and troubleshooting.',
+      siteDescription: 'Official Wisteria Software documentation for ChatGPT, Gemini, OutlineSave, Inbox, local-first archiving, tutorials, FAQ, and troubleshooting.',
       nav: {
         home: 'Home',
         categories: 'Categories',
         tags: 'Tags',
         archives: 'Archives',
         about: 'About',
-        search: 'Search'
+        search: 'Search',
+        start: 'Get started',
+        guides: 'Guides',
+        faq: 'FAQ',
+        updates: 'Release notes'
       },
       sidebar: {
         toc: 'Table of Contents',
@@ -176,6 +184,17 @@
     });
     document.querySelectorAll('[data-i18n="search_button"]').forEach(element => {
       element.textContent = t.searchButton;
+    });
+    const customNav = {
+      nav_start: t.nav.start,
+      nav_guides: t.nav.guides,
+      nav_faq: t.nav.faq,
+      nav_updates: t.nav.updates
+    };
+    Object.entries(customNav).forEach(([key, value]) => {
+      document.querySelectorAll('[data-i18n="' + key + '"]').forEach(element => {
+        element.textContent = value;
+      });
     });
     document.querySelectorAll('[data-i18n="nav_home"]').forEach(element => {
       element.textContent = t.nav.home;
@@ -301,7 +320,7 @@
 
   const updateSearchShortcut = () => {
     const shortcut = /mac|iphone|ipad|ipod/i.test(navigator.platform || '') ? '⌘ K' : 'Ctrl K';
-    document.querySelectorAll('.wt-search-trigger kbd').forEach(element => {
+    document.querySelectorAll('.wt-search-trigger kbd, .wt-home-search kbd').forEach(element => {
       element.textContent = shortcut;
     });
   };
