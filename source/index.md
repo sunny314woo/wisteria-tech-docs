@@ -105,8 +105,8 @@ keywords:
       <div class="wt-home-panel"><div class="wt-home-panel-head"><h2>Frequently asked</h2><a href="/faq/">All FAQs →</a></div><ul class="wt-home-link-list">
         <li><a href="/Product-Docs/en/faq-chatgpt-outline-incomplete-long-conversation/">Why is my long-chat outline incomplete?<span aria-hidden="true">→</span></a></li>
         <li><a href="/Product-Docs/en/how-to-save-chatgpt-as-searchable-offline-html/">How do I save a searchable offline HTML?<span aria-hidden="true">→</span></a></li>
-        <li><a href="/faq/#free-pro">What's included in Free vs. PRO?<span aria-hidden="true">→</span></a></li>
-        <li><a href="/faq/#subscription">How do I manage my license?<span aria-hidden="true">→</span></a></li>
+        <li><a href="/faq/#free-pro-en">What's included in Free vs. PRO?<span aria-hidden="true">→</span></a></li>
+        <li><a href="/faq/#subscription-en">How do I manage my license?<span aria-hidden="true">→</span></a></li>
         <li><a href="/help/">Where are all the step-by-step guides?<span aria-hidden="true">→</span></a></li>
       </ul></div>
       <div class="wt-home-panel"><div class="wt-home-panel-head"><h2>Release notes</h2><a href="/updates/">All updates →</a></div>
