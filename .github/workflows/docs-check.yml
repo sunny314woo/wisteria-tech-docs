@@ -5,6 +5,7 @@ on:
     paths:
       - "source/**"
       - "scripts/**"
+      - "lib/**"
       - "tools/**"
       - "_config*.yml"
       - "package*.json"
@@ -32,4 +33,4 @@ jobs:
         continue-on-error: true
         run: npm run check:content
       - name: Validate product homepage and search
-        run: npm run check:homepage
+        run: npm run check:homepage && npm run check:interiors

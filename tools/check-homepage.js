@@ -40,7 +40,7 @@ const parser = new Parser({
   }
 }, { decodeEntities: true });
 parser.end(home);
-for (const [page, marker] of [['faq', 'OutlineSave FAQ'], ['updates', '3.10.1']]) {
+for (const [page, marker] of [['faq', 'free-pro'], ['updates', '3.11.0']]) {
   const pageHtml = fs.readFileSync(path.join(root, page, 'index.html'), 'utf8');
   assert(pageHtml.includes(marker), `${page} content missing`);
   const source = fs.readFileSync(`source/${page}/index.md`, 'utf8');

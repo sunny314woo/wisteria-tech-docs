@@ -11,7 +11,8 @@
     "check:content": "node tools/check-content.js",
     "new": "hexo new",
     "deploy": "hexo deploy",
-    "check:homepage": "node tools/check-homepage.js"
+    "check:homepage": "node tools/check-homepage.js",
+    "check:interiors": "node tools/check-interiors.js"
   },
   "hexo": {
     "version": "7.3.0"

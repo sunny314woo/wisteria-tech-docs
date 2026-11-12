@@ -329,6 +329,6 @@ OutlineSave 当前 HTML 不打包附件和图片实体。
 - [OpenAI 官方：Exporting your ChatGPT history and data](https://help.openai.com/en/articles/7260999-exporting-your-chatgpt-history-and-data)
 - [OpenAI Developer Community：How to Download All of Your ChatGPT Chats and Extract an Individual Chat by Name as an HTML Document](https://community.openai.com/t/how-to-download-all-of-your-chatgpt-chats-and-extract-an-individual-chat-by-name-as-an-html-document/1394982)
 - [OpenAI Developer Community：Feature request: Native Markdown export for ChatGPT conversations](https://community.openai.com/t/feature-request-native-markdown-export-for-chatgpt-conversations/1395967)
-- [如何把 ChatGPT 对话导出为 Markdown](/Product-Docs/zh/how-to-export-chatgpt-to-markdown/)
+- [如何把 ChatGPT 对话导出为 Markdown](/AI-工具/zh/how-to-export-chatgpt-to-markdown/)
 - [Wisteria Software](https://wisteriasoftware.uk)
 - [OutlineSave Chrome Web Store](https://chromewebstore.google.com/detail/outlinesave-chatgpt-outli/opbngifmlnoahbhjhgmngkggedlofddj)

@@ -100,6 +100,8 @@
   "产品更新": "Updates",
   "常见问题": "FAQ",
   "相关文章": "Articles",
+  "文章": "Articles",
+  "精选文章": "Featured articles",
   "搜索": "Search",
   "产品官网": "Product website",
   "WISTERIA SOFTWARE · 官方指南": "WISTERIA SOFTWARE · OFFICIAL GUIDES",
@@ -114,8 +116,8 @@
   "长对话整理与保存": "Organize and keep long conversations",
   "打开交互演示": "Try the interactive demo",
   "真实导出效果 · 可体验目录、搜索与书签": "A real export · Try outlines, search and bookmarks",
-  "PDF 导出与长对话导航优化": "PDF export and long-chat navigation",
-  "OutlineSave 3.10.1 · 了解导出体验、导航改进及本次修复。": "OutlineSave 3.10.1 · Export improvements, better navigation and fixes.",
+  "导出额度与免费目录范围调整": "Export credits and Free outline access",
+  "OutlineSave 3.11.0 · 每周 3 次 HTML/PDF 导出、免费目录前 100 条跳转及导航与界面优化。": "OutlineSave 3.11.0 · 3 shared weekly exports, first 100 Free outline entries, navigation and UI improvements.",
   "阅读更新公告": "Read the update",
   "开始使用": "GET STARTED",
   "你想了解什么？": "What would you like to do?",
@@ -161,8 +163,8 @@
   "购买后如何激活，或找回授权？": "How can I activate or recover a license?",
   "遇到问题，怎样提交反馈？": "How can I report a problem?",
   "完整更新记录": "All release notes",
-  "本地 PDF 导出，以及 HTML / PDF 下载与排版体验改进。": "Local PDF export, plus HTML/PDF download and formatting improvements.",
-  "2026 年 11 月 7 日 · OutlineSave": "November 7, 2026 · OutlineSave",
+  "调整免费 HTML/PDF 导出额度与目录跳转范围，优化导航稳定性与部分 UI。": "Updated Free export credits and outline access, plus navigation stability and UI improvements.",
+  "2026 年 11 月 12 日 · OutlineSave": "November 12, 2026 · OutlineSave",
   "授权读取与兼容性修复": "License and compatibility fixes",
   "改善更新后的授权读取等问题。": "Improved license recovery after updates.",
   "2026 年 10 月 30 日 · OutlineSave": "October 30, 2026 · OutlineSave",
@@ -210,10 +212,10 @@
   "查看长对话关键词检索的界面与步骤": "View the keyword-search interface and steps",
   "在 YouTube 观看 OutlineSave 目录、搜索与导出功能视频": "Watch OutlineSave navigation, search and export on YouTube",
   "2026 年 11 月": "November 2026",
-  "这一版本重点改进对话保存与长对话回看的使用体验：": "This release focuses on saving and revisiting long conversations:",
-  "支持本地 PDF 导出，方便固定版式阅读与打印。": "Local PDF export for fixed-layout reading and printing.",
-  "优化长对话目录跳转体验。": "Improved navigation through long conversations.",
-  "改进 HTML / PDF 下载与部分导出内容排版。": "Better HTML/PDF downloads and export formatting.",
+  "本次更新调整免费版的使用范围，并改善日常操作体验：": "This update changes Free allowances and improves everyday use:",
+  "免费 HTML/PDF 每周共用 3 次导出额度，每周一恢复。": "3 shared Free HTML/PDF exports per week, resetting every Monday.",
+  "免费用户每个对话前 100 条目录可跳转；PRO 可使用全部目录跳转。": "Free navigation covers the first 100 entries per chat; PRO unlocks all entries.",
+  "优化导航稳定性和部分 UI，统一账户权益展示。": "Improved navigation stability, selected UI and account benefits display.",
   "功能可用范围与具体说明，请以当前安装的插件版本及完整发布记录为准。": "Check your installed version and the full release notes for availability and details.",
   "查看完整更新说明": "Read the full release notes",
   "目录排查指南": "outline troubleshooting guide",
@@ -250,11 +252,12 @@
         if(original.label&&translations[original.label])element.setAttribute('aria-label',language==='en'?translations[original.label]:original.label);
       });
       document.querySelector('.home-language').textContent=language==='en'?'中文':'EN';
-      document.querySelectorAll('[data-original-href],a[href^="/Outline/"],a[href^="/Product-Docs/zh/"],a[href^="/faq/#"]').forEach(link=>{
+      document.querySelectorAll('[data-original-href],a[href^="/Outline/"],a[href^="/Product-Docs/zh/"],a[href^="/faq/#"],a[href^="/Updates/"]').forEach(link=>{
         if(!link.dataset.originalHref)link.dataset.originalHref=link.getAttribute('href');
         const href=link.dataset.originalHref;
         const english={
           '/faq/#free-pro':'/faq/#free-pro-en',
+          '/Updates/outline/3-11-0/':'/Updates/en/outline/3-11-0/',
           '/faq/#subscription':'/faq/#subscription-en',
           '/Outline/outline/getting-started/':'/Product-Docs/en/how-to-organize-long-chatgpt-conversations-with-outlinesave/',
           '/Outline/outline/long-conversation-outline/':'/Product-Docs/en/how-to-add-an-outline-sidebar-to-chatgpt-for-faster-navigation/',

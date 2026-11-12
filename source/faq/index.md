@@ -23,7 +23,7 @@ description: "OutlineSave 官方常见问题：目录加载、离线 HTML、免�
   <p>HTML 更适合离线搜索、目录导航和交互式回顾；PDF 更适合固定版式的阅读、保存和打印。两个格式的免费额度和当前 PRO 权益，请以插件内说明为准。</p>
   <h2 id="free-pro">免费版与 PRO</h2>
   <h3>试用结束后还能继续使用 OutlineSave 吗？</h3>
-  <p>可以。免费版仍提供基础功能；部分高阶导航或导出能力可能有限额。具体以你当前安装版本显示的权益说明为准。已有付费许可的用户继续享有其许可证承诺的权益。</p>
+  <p>可以。当前免费版可跳转每个对话前 100 条目录，HTML/PDF 每周共用 3 次导出额度，每周一恢复。目录搜索、书签、高亮和备注仍可使用。已有付费许可的用户继续享有其许可证承诺的权益。</p>
   <h3>OutlineSave 会把我的 AI 对话上传到自己的服务器吗？</h3>
   <p>OutlineSave 以本地处理和存储对话整理数据为主，不向自己的服务器上传 AI 对话正文。原始对话仍由 ChatGPT 等平台处理；你主动导出或分享的文件应自行检查隐私内容。</p>
   <h2 id="subscription">购买、授权与支持</h2>
@@ -43,7 +43,7 @@ description: "OutlineSave 官方常见问题：目录加载、离线 HTML、免�
   <h3>How do I save a searchable offline HTML?</h3><p>Choose HTML from the extension's export menu. Learn more in the <a href="/Product-Docs/en/how-to-save-chatgpt-as-searchable-offline-html/">offline HTML guide</a>.</p>
   <h3>How are HTML and PDF different?</h3><p>HTML is better for interactive outlines, search, and review. PDF is useful for fixed-layout reading and printing. See your installed extension for current Free and PRO allowances.</p>
   <h2 id="free-pro-en">Free &amp; PRO</h2>
-  <h3>Can I keep using OutlineSave after the trial?</h3><p>Yes. Basic features remain available on the Free plan. Higher-level navigation and export entitlements depend on the installed version. Existing paid licenses retain their purchased rights.</p>
+  <h3>Can I keep using OutlineSave after the trial?</h3><p>Yes. Free users can navigate the first 100 outline entries per chat and share 3 HTML/PDF exports per week, resetting every Monday. Search, bookmarks, highlights and notes remain available. Existing paid licenses retain their purchased rights.</p>
   <h3>Does OutlineSave upload my AI chats to its own server?</h3><p>Conversation organization is local-first, and OutlineSave does not upload conversation text to its own server. Your AI platform still processes the original chat. Check sensitive content before sharing exports.</p>
   <h2 id="subscription-en">Licensing &amp; support</h2>
   <h3>How can I recover my activation details?</h3><p>Check the email used at purchase, or contact us through the <a href="https://wisteriasoftware.uk/support.html" target="_blank" rel="noopener noreferrer">official support page</a>. Keep activation codes private.</p>

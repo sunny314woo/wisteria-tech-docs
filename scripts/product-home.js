@@ -2,54 +2,9 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
-const { stripHTML, unescapeHTML, escapeHTML } = require('hexo-util');
-
-function plainText(value) {
-  return unescapeHTML(stripHTML(String(value || '')
-    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')))
-    .replace(/\s+/g, ' ').trim();
-}
-
-function languageOf(post) {
-  return String(post.lang || '').startsWith('en') ? 'en' : 'zh-CN';
-}
-
-function sourceOf(post) {
-  return String(post.source || '').replace(/^_posts\//, '');
-}
-
-function groupOf(post) {
-  const categories = post.categories ? post.categories.map(item => item.name).join(' ') : '';
-  if (/dev-notes\//i.test(sourceOf(post)) || /开发笔记|Development/i.test(categories)) return '开发笔记';
-  if (/评测|对比|Reviews|Comparisons/i.test(categories)) return '工具比较';
-  if (/本地|Local-first|Knowledge Management/i.test(categories) || /^inbox\//.test(sourceOf(post))) return '本地知识';
-  return 'AI 工作流';
-}
-
-function typeOf(post) {
-  if (/^changelog\//.test(sourceOf(post))) return '产品更新';
-  if (/^license\//.test(sourceOf(post)) || /faq|incomplete|not-showing|is-missing/i.test(post.slug)) return '常见问题';
-  if (/^(outline|inbox)\//.test(sourceOf(post)) || /Product-Docs|产品文档/.test(post.path)) return '教程';
-  return '相关文章';
-}
-
-function articleData(post) {
-  const categories = post.categories ? post.categories.map(item => item.name) : [];
-  const tags = post.tags ? post.tags.map(item => item.name) : [];
-  const body = plainText(post.content);
-  return {
-    title: post.title,
-    summary: plainText(post.description || post.excerpt || body).slice(0, 180),
-    href: '/' + post.path.replace(/^\/+/, ''),
-    date: post.date.format('YYYY-MM-DD'),
-    lang: languageOf(post),
-    group: groupOf(post),
-    type: typeOf(post),
-    keywords: [...categories, ...tags, ...(Array.isArray(post.keywords) ? post.keywords : [])].join(' '),
-    body
-  };
-}
+const { escapeHTML } = require('hexo-util');
+const { plainText, sourceOf, articleData } = require('../lib/site-content');
+const { header } = require('../lib/site-shell');
 
 function articleCard(article) {
   const href = escapeHTML(article.href);
@@ -80,7 +35,7 @@ hexo.extend.generator.register('product-information-home', function(locals) {
   });
   // All original posts remain discoverable. The home grid excludes release records,
   // licensing and task-specific product manuals, which have their own entry points.
-  const editorial = posts.filter(post => !/^(outline|license|changelog)\//.test(sourceOf(post)));
+  const editorial = posts.filter(post => !/^(outline|license|changelog|updates)\//.test(sourceOf(post)));
   const featuredSources = [
     'zh/why-heavy-ai-users-need-local-first-archive-workflow.md',
     'zh/best-chatgpt-chrome-extensions.md',
@@ -97,6 +52,7 @@ hexo.extend.generator.register('product-information-home', function(locals) {
   const template = fs.readFileSync(path.join(this.source_dir, '_data/homepage.html'), 'utf8');
   const zhArticles = articles.filter(article => article.lang === 'zh-CN');
   const html = template
+    .replace('__SITE_HEADER__', header(this))
     .replace('__HOME_CONTENT__', content)
     .replace('__HOME_ARTICLE_CARDS__', zhArticles.slice(0, 6).map(articleCard).join('\n'))
     .replace('__HOME_ARTICLE_COUNT__', `精选 ${zhArticles.length} 篇 · 更多内容见全部文章`);

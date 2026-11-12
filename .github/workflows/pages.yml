@@ -38,7 +38,7 @@ jobs:
           npx hexo generate
 
       - name: Validate product homepage and search
-        run: npm run check:homepage
+        run: npm run check:homepage && npm run check:interiors
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

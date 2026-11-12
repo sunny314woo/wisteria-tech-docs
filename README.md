@@ -22,19 +22,24 @@
 
 这个项目没有后台、没有数据库、没有 CMS。所有内容都在本地文件里。
 
-## 产品信息中心首页
+## 产品信息中心与文章内页
 
-首页是独立的产品信息中心，文章内页继续沿用 NexT。下文历史记录中的“首页分页、前 10 篇、首页侧栏”不再适用于当前首页；首页维护以本节为准。请修改以下文件，不要新建 `source/index.md`，避免首页重复生成或 HTML 被 Markdown 当成代码：
+首页使用产品信息中心布局，内页使用紧凑的“左导航、右内容”。文章列表只显示标题、图钉和右侧更新时间。首页与所有内页共用 `source/_data/site-header.html`，主菜单的“文章 / Articles”统一进入 `/articles/`。
 
-- `source/_data/homepage.html`：首页模块、演示入口、FAQ 和版本公告。
-- `source/css/product-home.css`：首页排版、响应式与明暗主题。
-- `source/js/product-home.js`：全文搜索、文章筛选、中英文切换与演示弹窗。
-- `scripts/product-home.js`：从现有文章生成首页卡片和搜索索引；保留文章原有 URL。
-- `source/images/homepage/`：首页截图和交互示例，图片可直接放入仓库；未来可将地址换为媒体 CDN。
+- `source/_data/homepage.html`、`source/css/product-home.css`、`source/js/product-home.js`：首页模块与交互。
+- `source/_data/site-header.html`、`source/css/site-shell.css`、`lib/site-shell.js`：共享页眉与页面头信息。
+- `scripts/article-center.js`：在 Hexo 完成内容生成后，为文章、指南、更新、FAQ、分类、标签和归档套用统一内页，保留原 URL 与文章正文。
+- `source/css/article-center.css`、`source/js/article-center.js`：紧凑列表、左侧标签、全文搜索、语言主题切换、手机目录与正文阅读。
+- `lib/site-content.js`：文章元数据与内容分类；`scripts/product-home.js` 也使用同一套数据规则。
+- `source/images/homepage/`：既有产品截图与交互样例；可换成媒体 CDN 地址。
 
-“相关文章”自动读取原有文章，按 AI 工作流、工具比较、本地知识、开发笔记展示。新增文章仍写入 `source/_posts/`；产品文档、授权页和更新日志保留原有入口及归档。首页和文章内页的搜索索引都会移除 SEO 脚本，避免结果摘要显示 JSON 代码。
+新文章仍写入 `source/_posts/`。`updated` 为列表右侧的更新时间；未填写时使用发布日期。分类和标签从文章中自动统计，不需要手工维护数量。
 
-完成修改后运行 `npm run clean && npm run build && npm run check:homepage`。部署工作流也会运行首页检查。`npm run check:content` 仍有 12 项原有内容问题，首页检查通过不代表旧文章审计全部通过。
+文章 frontmatter 可设置 `article_type`（教程 / 产品更新 / 常见问题 / 相关文章）、`pin`（越大越靠前）及中英文共用的 `translation_key`。当前使用指南优先级为 100，最新更新为 90；后续发布时将旧更新的 `pin` 移除，避免不断增加置顶。现有指南入口在共享数据层保留默认置顶。
+
+`/help/`、`/updates/` 是预选教程和更新分类的列表；分类、标签、年月归档沿用原地址，正文采用左侧目录。英文内容和旧链接继续保留，首页只显示精选内容。请不要新建 `source/index.md`，以免与首页生成器冲突。
+
+修改后运行 `npm run clean && npm run build && npm run check:homepage && npm run check:interiors`。CI 也运行这两项检查。旧文章的 `check:content` 有 11 项既有关键词数量问题；首页和内页检查通过不表示旧文章审计全部通过。下文历史记录中的“首页分页、前 10 篇、首页侧栏”不适用于当前首页。
 
 ## 第一次接手怎么跑起来
 
