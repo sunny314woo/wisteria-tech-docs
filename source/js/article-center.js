@@ -53,7 +53,7 @@ directory.addEventListener('click',event=>{const link=event.target.closest('.art
 if(payload.kind==='reader'){applyLanguage();return;}
 const items=payload.items,context=payload.context,params=new URLSearchParams(location.search),validTypes=new Set(Object.keys(typeLabels));
 let type=validTypes.has(params.get('type'))?params.get('type'):context.type,tag=params.get('tag')||context.tag||'',category=params.get('category')??context.category,limit=20;
-if(params.get('q'))$('#article-query').value=params.get('q');
+const legacyQuery=params.get('q')||'',legacySearch=location.hash==='#article-query';
 if((tag||category)&&!items.some(item=>item.lang===language&&(!tag||item.tags.includes(tag))&&(!category||item.categories.includes(category))))language=payload.lang;
 const pinIcon='<svg class="pin-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65"><path d="M8 3h8l-1 6 4 4v2H5v-2l4-4-1-6Z"/><path d="M12 15v7"/></svg>';
 function renderTags(){
@@ -62,29 +62,20 @@ function renderTags(){
   $('.tag-total').textContent=String(tags.length);
   $('.tag-cloud').innerHTML=tags.map(([value,count])=>`<button class="tag-filter" type="button" data-tag="${escapeHTML(value)}" aria-pressed="${String(tag===value)}" aria-label="${escapeHTML(value)} (${count})">${escapeHTML(value)}</button>`).join('');
 }
-function syncUrl(){const url=new URL(location.href);if((context.tag&&!tag)||(context.category&&!category))url.pathname='/articles/';for(const [key,value]of Object.entries({type:type===context.type?'':type,tag:tag||'',q:$('#article-query').value.trim(),category:category===context.category?'':category||''})){if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);}history.replaceState(null,'',url);}
+function syncUrl(){const url=new URL(location.href);if((context.tag&&!tag)||(context.category&&!category))url.pathname='/articles/';for(const [key,value]of Object.entries({type:type===context.type?'':type,tag:tag||'',q:'',category:category===context.category?'':category||''})){if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);}if(legacySearch)url.hash='';history.replaceState(null,'',url);}
 function render(){
-  const query=$('#article-query').value.trim().toLowerCase();const words=query.split(/\s+/u).filter(Boolean);
-  const filtered=items.filter(item=>(item.lang===language||words.length>0)&&(type==='all'||item.type===type)&&(!tag||item.tags.includes(tag))&&(!category||item.categories.includes(category))&&(!context.year||item.date.startsWith(context.year+(context.month?'-'+context.month:'')))&&words.every(word=>(item.title+' '+item.summary+' '+item.keywords+' '+(item.body||'')).toLowerCase().includes(word)));
+  const filtered=items.filter(item=>item.lang===language&&(type==='all'||item.type===type)&&(!tag||item.tags.includes(tag))&&(!category||item.categories.includes(category))&&(!context.year||item.date.startsWith(context.year+(context.month?'-'+context.month:''))));
   const visible=filtered.slice(0,limit);
   $('#post-list').innerHTML=visible.map(item=>`<li class="post-row${item.pin?' is-pinned':''}"><a class="post-link" href="${escapeHTML(item.href)}"${item.pin?' aria-label="'+escapeHTML(item.title)+text('（置顶）',' (pinned)')+'"':''}><span class="row-marker" aria-hidden="true">${item.pin?pinIcon:''}</span><span class="post-title">${escapeHTML(item.title)}</span><time class="post-updated" datetime="${item.updated}" aria-label="${text('更新时间 ','Updated ')}${item.updated}">${item.updated.replaceAll('-','.')}</time></a></li>`).join('');
   $('#list-empty').hidden=filtered.length>0;$('#load-more').hidden=visible.length>=filtered.length;$('#clear-tag').hidden=!tag;
   $('#list-heading').textContent=tag||category||context.title||text(...typeLabels[type]);
-  $('#article-query').placeholder=text('搜索文章','Search articles');
   document.querySelectorAll('.category').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.type===type)));
   document.querySelectorAll('.tag-filter').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.tag===tag)));
   syncUrl();
 }
-let fullSearch;
-async function loadFullSearch(){
-  if(!fullSearch)fullSearch=window.WisteriaSite.loadSearch().then(index=>{const bodies=new Map(index.map(item=>[item.href,item.body]));items.forEach(item=>item.body=bodies.get(item.href)||'');render();}).catch(()=>{fullSearch=null;});
-  await fullSearch;
-}
 $('.article-categories').addEventListener('click',event=>{const button=event.target.closest('[data-type]');if(!button)return;type=button.dataset.type;category='';limit=20;render();if(narrow.matches)closeDirectory();});
 $('.tag-cloud').addEventListener('click',event=>{const button=event.target.closest('[data-tag]');if(!button)return;tag=tag===button.dataset.tag?'':button.dataset.tag;limit=20;render();if(narrow.matches)closeDirectory();});
 $('#clear-tag').addEventListener('click',()=>{tag='';limit=20;render();});
-$('.compact-search').addEventListener('submit',event=>event.preventDefault());
-$('#article-query').addEventListener('input',()=>{limit=20;render();if($('#article-query').value.trim())void loadFullSearch();});
 $('#load-more').addEventListener('click',()=>{limit+=20;render();});
-applyLanguage();if(params.get('q'))void loadFullSearch();if(location.hash==='#article-query')$('#article-query').focus();
+applyLanguage();if(legacyQuery||legacySearch)window.WisteriaSite.openSearch(legacyQuery);
 })();

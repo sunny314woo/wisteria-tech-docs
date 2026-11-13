@@ -8,6 +8,31 @@ const t=(zh,en)=>language==='en'?en:zh;
 const labels={home:['文档首页','Docs home'],guides:['使用指南','Guides'],demos:['功能演示','Demos'],updates:['产品更新','Updates'],faq:['常见问题','FAQ'],articles:['文章','Articles']};
 const normalize=value=>String(value||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}\s._+\-]/gu,' ').replace(/\s+/g,' ').trim();
 let items,request,limit=20,composing=false;
+function highlightMatches(root,value,name){
+  const native=!!(CSS.highlights&&window.Highlight);
+  if(native)CSS.highlights.delete(name);
+  const previous=root.querySelectorAll('mark.search-match');
+  previous.forEach(mark=>mark.replaceWith(...mark.childNodes));if(previous.length)root.normalize();
+  const words=[...new Set(normalize(value).split(' ').filter(Boolean))].sort((a,b)=>b.length-a.length);
+  if(!words.length)return null;
+  const pattern=new RegExp(words.map(word=>word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|'),'giu');
+  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),nodes=[],ranges=[];
+  while(walker.nextNode())if(!walker.currentNode.parentElement.closest('script,style,button,.code-head,[hidden]'))nodes.push(walker.currentNode);
+  for(const node of nodes){
+    const text=node.textContent,matches=[...text.matchAll(pattern)];
+    if(!matches.length)continue;
+    const fragment=document.createDocumentFragment();let offset=0;
+    for(const match of matches){
+      if(native){const range=new Range();range.setStart(node,match.index);range.setEnd(node,match.index+match[0].length);ranges.push(range);}
+      else{fragment.append(text.slice(offset,match.index));const mark=document.createElement('mark');mark.className='search-match';mark.textContent=match[0];fragment.append(mark);offset=match.index+match[0].length;}
+    }
+    if(!native){fragment.append(text.slice(offset));node.replaceWith(fragment);}
+  }
+  if(native){CSS.highlights.set(name,new Highlight(...ranges));return ranges[0]||null;}
+  const first=root.querySelector('mark.search-match');
+  if(!first)return null;
+  const range=new Range();range.selectNodeContents(first);return range;
+}
 function closeMenu(){delete nav.dataset.open;menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label',t('展开导航','Open navigation'));}
 function setLanguage(next){
   language=next==='en'?'en':'zh-CN';
@@ -37,7 +62,7 @@ function loadSearch(){
 }
 function snippet(item,words){
   const body=(item.body||item.summary||'').replace(/\s+/g,' '),found=words.find(word=>body.toLowerCase().includes(word));
-  if(!found&&item.summary)return item.summary;
+  if(!found){if(words.some(word=>(item.keywords||'').toLowerCase().includes(word)))return item.keywords;if(item.summary)return item.summary;}
   const position=found?body.toLowerCase().indexOf(found):0,start=Math.max(0,position-22);
   return(start?'…':'')+body.slice(start,start+115)+(body.length>start+115?'…':'');
 }
@@ -57,9 +82,12 @@ function render(){
   $('.site-search-meta').textContent=words.length?t(`找到 ${found.length} 篇结果`,`${found.length} results`):t(`全部文档 · ${items.length} 篇`,`All documentation · ${items.length}`);
   $('#site-search-results').replaceChildren(...found.slice(0,limit).map(({item})=>{
     const li=document.createElement('li'),link=document.createElement('a'),title=document.createElement('span'),description=document.createElement('p');
-    link.href=item.href;title.className='site-search-result-title';title.textContent=item.title;description.textContent=snippet(item,words);
+    const url=new URL(item.href,location.origin);
+    if(words.length&&!['/help/','/updates/'].includes(url.pathname))url.searchParams.set('highlight',input.value.trim());
+    link.href=url.href;title.className='site-search-result-title';title.textContent=item.title;description.textContent=snippet(item,words);
     link.append(title,description);li.append(link);return li;
   }));
+  highlightMatches($('#site-search-results'),input.value,'wisteria-results');
   $('.site-search-empty').hidden=found.length>0;$('.site-search-more').hidden=found.length<=limit;
 }
 async function fetchResults(){
@@ -95,5 +123,5 @@ if(!('closedBy'in HTMLDialogElement.prototype)){
   const outside=(event,target)=>{const box=target.getBoundingClientRect();return event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom;};
   document.querySelectorAll('dialog[closedby="any"]').forEach(target=>{let pressedOutside=false;target.addEventListener('pointerdown',event=>{pressedOutside=outside(event,target);});target.addEventListener('pointerup',event=>{if(pressedOutside&&outside(event,target))target.close();});});
 }
-window.WisteriaSite={openSearch,loadSearch,setLanguage};setLanguage(language);
+window.WisteriaSite={openSearch,loadSearch,setLanguage,highlightMatches};setLanguage(language);
 })();

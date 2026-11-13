@@ -40,6 +40,7 @@ for(const file of htmlFiles){
       byClass(tree,'code-block').forEach(block=>{assert.equal(byClass(block,'copy-code').length,1);assert.equal(find(block,node=>node.name==='code').length,1);});
     }
     if(payload.kind==='list'){
+      assert.equal(find(tree,node=>node.name==='input'&&node.attribs.type==='search').length,1,'Duplicate article search at '+relative);
       assert(payload.items.length>=89,'Article index lost posts');
       const rows=byClass(tree,'post-row');
       rows.forEach(row=>{assert.equal(find(row,node=>node.name==='p').length,0,'Article summary in compact list');assert.equal(find(row,node=>node.name==='time').length,1,'Missing update date');});

@@ -2,6 +2,14 @@
 'use strict';
 const english=()=>document.documentElement.dataset.uiLang==='en';
 const viewer=document.getElementById('article-image-dialog');
+const query=new URLSearchParams(location.search).get('highlight');
+if(query){
+  const first=window.WisteriaSite.highlightMatches(document.querySelector('.prose'),query,'wisteria-article');
+  if(first&&!location.hash)requestAnimationFrame(()=>{
+    const box=first.getBoundingClientRect();
+    window.scrollTo({top:Math.max(0,scrollY+box.top-innerHeight/3),behavior:'instant'});
+  });
+}
 document.querySelectorAll('.article-image').forEach(button=>button.addEventListener('click',()=>{
   const image=button.querySelector('img'),enlarged=viewer.querySelector('img');
   enlarged.src=image.currentSrc||image.src;enlarged.alt=image.alt;
