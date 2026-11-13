@@ -62,7 +62,15 @@ function loadSearch(){
 }
 function snippet(item,words){
   const body=(item.body||item.summary||'').replace(/\s+/g,' '),found=words.find(word=>body.toLowerCase().includes(word));
-  if(!found){if(words.some(word=>(item.keywords||'').toLowerCase().includes(word)))return item.keywords;if(item.summary)return item.summary;}
+  if(!found){
+    if(words.every(word=>normalize(item.title+' '+item.summary).includes(word))&&item.summary)return item.summary;
+    if(words.some(word=>(item.keywords||'').toLowerCase().includes(word))){
+      const labels=[...new Set([...(item.categories||[]),...(item.tags||[])])];
+      words.forEach(word=>{if(!normalize(labels.join(' ')).includes(word))labels.push(word);});
+      return labels.join(' · ');
+    }
+    if(item.summary)return item.summary;
+  }
   const position=found?body.toLowerCase().indexOf(found):0,start=Math.max(0,position-22);
   return(start?'…':'')+body.slice(start,start+115)+(body.length>start+115?'…':'');
 }
