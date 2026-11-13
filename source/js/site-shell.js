@@ -17,7 +17,7 @@ function highlightMatches(root,value,name){
   if(!words.length)return null;
   const pattern=new RegExp(words.map(word=>word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|'),'giu');
   const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),nodes=[],ranges=[];
-  while(walker.nextNode())if(!walker.currentNode.parentElement.closest('script,style,button,.code-head,[hidden]'))nodes.push(walker.currentNode);
+  while(walker.nextNode())if(!walker.currentNode.parentElement.closest('script,style,button,.code-head,.article-meta,[hidden]'))nodes.push(walker.currentNode);
   for(const node of nodes){
     const text=node.textContent,matches=[...text.matchAll(pattern)];
     if(!matches.length)continue;
