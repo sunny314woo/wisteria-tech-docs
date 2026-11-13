@@ -20,6 +20,9 @@ for(const file of htmlFiles){
   const html=fs.readFileSync(file,'utf8');
   assert(!html.includes('__SITE_HEADER__'),'Unresolved header in '+relative);
   const tree=parseDocument(html);
+  assert.equal(find(tree,node=>node.attribs?.id==='site-search-dialog').length,1,'Missing shared search at '+relative);
+  assert(html.includes('src="/js/site-shell.js?'),'Missing shared behavior at '+relative);
+  assert(html.includes('href="/images/wisteria-docs.svg"'),'Missing shared favicon at '+relative);
   if(relative!=='index.html'){
     assert(html.includes('reader-shell'),'Legacy inner layout at '+relative);
     assert.equal(header(html),expectedHeader,'Header differs in '+relative);interiorCount++;
@@ -29,6 +32,13 @@ for(const file of htmlFiles){
     assert(byClass(tree,'directory').length===1,'Missing left directory in '+relative);
     const payloadNode=find(tree,node=>node.attribs?.id==='article-data')[0];
     const payload=JSON.parse(dom.textContent(payloadNode));
+    if(payload.kind==='reader'){
+      assert.equal(byClass(tree,'fixed-articles').length,0,'Pinned navigation repeated in reader');
+      assert.equal(byClass(tree,'article-meta').length,1,'Missing compact article metadata');
+      const toc=byClass(tree,'article-toc')[0];
+      find(toc,node=>node.name==='a').forEach(link=>assert(ids.includes(link.attribs.href.slice(1)),'Broken article contents at '+relative));
+      byClass(tree,'code-block').forEach(block=>{assert.equal(byClass(block,'copy-code').length,1);assert.equal(find(block,node=>node.name==='code').length,1);});
+    }
     if(payload.kind==='list'){
       assert(payload.items.length>=89,'Article index lost posts');
       const rows=byClass(tree,'post-row');
@@ -48,7 +58,7 @@ for(const file of htmlFiles){
   }
 }
 assert.equal(broken.length,0,'Broken internal links:\n'+broken.join('\n'));
-for(const source of ['css/product-home.css','css/site-shell.css','css/article-center.css','js/article-center.js','js/product-home.js'])assert.equal(fs.readFileSync('source/'+source,'utf8'),fs.readFileSync(path.join(root,source),'utf8'),'Static asset was rendered as a page: '+source);
+for(const source of ['css/product-home.css','css/site-shell.css','css/article-center.css','css/article-reading.css','js/article-center.js','js/product-home.js','js/site-shell.js','js/article-reading.js'])assert.equal(fs.readFileSync('source/'+source,'utf8'),fs.readFileSync(path.join(root,source),'utf8'),'Static asset was rendered as a page: '+source);
 const update=fs.readFileSync(path.join(root,'Updates/outline/3-11-0/index.html'),'utf8');
 const updateText=dom.textContent(parseDocument(update));
 for(const token of ['3.11.0','前 100 条目录','每周一恢复','3 次 HTML','导航稳定性','界面优化'])assert(updateText.includes(token),'Release announcement missing '+token);

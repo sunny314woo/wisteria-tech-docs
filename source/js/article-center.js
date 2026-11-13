@@ -5,9 +5,8 @@ let language=payload.lang||'zh-CN';
 try{language=localStorage.getItem('wisteria-ui-language')||language;}catch(_){}
 const text=(zh,en)=>language==='en'?en:zh;
 const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-const navLabels={guides:['使用指南','Guides'],demos:['功能演示','Demos'],updates:['产品更新','Updates'],faq:['常见问题','FAQ'],articles:['文章','Articles']};
 const typeLabels={all:['全部文章','All articles'],'教程':['使用指南','Guides'],'产品更新':['产品更新','Updates'],'常见问题':['常见问题','FAQ'],'相关文章':['博客文章','Blog articles']};
-const directory=$('#directory'),toggle=$('.directory-toggle'),shade=$('.directory-shade'),close=$('.directory-close'),nav=$('#site-nav'),menu=$('.mobile-toggle');
+const directory=$('#directory'),toggle=$('.directory-toggle'),shade=$('.directory-shade'),close=$('.directory-close');
 const narrow=matchMedia('(max-width:850px)');
 function openDirectory(open){
   directory.dataset.open=String(open);shade.hidden=!open;shade.dataset.open=String(open);toggle.setAttribute('aria-expanded',String(open));
@@ -23,29 +22,18 @@ document.addEventListener('keydown',event=>{
     if(event.key==='Escape'){event.preventDefault();closeDirectory();}
     if(event.key==='Tab'){const controls=[...directory.querySelectorAll('a[href],button:not([hidden])')].filter(el=>el.getClientRects().length);const first=controls[0],last=controls.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
   }
-  if((event.metaKey||event.ctrlKey)&&event.key.toLowerCase()==='k'){event.preventDefault();search();}
 });
-menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.dataset.open=String(open);});
-nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');nav.dataset.open='false';}));
-document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){nav.dataset.open='false';menu.setAttribute('aria-expanded','false');menu.focus();}});
-$('.home-theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('wisteria-ui-theme',theme);}catch(_){}});
-const search=()=>{if(payload.kind==='list'){$('#article-query').focus();$('#article-query').scrollIntoView({block:'center'});}else location.href='/articles/#article-query';};
-$('[data-open-search]').addEventListener('click',search);
 function applyLanguage(){
   document.documentElement.dataset.uiLang=language;
   if(payload.kind==='list')document.documentElement.lang=language;
   document.querySelectorAll('[data-zh][data-en]').forEach(el=>el.textContent=el.dataset[language==='en'?'en':'zh']);
-  document.querySelectorAll('[data-nav]').forEach(el=>el.textContent=text(...navLabels[el.dataset.nav]));
-  $('.header-search>span').textContent=text('搜索','Search');$('.header-search').setAttribute('aria-label',text('搜索文章','Search articles'));
-  $('.official').firstChild.textContent=text('产品官网 ','Product website ');
-  $('.home-language').textContent=text('EN','中文');$('.home-language').setAttribute('aria-label',text('切换语言','Switch language'));
-  $('.home-theme').textContent=text('外观','Theme');$('.home-theme').setAttribute('aria-label',text('切换明暗模式','Toggle color theme'));
-  menu.setAttribute('aria-label',text('展开导航','Open navigation'));close.setAttribute('aria-label',text('关闭目录','Close contents'));
+  window.WisteriaSite.setLanguage(language);
+  close.setAttribute('aria-label',text('关闭目录','Close contents'));
   directory.setAttribute('aria-label',text('内容导航','Content navigation'));
   if(payload.kind==='reader'){
     document.querySelectorAll('.wt-home-lang-zh,.wt-home-lang-en').forEach(el=>el.hidden=el.classList.contains(language==='en'?'wt-home-lang-zh':'wt-home-lang-en'));
     document.querySelectorAll('.article-toc>[data-content-lang]').forEach(el=>el.hidden=(el.dataset.contentLang.startsWith('en')?'en':'zh-CN')!==language);
-    if($('.wt-home-lang-zh')){$('.reading-article>h1').textContent=text('常见问题与支持','FAQ & support');}
+    if($('.wt-home-lang-zh')){$('.reading-article h1').textContent=text('常见问题与支持','FAQ & support');}
     refreshToc();
   }else{renderTags();render();}
 }
@@ -57,9 +45,10 @@ $('.home-language').addEventListener('click',()=>{
 });
 let tocLinks=[];
 function refreshToc(){tocLinks=[...document.querySelectorAll('.article-toc>a')].filter(link=>!link.hidden);syncToc();}
-function syncToc(){if(!tocLinks.length)return;let current=tocLinks[0];for(const link of tocLinks){const heading=document.getElementById(decodeURIComponent(link.hash.slice(1)));if(heading&&heading.getBoundingClientRect().top<=140)current=link;}tocLinks.forEach(link=>link.setAttribute('aria-current',String(link===current)));}
+function syncToc(){if(!tocLinks.length)return;let current=tocLinks[0];for(const link of tocLinks){const heading=document.getElementById(decodeURIComponent(link.hash.slice(1)));if(heading&&heading.getBoundingClientRect().top<=140)current=link;}if(CSS.supports('scroll-target-group: auto')){const native=directory.querySelector('.article-toc>a:target-current');if(native&&tocLinks.includes(native))current=native;}tocLinks.forEach(link=>link.setAttribute('aria-current',String(link===current)));}
 let frame=false;
 document.addEventListener('scroll',()=>{if(!frame){frame=true;requestAnimationFrame(()=>{frame=false;syncToc();});}},{passive:true});
+document.addEventListener('scrollend',syncToc);
 directory.addEventListener('click',event=>{const link=event.target.closest('.article-toc>a');if(link&&narrow.matches){openDirectory(false);document.getElementById(decodeURIComponent(link.hash.slice(1)))?.focus();}});
 if(payload.kind==='reader'){applyLanguage();return;}
 const items=payload.items,context=payload.context,params=new URLSearchParams(location.search),validTypes=new Set(Object.keys(typeLabels));
@@ -88,7 +77,7 @@ function render(){
 }
 let fullSearch;
 async function loadFullSearch(){
-  if(!fullSearch)fullSearch=fetch('/home-search.json').then(response=>{if(!response.ok)throw Error('Search unavailable');return response.json();}).then(index=>{const bodies=new Map(index.map(item=>[item.href,item.body]));items.forEach(item=>item.body=bodies.get(item.href)||'');render();}).catch(()=>{fullSearch=null;});
+  if(!fullSearch)fullSearch=window.WisteriaSite.loadSearch().then(index=>{const bodies=new Map(index.map(item=>[item.href,item.body]));items.forEach(item=>item.body=bodies.get(item.href)||'');render();}).catch(()=>{fullSearch=null;});
   await fullSearch;
 }
 $('.article-categories').addEventListener('click',event=>{const button=event.target.closest('[data-type]');if(!button)return;type=button.dataset.type;category='';limit=20;render();if(narrow.matches)closeDirectory();});

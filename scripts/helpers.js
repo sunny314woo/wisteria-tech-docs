@@ -123,7 +123,7 @@ function postSchema(post) {
       url: 'https://wisteriasoftware.uk/',
       logo: {
         '@type': 'ImageObject',
-        url: absoluteUrl('/images/favicon-32x32.png')
+        url: absoluteUrl('/images/wisteria-docs.svg')
       }
     },
     articleSection: category,

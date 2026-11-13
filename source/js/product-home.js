@@ -2,8 +2,6 @@
     'use strict';
     const base='';
     const content=JSON.parse(document.getElementById('home-content').textContent);
-    let items=content.search;
-    let searchLoaded=false;let searchRequest=null;
     const relatedArticles=content.articles;
     const articleGrid=document.getElementById('related-article-grid');
     const articleTemplate=document.getElementById('article-template');
@@ -34,45 +32,9 @@
     }
     document.querySelectorAll('.article-filter').forEach(button=>button.addEventListener('click',()=>{articleTopic=button.dataset.topic;expandedArticles=false;document.querySelectorAll('.article-filter').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));renderArticles();}));
     articleMore.addEventListener('click',()=>{expandedArticles=!expandedArticles;renderArticles();});
-    const searchDialog=document.getElementById('search-dialog');
-    const query=document.getElementById('search-query');
-    const results=document.getElementById('search-results');
-    let activeType='all';
-    function renderSearch(){
-      const term=query.value.trim().toLocaleLowerCase();
-      const words=term.split(/\s+/u).filter(Boolean);
-      const found=items.filter(item=>(activeType==='all'||item.type===activeType)&&words.every(word=>(item.title+' '+item.summary+' '+item.keywords+' '+(item.body||'')).toLocaleLowerCase().includes(word)))
-        .map(item=>({item,score:(item.lang===language?100:0)+(term&&item.title.toLocaleLowerCase().includes(term)?40:0)+(item.type==='常见问题'||item.type==='教程'?5:0)}))
-        .sort((a,b)=>b.score-a.score).map(result=>result.item);
-      results.replaceChildren();
-      document.getElementById('search-count').textContent=found.length?t('找到 '+found.length+' 条相关内容',found.length+' results'):t('没有找到匹配内容','No matching content');
-      if(!found.length){const p=document.createElement('p');p.className='empty-state';p.textContent=t('试试更短的关键词，例如“目录”“导出”或“授权”。也可以从首页的任务入口浏览指南。','Try a shorter keyword, or browse guides and articles from the homepage.');results.append(p);return;}
-      found.forEach(item=>{
-        const a=document.createElement('a');a.className='search-result';a.href=item.href;
-        const type=document.createElement('span');type.className='search-result-type';type.textContent=t(item.type,typeLabel(item.type));
-        const title=document.createElement('h3');title.textContent=item.title;
-        const summary=document.createElement('p');
-        const match=words.length&&item.body?item.body.toLocaleLowerCase().indexOf(words[0]):-1;
-        summary.textContent=match>=0?(match>45?'…':'')+item.body.slice(Math.max(0,match-45),match+135):item.summary;
-        a.append(type,title,summary);results.append(a);
-      });
-    }
-    async function loadSearch(){
-      if(searchLoaded)return;
-      if(!searchRequest)searchRequest=fetch('/home-search.json').then(response=>{if(!response.ok)throw new Error('Search index unavailable');return response.json();});
-      try{items=await searchRequest;searchLoaded=true;if(searchDialog.open)renderSearch();}
-      catch(error){searchRequest=null;document.getElementById('search-count').textContent=t('全文索引暂时不可用，仍可按标题检索。','Full-text search is unavailable. Title search still works.');}
-    }
-    function openSearch(value=''){query.value=value;activeType='all';document.querySelectorAll('.filter').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.type==='all')));renderSearch();if(!searchDialog.open)searchDialog.showModal();query.focus();void loadSearch();}
+    const openSearch=value=>window.WisteriaSite.openSearch(value);
     document.getElementById('hero-search-form').addEventListener('submit',event=>{event.preventDefault();openSearch(document.getElementById('hero-query').value);});
-    document.querySelectorAll('[data-open-search]').forEach(button=>button.addEventListener('click',()=>openSearch()));
     document.querySelectorAll('[data-query]').forEach(button=>button.addEventListener('click',()=>openSearch(language==='en'?({'目录不完整':'incomplete','免费':'free'}[button.dataset.query]||button.dataset.query):button.dataset.query)));
-    query.addEventListener('input',renderSearch);
-    document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{activeType=button.dataset.type;document.querySelectorAll('.filter').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));renderSearch();}));
-    document.addEventListener('keydown',event=>{if((event.metaKey||event.ctrlKey)&&event.key.toLowerCase()==='k'&&!document.querySelector('dialog[open]')){event.preventDefault();openSearch();}});
-    const menuToggle=document.querySelector('.mobile-toggle');const nav=document.getElementById('site-nav');
-    menuToggle.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')!=='true';menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?t('收起导航','Close navigation'):t('展开导航','Open navigation'));nav.dataset.open=String(open);});
-    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label',t('展开导航','Open navigation'));nav.dataset.open='false';}));
     document.querySelectorAll('[data-release]').forEach(button=>button.addEventListener('click',()=>document.getElementById('release-dialog').showModal()));
     const demoDialog=document.getElementById('demo-dialog');const demoContent=document.getElementById('demo-content');
     const searchImage='/images/homepage/outline-search.webp';
@@ -242,7 +204,7 @@
       const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
       while(walker.nextNode()){
         const node=walker.currentNode;
-        if(node.parentElement.closest('script,style,template,#related-article-grid,#search-results,#demo-content'))continue;
+        if(node.parentElement.closest('script,style,template,.site-header,#site-search-dialog,#related-article-grid,#demo-content'))continue;
         const original=originalText.get(node)||node.nodeValue;originalText.set(node,original);
         const key=original.trim();if(translations[key])node.nodeValue=language==='en'?original.replace(key,translations[key]):original;
       }
@@ -267,18 +229,10 @@
         };
         link.href=language==='en'?(english[href]||href):href;
       });
-      renderArticles();if(searchDialog.open)renderSearch();
+      renderArticles();window.WisteriaSite.setLanguage(language);
       try{localStorage.setItem('wisteria-ui-language',language);}catch(_){}
     }
     document.querySelector('.home-language').addEventListener('click',()=>applyLanguage(language==='en'?'zh-CN':'en'));
-    document.querySelector('.home-theme').addEventListener('click',()=>{
-      const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;
-      try{localStorage.setItem('wisteria-ui-theme',theme);}catch(_){}
-    });
     let savedLanguage;try{savedLanguage=localStorage.getItem('wisteria-ui-language');}catch(_){}
     applyLanguage(savedLanguage||(navigator.language.startsWith('zh')?'zh-CN':'en'));
-    if(!('closedBy' in HTMLDialogElement.prototype)){
-      const outside=(event,dialog)=>{const r=dialog.getBoundingClientRect();return event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom;};
-      document.querySelectorAll('dialog[closedby="any"]').forEach(dialog=>{let pressedOutside=false;dialog.addEventListener('pointerdown',event=>{pressedOutside=outside(event,dialog);});dialog.addEventListener('pointerup',event=>{if(pressedOutside&&outside(event,dialog))dialog.close();});});
-    }
   })();

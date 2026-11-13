@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { escapeHTML } = require('hexo-util');
 const { plainText, sourceOf, articleData } = require('../lib/site-content');
-const { header } = require('../lib/site-shell');
+const { header, searchDialog, version } = require('../lib/site-shell');
 
 function articleCard(article) {
   const href = escapeHTML(article.href);
@@ -52,7 +52,9 @@ hexo.extend.generator.register('product-information-home', function(locals) {
   const template = fs.readFileSync(path.join(this.source_dir, '_data/homepage.html'), 'utf8');
   const zhArticles = articles.filter(article => article.lang === 'zh-CN');
   const html = template
-    .replace('__SITE_HEADER__', header(this))
+    .replace('__SITE_HEADER__', header(this,'home'))
+    .replace('__SITE_SEARCH__', searchDialog(this))
+    .replaceAll('__ASSET_VERSION__', version)
     .replace('__HOME_CONTENT__', content)
     .replace('__HOME_ARTICLE_CARDS__', zhArticles.slice(0, 6).map(articleCard).join('\n'))
     .replace('__HOME_ARTICLE_COUNT__', `精选 ${zhArticles.length} 篇 · 更多内容见全部文章`);
