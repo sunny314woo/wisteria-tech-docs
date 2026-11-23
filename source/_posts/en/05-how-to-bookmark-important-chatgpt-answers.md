@@ -367,4 +367,4 @@ That is how a 200+ turn AI conversation can become something closer to a reusabl
 
 ---
 
-**Related FAQ:** [Will I lose my ChatGPT bookmarks after reinstalling the extension? Backup and restore guide](/Product-Docs/en/chatgpt-bookmark-backup-restore/)
+**Related FAQ:** [How to filter colored ChatGPT bookmarks and export HTML/PDF](/Product-Docs/en/chatgpt-colored-bookmarks-filter-export/) · [Will I lose my ChatGPT bookmarks after reinstalling the extension? Backup and restore guide](/Product-Docs/en/chatgpt-bookmark-backup-restore/)
