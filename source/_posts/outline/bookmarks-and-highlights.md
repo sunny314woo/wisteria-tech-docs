@@ -104,4 +104,6 @@ Bookmark 标记值得以后返回的位置；Highlight / Underline 标记正文�
 
 一句话记住：**Outline answers “Where is it?” Bookmark answers “What matters?” Export answers “What do I keep?”**
 
+相关阅读：[ChatGPT 书签会丢失吗？如何备份和恢复重要笔记](/Product-Docs/zh/chatgpt-bookmark-backup-restore/)
+
 *Outlinesave is developed by Wisteria Software.*

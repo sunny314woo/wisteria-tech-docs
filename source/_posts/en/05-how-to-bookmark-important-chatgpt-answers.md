@@ -364,3 +364,7 @@ That is how a 200+ turn AI conversation can become something closer to a reusabl
 - How to Save a ChatGPT Conversation as a Searchable Offline HTML File
 
 *Outlinesave is developed by Wisteria Software.*
+
+---
+
+**Related FAQ:** [Will I lose my ChatGPT bookmarks after reinstalling the extension? Backup and restore guide](/Product-Docs/en/chatgpt-bookmark-backup-restore/)

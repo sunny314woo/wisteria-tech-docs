@@ -17,6 +17,9 @@ description: "OutlineSave 官方常见问题：目录加载、离线 HTML、免�
   <h3>怎样快速跳转到过去的回答？</h3>
   <p>从目录中选择对应的提问或回答标题，或参考 <a href="/Outline/outline/long-conversation-outline/">长对话导航使用指南</a>。</p>
   <h2 id="export">标注与导出</h2>
+  <h3>ChatGPT 书签和高亮会因重装插件或换电脑而丢失吗？</h3>
+  <p>本地标注可能因卸载扩展、清除数据或更换电脑而丢失。Outlinesave 支持用户开启 Google Drive 自动备份，并在需要时手动恢复书签、高亮和备注。请阅读 <a href="/Product-Docs/zh/chatgpt-bookmark-backup-restore/">ChatGPT 书签备份与恢复指南</a>。</p>
+
   <h3>如何保存带目录的离线 HTML？</h3>
   <p>使用插件的导出菜单，选择 HTML 格式。离线 HTML 可保留目录及已有标注等内容，具体参见 <a href="/Outline/outline/offline-html-export/">HTML 导出教程</a>。</p>
   <h3>HTML 和 PDF 导出有哪些不同？</h3>
@@ -40,6 +43,8 @@ description: "OutlineSave 官方常见问题：目录加载、离线 HTML、免�
   <h3>Why is my ChatGPT outline incomplete?</h3><p>Long chats may load older messages in stages. Check that the extension is active, allow the outline to finish loading, and read the <a href="/Product-Docs/en/faq-chatgpt-outline-incomplete-long-conversation/">navigation troubleshooting guide</a>.</p>
   <h3>How do I jump back to an old answer?</h3><p>Choose the matching prompt or heading in the outline. See the <a href="/Product-Docs/en/how-to-add-an-outline-sidebar-to-chatgpt-for-faster-navigation/">outline navigation guide</a>.</p>
   <h2>Annotations &amp; export</h2>
+  <h3>Will I lose my ChatGPT bookmarks if I reinstall the extension?</h3><p>Local annotations can be lost after uninstalling, clearing data, or moving devices. Outlinesave offers opt-in automatic Google Drive backups for ChatGPT bookmarks, highlights, and notes, plus manual restore. Read the <a href="/Product-Docs/en/chatgpt-bookmark-backup-restore/">bookmark backup and restore FAQ</a>.</p>
+
   <h3>How do I save a searchable offline HTML?</h3><p>Choose HTML from the extension's export menu. Learn more in the <a href="/Product-Docs/en/how-to-save-chatgpt-as-searchable-offline-html/">offline HTML guide</a>.</p>
   <h3>How are HTML and PDF different?</h3><p>HTML is better for interactive outlines, search, and review. PDF is useful for fixed-layout reading and printing. See your installed extension for current Free and PRO allowances.</p>
   <h2 id="free-pro-en">Free &amp; PRO</h2>
