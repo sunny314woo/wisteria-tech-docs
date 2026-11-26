@@ -1,7 +1,7 @@
 ---
 title: "Can You Still Use Outlinesave After the 7-Day Free Trial?"
 date: 2026-10-20 10:20:00
-description: "Yes. Outlinesave stays usable after the 7-day Pro trial. Learn what remains free, the weekly HTML export allowance, and when the trial actually starts."
+description: "OutlineSave stays usable after an existing Pro trial ends. Learn which features remain free, the current navigation and shared HTML/PDF allowances, and how trial availability depends on your installed version."
 keywords:
   - Outlinesave free trial
   - Outlinesave free plan
@@ -16,73 +16,65 @@ tags:
 lang: en
 ---
 
-**Yes. Outlinesave still works after your 7-day Pro trial ends. You do not have to pay to keep using its core features.** The Free plan includes conversation outlines, navigation, highlights, notes, bookmarks, and Markdown export. It also includes **one offline HTML export per week**.
+**Yes. OutlineSave still works after an existing 7-day Pro trial ends.** Free is a continuing plan, not a trial that expires. You can view and search the complete outline, use bookmarks and annotations, and export Markdown or JSON.
 
 ## When does the 7-day trial begin?
 
-The trial does **not** automatically start when you install the extension. Currently, it starts when you first use the **HTML export action in ChatGPT**. During the trial, HTML exports are unlimited.
-
-Other supported AI platforms can recognize an existing trial, but they do not independently start it. Each browser profile can start the trial once. When it expires, you can continue on the Free plan without reinstalling.
+Trial enrollment has changed across versions. Do not assume that installing the extension or exporting a chat starts a new trial. If your installed version offers a trial, its displayed terms apply. An already active trial remains subject to its original expiry; when it ends, you can continue on Free without reinstalling.
 
 ## What stays free after the trial?
 
-- **Conversation outline and navigation:** browse the two-level outline and jump to questions and answers.
-- **Highlights and notes:** mark useful passages with four highlight colors, underlines, notes, and bookmarks.
-- **Markdown and JSON export:** save reusable conversation files without using your HTML allowance.
-- **Offline HTML export:** save one conversation as an offline HTML knowledge page per week, with navigation and annotations.
-- **Other currently available Free features:** consult the extension for current entitlements; some search features may still be in public testing.
+- **Outline and navigation:** the complete outline remains visible and searchable. In each ChatGPT chat, the first 100 top-level entries and already-loaded entries can be navigated for free; secondary headings follow their parent entry.
+- **Highlights and notes:** four highlight colors, underlines, notes and bookmarks remain available.
+- **Markdown and JSON export:** unlimited, without using the HTML/PDF allowance.
+- **HTML/PDF export:** three shared exports per week on Free, where the format is supported.
 
-Outlinesave supports ChatGPT, Gemini, Claude, and DeepSeek. Controls and availability can vary slightly by platform.
+OutlineSave supports ChatGPT, Gemini, Claude and DeepSeek. Features and navigation methods vary by platform; PDF export is currently described for ChatGPT.
 
 ## When does the free HTML allowance reset?
 
-The Free plan allows **one HTML export per week**, resetting **Monday at 00:00 UTC**. The allowance is shared across the four supported AI platforms, not one export per platform. A failed generation or download does not consume a successfully completed export.
-
-If you only archive an important chat occasionally, the Free plan may be enough. If you regularly save research, study, or coding conversations, Pro removes the HTML export frequency limit.
+The shared HTML/PDF allowance resets Monday at 00:00 UTC, with no rollover. It is not three exports per format or per AI platform. Check the installed extension for your current allowance.
 
 ## Free vs. Trial vs. Pro
 
-| Feature | Free | 7-day Trial | Pro |
+| Feature | Free | Existing active trial | Pro |
 | --- | --- | --- | --- |
-| Outline, navigation, bookmarks | Included | Included | Included |
-| Highlights, underlines, notes | Included | Included | Included |
-| Markdown / JSON export | Does not use HTML allowance | Does not use HTML allowance | Does not use HTML allowance |
-| Advanced offline HTML export | 1 per week | Unlimited | Unlimited |
+| View and search outline | Available | Available | Available |
+| ChatGPT outline navigation | First 100 top-level and already-loaded entries | All entries | All entries |
+| Highlights, underlines, notes, bookmarks | Available | Available | Available |
+| Markdown / JSON export | Unlimited | Unlimited | Unlimited |
+| HTML / PDF export | 3 shared per week | Unlimited | Unlimited |
 
-**Pro is not required to keep using Outlinesave.** It is especially useful for people who export offline HTML pages frequently. Refer to the extension for current licensing and other Pro entitlements.
+Existing paid licenses retain their original terms. See the [official Free and Pro comparison](https://wisteriasoftware.uk/outline-pro.html) for current details.
 
 ## Why export to offline HTML?
 
-An Outlinesave HTML export is more than a plain transcript. It creates an offline knowledge page that can retain the conversation outline, annotations, bookmarks, and relevant finding tools, with support for displaying code, math, and diagrams.
+OutlineSave creates an offline knowledge page with its outline, existing annotations and bookmarks, search, code, math and diagrams where supported. PDF is a fixed-layout alternative for reading and printing.
 
-For example, after weeks of troubleshooting a coding problem in ChatGPT, you can highlight key conclusions, add notes, and export the discussion for later reference without searching through the original online chat.
-
-Outlinesave is local-first and does not require a separate Outlinesave account. User-initiated operations such as Google Drive backup connect to the chosen external service.
+For example, after a long coding session, mark key conclusions and export the chat or bookmarked content for later review. OutlineSave processes conversation organization locally and does not upload conversation text to its own servers.
 
 ## Frequently asked questions
 
 ### Will my outline and annotations disappear when the trial expires?
 
-Trial expiration alone does not delete locally stored annotations. We still recommend backing up important material.
+Trial expiration alone does not delete locally stored annotations. Back up important material; see the [bookmark backup and restore guide](/Product-Docs/en/chatgpt-bookmark-backup-restore/).
 
 ### Can Free users export Markdown?
 
-Yes. Markdown and JSON exports do not consume the weekly HTML allowance.
+Yes. Markdown and JSON do not consume the shared weekly HTML/PDF allowance.
 
 ### Does the free HTML allowance roll over?
 
-It resets weekly on Monday UTC. Do not treat unused allowances as an indefinitely accumulating balance.
+No. The shared allowance resets Monday at 00:00 UTC.
 
 ### Do I need to reinstall or register?
 
-No. Simply continue using the Free plan.
+No. You can continue using Free without reinstalling or creating an OutlineSave account.
 
 ### When should I upgrade to Pro?
 
-Consider Pro if you frequently need multiple offline HTML exports within a week. For navigation, annotation, and occasional archiving, you can keep using Free.
+Consider Pro if you frequently need to navigate unloaded entries beyond the free ChatGPT range or export HTML/PDF more often than the free allowance.
 
----
+[Install OutlineSave from the Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj) · [Official FAQ](/faq/)
 
-[Install Outlinesave from the Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)
-
-**The end of your trial is not the end of free access.**
+**The end of a trial is not the end of free access.**
